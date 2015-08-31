@@ -1,0 +1,33 @@
+html, body {
+	margin: 0;
+	padding: 0;
+
+	header {
+		display: block;
+		margin: 0;
+		padding: 0;
+		border-bottom: 1px black solid;
+
+		ul {
+			text-align: right;
+			margin-right: 20px;
+			padding: 0;
+
+			li{
+				display: inline-block;
+				margin: 0;
+				padding: 0 10px;
+				list-style: none;
+
+				a {
+					text-decoration: none;
+					color: rgb(0, 0, 0);
+				}
+
+				a:hover {
+					color: rgb(108, 123, 139);
+				}
+			}
+		}
+	}
+}
