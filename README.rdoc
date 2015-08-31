@@ -1,3 +1,0 @@
-# devpull
-
-CURRENT DEV BRANCH AT: [https://devpull.herokuapp.com/](https://tulip-init.herokuapp.com/)
