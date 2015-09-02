@@ -1,11 +1,11 @@
 <div id="homepage">
 	<table>
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Address</th>
+		</tr>
 		<% @user.each do |z| %>
-			<tr>
-				<th>Name</th>
-				<th>Email</th>
-				<th>Address</th>
-			</tr>
 			<tr>
 				<td class="index"><%= link_to "#{z.first} #{z.last}", z %></td>
 				<td class="index"><%= z.email %></td>
