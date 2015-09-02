@@ -58,10 +58,18 @@ html, body {
 			td {
 				vertical-align: top;
 				padding: 0 10px;
+				color: rgb(108, 123, 139);
 			}
 
 			td.index {
 				text-align: center;
+				color: rgb(108, 123, 139);
+
+				a {
+					font-size: 1em;
+					text-decoration: none;
+					color: rgb(108, 123, 139);
+				}
 			}
 
 			td.product {
