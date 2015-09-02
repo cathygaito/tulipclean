@@ -1,2 +1,34 @@
-<h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
+<div id="homepage">
+	<h1>Products</h1>
+	
+	<table>
+		<tr>
+			<th>Image</th>
+			<th>SKU</th>
+			<th>Description</th>
+			<th>Price</th>
+			<th>Color</th>
+			<th>Flavor</th>
+		</tr>
+		<% @products.each do |z| %>
+			<tr>
+				<td class="product"><%= image_tag ("#{z.photo}") %></td>
+				<td class="product"><%= z.sku %></td>
+				<td class="product"><%= z.description %></td>
+				<td class="product"><%= z.price %></td>
+
+				<% if z.color %>
+					<td class="product"><%= z.color %></td>
+				<% else %>
+					<td class="product"><%= " " %></td>
+				<% end %>
+
+				<% if z.flavor %>
+					<td class="product"><%= z.flavor %></td>
+				<% else %>
+					<td class="product"><%= " " %></td>
+				<% end %>
+			</tr>
+		<% end %>
+	</table>
+</div>

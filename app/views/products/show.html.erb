@@ -1,2 +1,13 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<div id="homepage">
+	<%= image_tag ("#{@products.photo}"), class: "productphoto" %>
+	<div class="description">
+		<h1><%= @products.description %></h1><h3> - $<%= @products.price %></h3>
+		<p><%= @products.sku %></p>
+		<% if @products.color %>
+			<p><%= @products.color %></p>
+		<% elsif @products.flavor %>
+			<p><%= @products.color %></p>
+		<% end %>
+				
+	</div>
+</div>

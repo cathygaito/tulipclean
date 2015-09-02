@@ -1,2 +1,42 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div id="homepage">
+
+	<table>
+
+		<tr>
+			<td><b>Name: </b></td>
+			<td><%= @user.first + " " + @user.last %></td>
+		</tr>
+
+		<tr>
+			<td><b>Email: </b></td>
+			<td><%= @user.email %></td>
+		</tr>
+
+		<tr>
+			<td><b>Address: </b></td>
+			<td>
+				<% if @user.apt %>
+					<%= @user.street + ", " + @user.apt  %>
+				<% else %>
+					<%= @user.street %>
+				<% end %>
+				<br>
+				<%= @user.city + ", " + @user.state + " " + @user.zip %>
+			</td>
+		</tr>
+
+		<% unless @user.purchases == [] %>
+			<tr>
+				<td><b>Orders: </b></td>
+				<td>
+					<% @user.purchases.each do |z| %>
+						<%= z %>
+					<% end %>
+				</td>
+			</tr>
+		<% end %>
+
+	</table>
+	<%= link_to "Edit profile", edit_user_path(@current_user) %>
+	<%= link_to "Delete profile", "#" %>
+</div>

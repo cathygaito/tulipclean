@@ -9,7 +9,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :apt
       t.string :city
       t.string :zip
-      t.text :orders, array: true, default: []
+      t.text :purchases, array: true, default: []
 
       t.timestamps null: false
     end

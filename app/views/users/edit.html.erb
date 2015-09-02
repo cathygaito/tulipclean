@@ -1,5 +1,5 @@
 <div id="homepage">
-	<h1>Sign Up for news, deals, and more!</h1>
+	<h1>Change your information!</h1>
 
 	<table class="applyform">
 		<%= form_for(@user) do |f| %>
@@ -27,13 +27,13 @@
 					<%= f.label :apt, "Apartment, floor, suite: "%>
 					<%= f.text_field :apt %>
 					
-					<%= f.label :city, "Billing city: "%>
+					<%= f.label :city, "City: "%>
 					<%= f.text_field :city %>
 					
-					<%= f.label :state, "Billing state: "%>
+					<%= f.label :state, "State: "%>
 					<%= f.text_field :state %>
 
-					<%= f.label :zip, "Billing zipcode: "%>
+					<%= f.label :zip, "Zipcode: "%>
 					<%= f.text_field :zip %>	
 
 					<%= f.submit "SUBMIT", class: "button"%>

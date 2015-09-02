@@ -10,8 +10,13 @@
 	<header>
 		<ul>
 			<li><%= link_to "Home", root_path %></li>
-			<li><%= link_to "Sign Up", "#" %></li>
-			<li><%= link_to "Sign In", "#" %></li>
+			<% if logged_in? %>
+				<li><%= link_to "Profile", current_user %></li>
+				<li><%= link_to "Sign Out", logout_path, method: "delete" %></li>
+			<% else %>
+				<li><%= link_to "Sign Up", new_user_path %></li>
+				<li><%= link_to "Sign In", login_path %></li>
+			<% end %>
 			<li><%= link_to "About", "#" %></li>
 		</ul>
 	</header>

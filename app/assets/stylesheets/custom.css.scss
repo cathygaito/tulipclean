@@ -51,6 +51,111 @@ html, body {
 			padding: 0;			
 		}
 
+		table {
+			text-align: left;
+			margin: 0 auto;
+
+			td {
+				vertical-align: top;
+				padding: 0 10px;
+			}
+
+			td.index {
+				text-align: center;
+			}
+
+			td.product {
+				vertical-align: middle;
+				text-align: center;
+			}
+
+			th {
+				text-align: center;
+				padding: 0 60px;
+			}
+
+			img {
+				width: 20vw;
+				height: 20vw;
+				border: 1px black dashed;
+			}
+
+
+		}
+
+		img.productphoto {
+			width: 20vw;
+			height: 20vw;
+			border: 1px black dashed;
+			display: inline-block;
+			position: relative;
+		}
+
+		div.description {
+			display: inline-block;
+			position: relative;
+			margin: 0;
+			padding: 0;
+			top: -50%;
+			text-align: left;
+
+			h1, h3 {
+				display: inline;
+				position: relative;
+				top: -10vw;
+				margin: 0;
+				padding: 0;
+			}
+
+			p {
+				position: relative;
+				margin: 0;
+				padding: 0;
+				top: -10vw;
+			}
+		}
+
+		a {
+			display: inline-block;
+			margin: 5px 10px;
+			font-size: 0.75em;
+		}
+
+		table.applyform {
+			border: 2px #e3dbdb solid;
+			border-collapse: collapse;
+			margin: 0 auto;
+			margin-top: 5vh;
+			width: 75%;
+
+			td {
+				border-right: 2px #e3dbdb solid;
+				padding: 10px;
+				text-align: left;
+				vertical-align: top;
+			}
+
+			input {
+				display: block;
+				width: 75%;
+			}
+
+			input.button {
+				margin: 0 auto;
+				margin-top: 4.5%;
+				background-color: #eee9e9;
+				border-radius: 5px;
+				width: 25%;
+			}
+
+			label {
+				display: inline-block;
+				position: relative;
+				margin: 0;
+				padding: 0 0 0 3px;
+			}
+		}
+
 		div#hero {
 			display: block;
 			width: 100%;
