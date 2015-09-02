@@ -12,7 +12,7 @@
 		</tr>
 		<% @products.each do |z| %>
 			<tr>
-				<td class="product"><%= image_tag ("#{z.photo}") %></td>
+				<td class="product"><%= link_to image_tag("#{z.photo}"), product_path(z) %></td>
 				<td class="product"><%= z.sku %></td>
 				<td class="product"><%= z.description %></td>
 				<td class="product"><%= z.price %></td>
