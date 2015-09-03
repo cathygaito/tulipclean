@@ -7,6 +7,7 @@ class ProductsController < ApplicationController
 
   def show
     @products = Product.find(params[:id])
+    @order = Order.new
   end
 
   def index

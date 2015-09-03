@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-	has_many :orders
+	has_many :orders, dependent: :destroy
 	before_save { self.email = email.downcase }
 
 	NAME_CHECK = /\D+/i

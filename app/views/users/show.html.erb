@@ -30,7 +30,7 @@
 				<td><b>Orders: </b></td>
 				<td>
 					<% @user.purchases.each do |z| %>
-						<%= z %>
+						<%= link_to z, order_path(z), class: "order" %>
 					<% end %>
 				</td>
 			</tr>

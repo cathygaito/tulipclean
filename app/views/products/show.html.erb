@@ -6,8 +6,17 @@
 		<% if @products.color %>
 			<p><%= @products.color %></p>
 		<% elsif @products.flavor %>
-			<p><%= @products.color %></p>
+			<p><%= @products.flavor %></p>
 		<% end %>
-				
+	
+		<%= form_for(@order) do |f| %>
+			<%= f.label("Quantity:") %>
+			<%= f.select(:quantity, options_for_select(['1', '2', '3', '4', '5'], 1)) %>
+
+			<%= f.hidden_field :productID, value: @products.id %>
+
+			<%= f.submit "Add to Cart"%>
+		<% end %>
+		
 	</div>
 </div>
