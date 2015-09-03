@@ -2,15 +2,19 @@ module OrdersHelper
 
 	def existing_order?
 		@user = @current_user
-		unless @user.purchases == []
-
-			#THIS IS A BAD TEST FOR SOME REASON!
-			@user.purchases.each do |z|
-				if Order.find(z).shipmentTracker == nil
-					return true
-				else
-					return false
+		if @user.purchases == []
+			return false
+		else
+			y = []
+			Order.find_each do |z|
+				if z.shipmentTracker.nil?
+					y << z.id
 				end
+			end
+			if y == []
+				return false
+			elsif y != []
+				return true
 			end
 		end
     end
