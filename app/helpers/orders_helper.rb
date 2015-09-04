@@ -77,4 +77,12 @@ module OrdersHelper
     	@user.save
     end
 
+    def order_total(order)
+        y = 0
+        order.item.each do |x|
+            y += (x[0].to_f)*(x[4].to_f)
+        end
+        return y
+    end
+
 end
