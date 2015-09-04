@@ -1,32 +1,45 @@
 module OrdersHelper
 
+#Steps:
+    #1 - find all orders of the logged in customer, push to array "a"
+    #2 - check each order in array "a" for a shipping number, push to array "b"
+    #3 - check to be sure there is only one value in "b" - there should only be one open order at a time
+    #4 - @order = Order.find(b)
+    #5 - push new item array (from params using push_update) into @order.item array
+
 	def existing_order?
-		@user = @current_user
-		if @user.purchases == []
-			return false
-		else
-			y = []
-			Order.find_each do |z|
-				if z.shipmentTracker.nil?
-					y << z.id
-				end
-			end
-			if y == []
-				return false
-			elsif y != []
-				return true
-			end
-		end
+		a = find_customer_orders(@current_user)
+        if a == []
+            return false
+        elsif select_open_order(a) == []
+            return false
+        else
+            return true
+        end
     end
 
-    def open_order
-    	unless @current_user.purchases == []
-    		@current_user.purchases.each do |z|
-    			if Order.find(z).shipmentTracker == nil
-    				return z
-    			end
-    		end
-    	end
+    def find_customer_orders(user)
+        a = []
+        user.orders.find_each do |x|
+            a << x
+        end
+        return a
+    end
+
+    def find_open_order
+        a = find_customer_orders(@current_user)
+        b = select_open_order(a)
+        return b.first.to_i
+    end
+
+    def select_open_order(a)
+        b = []
+        a.each do |y|
+            if y.shipmentTracker.nil?
+                b << y.id
+            end
+        end
+        return b
     end
 	
 	def push_order(order)
@@ -59,7 +72,7 @@ module OrdersHelper
     end
 
     def send_user(order)
-    	@user = User.find_by(id: @current_user.id)
+    	@user = @current_user
     	@user.purchases.push(order.id.to_i).flatten!
     	@user.save
     end

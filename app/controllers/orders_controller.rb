@@ -7,7 +7,7 @@ class OrdersController < ApplicationController
 
   def create
     if existing_order?
-      @order = Order.find(open_order)
+      @order = Order.find(find_open_order)
       push_update(@order, order_params)
     else
       @order = Order.new(order_params)
@@ -15,7 +15,7 @@ class OrdersController < ApplicationController
     end
 
     if @order.save
-      send_user(@order) unless existing_order?
+      send_user(@order) if @current_user.purchases == [] || @current_user.purchases.exclude?("#{@order.id.to_i}")
       redirect_to products_path
     else
       redirect_to root_path
