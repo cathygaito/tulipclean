@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :users
   resources :products
   resources :orders
+  resources :charges
 
   get 'static_pages/about'
   
