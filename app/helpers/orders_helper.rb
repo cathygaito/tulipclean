@@ -1,11 +1,5 @@
 module OrdersHelper
-
-#Steps:
-    #1 - find all orders of the logged in customer, push to array "a"
-    #2 - check each order in array "a" for a shipping number, push to array "b"
-    #3 - check to be sure there is only one value in "b" - there should only be one open order at a time
-    #4 - @order = Order.find(b)
-    #5 - push new item array (from params using push_update) into @order.item array
+    
 
 	def existing_order?
 		a = find_customer_orders(@current_user)
@@ -35,7 +29,7 @@ module OrdersHelper
     def select_open_order(a)
         b = []
         a.each do |y|
-            if y.shipmentTracker.nil?
+            if y.stripeToken.nil?
                 b << y.id
             end
         end
@@ -69,6 +63,28 @@ module OrdersHelper
     	end
     	z << Product.find_by(id: additions[:productID]).price.to_f
     	existing.item << z
+    end
+
+    def push_stripe(params)
+        z = params[:stripeToken]
+        order = Order.find_by(id: params[:id])
+        order.stripeToken = z
+        order.save
+
+        Stripe.api_key = "sk_live_uofBKTGXEsEAMfZXFz73Pbx3"
+
+        token = params[:stripeToken]
+
+        begin
+            charge = Stripe::Charge.create(
+                :amount => (order_total(order)*100).round, # amount in cents, again
+                :currency => "usd",
+                :source => token,
+                :description => "Tulip online purchase"
+            )
+        rescue Stripe::CardError => e
+            # The card has been declined
+        end
     end
 
     def send_user(order)

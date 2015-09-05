@@ -26,6 +26,7 @@ class OrdersController < ApplicationController
     @user = @current_user
     @order = Order.find(params[:id])
     @total = order_total(@order)
+    @stripetotal = (@total * 100).round
   end
 
   def index
@@ -38,6 +39,12 @@ class OrdersController < ApplicationController
   end
 
   def destroy
+  end
+
+  def payment
+    push_stripe(params)
+    @current_user = User.find_by(id: params[:user_id])
+    redirect_to @current_user
   end
 
   private

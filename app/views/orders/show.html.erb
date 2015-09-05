@@ -34,5 +34,21 @@
 	<% if @order.shipmentTracker %>
 		<h3><u>Order Shipped!</u></h3>
 		<h4>Tracking number: <%= @order.shipmentTracker %></h4>
+	<% elsif !@order.stripeToken %>
+		<form action="" method="POST">
+  			<script
+    			src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    			data-key="pk_live_7vTQ4ywT0SnIbuvTLRrAWZRF"
+    			data-amount="<%= (@stripetotal) %>"
+    			data-name="Tulip Checkout"
+    			data-description= "Order <%= @order.id %>"
+    			data-image="/photo.jpg"
+    			data-locale="auto">
+  			</script>
+  			<%= hidden_field_tag :id, value: @order.id %>
+  			<%= hidden_field_tag :user_id, @current_user.id %>
+		</form>
+	<% elsif @order.stripeToken %>
+		<h3><u>We are processing your order!</u></h3>
 	<% end %>
 </div>
