@@ -27,14 +27,24 @@
 
 		<% unless @user.purchases == [] %>
 			<tr>
-				<td><b>Orders: </b></td>
+				<td><b>Past orders: </b></td>
 				<td>
 					<% @user.purchases.each do |z| %>
-						<%= link_to z, order_path(z), class: "order" %>
+						<% if find_open_order != z.to_i %>
+							<%= link_to z, order_path(z), class: "order" %>
+						<% end %>
 					<% end %>
 				</td>
 			</tr>
 		<% end %>
+
+		<tr>
+			<% if existing_order? %>
+				<td id="profile"><b><%= link_to "Shopping cart", order_path(find_open_order) %></b></td>
+			<% else %>
+				<td id="profile"><b><%= link_to "Shopping cart", cart_path %></b></td>
+			<% end %>
+		</tr>
 
 	</table>
 	<%= link_to "Edit profile", edit_user_path(@current_user) %>

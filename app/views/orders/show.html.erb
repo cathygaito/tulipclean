@@ -18,8 +18,8 @@
 			<td class="product"><%= z[1] %></td>
 			<td class="product"><%= z[2] %></td>
 			<td class="product"><%= z[3] %></td>
-			<td class="product"><%= z[4] %></td>
-			<td class="product"><%= (z[4].to_f)*(z[0].to_f) %></td>
+			<td class="product"><%= number_to_currency(z[4]) %></td>
+			<td class="product"><%= number_to_currency((z[4].to_f)*(z[0].to_f)) %></td>
 		</tr>
 	<% end %>
 	</table>
@@ -27,7 +27,7 @@
 	<table id="special">
 		<tr>
 			<td id="inlineheader"><h2>Order Total: </h2></td>
-			<td id="inlineheader"><h2><%= @total %></h2></td>
+			<td id="inlineheader"><h2><%= number_to_currency(@total) %></h2></td>
 		</tr>
 	</table>
 

@@ -14,11 +14,16 @@
 			<% if logged_in? %>
 				<li><%= link_to "Profile", current_user %></li>
 				<li><%= link_to "Sign Out", logout_path, method: "delete" %></li>
+				<% if existing_order? %>
+					<li><%= link_to "Shopping Cart", order_path(find_open_order) %></li>
+				<% else %>
+					<li><%= link_to "Shopping Cart", cart_path %></li>
+				<% end %>	
 			<% else %>
 				<li><%= link_to "Sign Up", new_user_path %></li>
 				<li><%= link_to "Sign In", login_path %></li>
+				<li><%= link_to "About", "#" %></li>
 			<% end %>
-			<li><%= link_to "About", "#" %></li>
 		</ul>
 	</header>
 

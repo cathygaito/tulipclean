@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :charges
 
   get 'static_pages/about'
+  get 'cart' => 'orders#cart'
   post '/orders/:id' => 'orders#payment'
   
 end

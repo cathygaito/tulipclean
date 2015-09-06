@@ -47,6 +47,9 @@ class OrdersController < ApplicationController
     redirect_to @current_user
   end
 
+  def cart
+  end
+
   private
 
   def order_params
