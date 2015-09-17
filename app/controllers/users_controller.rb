@@ -10,6 +10,7 @@ class UsersController < ApplicationController
     if @user.save
       @user.purchases = []
       log_in @user
+      PrelaunchMailer.welcome_email(@user).deliver_now
       redirect_to @user
     else
       render 'new'
