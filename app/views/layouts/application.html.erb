@@ -7,25 +7,27 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<header>
-		<ul>
-			<li><%= link_to "Home", root_path %></li>
-			<li><%= link_to "Shop", products_path %></li>
-			<% if logged_in? %>
-				<li><%= link_to "Profile", current_user %></li>
-				<li><%= link_to "Sign Out", logout_path, method: "delete" %></li>
-				<% if existing_order? %>
-					<li><%= link_to "Shopping Cart", order_path(find_open_order) %></li>
+	<% if Rails.application.config.ended %>
+		<header>
+			<ul>
+				<li><%= link_to "Home", root_path %></li>
+				<li><%= link_to "Shop", products_path %></li>
+				<% if logged_in? %>
+					<li><%= link_to "Profile", current_user %></li>
+					<li><%= link_to "Sign Out", logout_path, method: "delete" %></li>
+					<% if existing_order? %>
+						<li><%= link_to "Shopping Cart", order_path(find_open_order) %></li>
+					<% else %>
+						<li><%= link_to "Shopping Cart", cart_path %></li>
+					<% end %>	
 				<% else %>
-					<li><%= link_to "Shopping Cart", cart_path %></li>
-				<% end %>	
-			<% else %>
-				<li><%= link_to "Sign Up", new_user_path %></li>
-				<li><%= link_to "Sign In", login_path %></li>
-				<li><%= link_to "About", "#" %></li>
-			<% end %>
-		</ul>
-	</header>
+					<li><%= link_to "Sign Up", new_user_path %></li>
+					<li><%= link_to "Sign In", login_path %></li>
+					<li><%= link_to "About", "#" %></li>
+				<% end %>
+			</ul>
+		</header>
+	<% end %>
 
 <%= yield %>
 
