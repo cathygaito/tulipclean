@@ -1,7 +1,7 @@
 <div id="homepage">
 	<%= image_tag ("#{@products.photo}"), class: "productphoto" %>
 	<div class="description">
-		<h1><%= @products.description %></h1><h3> - $<%= @products.price %></h3>
+		<h1><%= @products.description %></h1><h3> - <%= number_to_currency(@products.price) %></h3>
 		<p><%= @products.sku %></p>
 		<% if @products.color %>
 			<p><%= @products.color %></p>
