@@ -14,6 +14,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'bxslider-rails'
+gem 'rails_serve_static_assets'
+gem 'rails_stdout_logging'
 
 group :development, :test do
   gem 'byebug'
