@@ -2,10 +2,13 @@ Rails.application.routes.draw do
   get 'preusers/new'
 
   get 'preusers/create'
+  post 'preusers/create'
 
   get 'sessions/new'
   get 'sessions/create'
   get 'sessions/destroy'
+
+  get '/refer-a-friend' => 'preusers#refer'
 
   get 'coming_soon' => 'static_pages#prehome'
   get '/', to: redirect('/coming_soon')
