@@ -13,7 +13,7 @@ class Preuser < ActiveRecord::Base
             'count' => 5,
             "html" => "Black<br>Mug",
             "class" => "two",
-            "image" =>  ActionController::Base.helpers.asset_path("public/assets/black.jpg")
+            "image" =>  "/assets/black.jpg"
         },
         {
             'count' => 10,
