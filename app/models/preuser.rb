@@ -6,7 +6,7 @@ class Preuser < ActiveRecord::Base
     validates :referral_code, :uniqueness => true
 
     before_create :create_referral_code
-    after_create :send_welcome_email
+    #after_create :send_welcome_email
 
     REFERRAL_STEPS = [
         {
@@ -49,7 +49,7 @@ class Preuser < ActiveRecord::Base
         self.referral_code = referral_code
     end
 
-    def send_welcome_email
-        UserMailer.delay.signup_email(self)
-    end
+    #def send_welcome_email
+    #    UserMailer.delay.signup_email(self)
+    #end
 end
