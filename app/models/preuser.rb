@@ -19,19 +19,19 @@ class Preuser < ActiveRecord::Base
             'count' => 10,
             "html" => "Grey<br>Mug",
             "class" => "three",
-            "image" => ActionController::Base.helpers.asset_path("gray.jpg")
+            "image" => "gray.jpg"
         },
         {
             'count' => 25,
             "html" => "Orange<br>Mug",
             "class" => "four",
-            "image" => ActionController::Base.helpers.asset_path("orange.jpg")
+            "image" => "orange.jpg"
         },
         {
             'count' => 50,
             "html" => "Mint<br>Toothpaste",
             "class" => "five",
-            "image" => ActionController::Base.helpers.asset_path("mint.jpg")
+            "image" => "mint.jpg"
         }
     ]
 
