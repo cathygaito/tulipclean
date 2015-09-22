@@ -22,11 +22,10 @@
 </div>
 
 <% 
-    referrals_count = @preuser.referrals.count
     stops = Preuser::REFERRAL_STEPS
     found = nil
     stops.reverse_each { |stop|
-        if stop["count"] <= referrals_count and !found
+        if stop["count"] <= @count and !found
             stop["selected"] = true
             found = stop
         else
@@ -60,17 +59,17 @@
 
         <% 
             words = ''
-            if referrals_count == 1
+            if @count == 1
                 words = 'friend has'
             else 
                 words = 'friends have'
             end
         %>
 
-        <% if referrals_count == 0 %>
+        <% if @count == 0 %>
             <p class="place brandon"><span>No</span> friends have joined...Yet!</p>
         <% else %>
-            <p class="place brandon"><span><%= referrals_count %></span> <%= words %> joined</p>
+            <p class="place brandon"><span><%= @count %></span> <%= words %> joined</p>
         <% end %>
         <p class="check brandon">Keep checking</p>
 

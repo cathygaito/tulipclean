@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  before_filter :skip_first_page, :only => :prehome
+  before_action :skip_first_page, only: [:prehome]
 
   def home
   end

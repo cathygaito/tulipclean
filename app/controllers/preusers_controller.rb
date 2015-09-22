@@ -1,5 +1,5 @@
 class PreusersController < ApplicationController
-  before_action :ref_to_cookie
+  before_action :ref_to_cookie, only: [:create]
 
   def new
   end
@@ -55,6 +55,13 @@ class PreusersController < ApplicationController
         @is_mobile = mobile_device?
 
         @preuser = Preuser.find_by_email(email)
+
+        @count = 0
+        Preuser.all.each do |referrals|
+            if referrals.referrer_id == @preuser.referral_code
+                @count =+ 1
+            end
+        end
 
         respond_to do |format|
             if !@preuser.nil?
