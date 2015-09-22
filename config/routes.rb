@@ -10,8 +10,6 @@ Rails.application.routes.draw do
 
   get '/refer-a-friend' => 'preusers#refer'
 
-  get 'coming_soon' => 'static_pages#prehome'
-  get '/', to: redirect('/coming_soon')
 
 if Rails.application.config.ended
   root 'static_pages#home'
@@ -31,5 +29,8 @@ end
   get 'static_pages/about'
   get 'cart' => 'orders#cart'
   post '/orders/:id' => 'orders#payment'
+
+  #get 'coming_soon' => 'static_pages#prehome'
+  #get '/', to: redirect('/coming_soon')
   
 end

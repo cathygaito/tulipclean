@@ -4,16 +4,12 @@
 </div>
 
 <div>
-    <% if Rails.application.config.ended %>
-        <p>THANK YOU FOR PARTICIPATING<br>IN OUR PRE-LAUNCH.</p>
-        <p>WE ARE COMPILING REWARDS RIGHT NOW AND WILL EMAIL<br/>COUPON CODES TO ALL RECIPIENTS IN THE NEXT DAY OR TWO</p>
-        <p>In the meantime, head to  <a href="http://www.tulipclean.com/">www.tulipclean.com</a></p>
-        <p>Thank You Again!</p>
-    <% else %>
+    <% if !Rails.application.config.ended %>
         <p>Be the first to know</p>
-        <%= form_for @preuser, :url => { :controller => "preusers", :action => "create" } do |f| %>
+        <%= form_for @preuser, url: { controller: "preusers", action: "create" } do |f| %>
             <%= f.text_field :email, :placeholder => "Your Email Address" %>
-            <%= f.submit 'Join us', :value => "I want in" %>
+            <%= f.hidden_field :referrer_id, value: params[:ref] %>
+            <%= f.submit 'I WANT IN' %>
         <% end %>
     <% end %>
 </div>

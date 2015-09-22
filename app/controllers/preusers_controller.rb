@@ -1,4 +1,6 @@
 class PreusersController < ApplicationController
+  before_action :ref_to_cookie
+
   def new
   end
 
@@ -9,11 +11,11 @@ class PreusersController < ApplicationController
         # If user doesnt exist, make them, and attach referrer
         if @preuser.nil?
 
-            cur_ip = IpAddress.find_by_address(request.env['HTTP_X_FORWARDED_FOR'])
+            cur_ip = IpAddress.find_by_address(request.remote_ip)
 
             if !cur_ip
                 cur_ip = IpAddress.new(
-                    :address => request.env['HTTP_X_FORWARDED_FOR'],
+                    :address => request.remote_ip,
                     :count => 0
                 )
             end
@@ -22,30 +24,24 @@ class PreusersController < ApplicationController
                 return redirect_to root_path
             end
 
-            @preuser = Preuser.new(:email => params[:preuser][:email])
-
-            @referred_by = Preuser.find_by_referral_code(cookies[:h_ref])
+            @preuser = Preuser.new(:email => params[:preuser][:email], :referrer_id => params[:preuser][:referrer_id])
 
             puts '------------'
-            puts @referred_by.email if @referred_by
             puts params[:preuser][:email].inspect
-            puts request.env['HTTP_X_FORWARDED_FOR'].inspect
+            puts request.remote_ip.inspect
             puts '------------'
-
-            if !@referred_by.nil?
-                @preuser.referrer = @referred_by
-            end
 
             if @preuser.save
                 cur_ip.count = cur_ip.count + 1
                 cur_ip.save
+                PrelaunchMailer.welcome_email(@preuser).deliver_now
             end
         end
 
         # Send them over refer action
         respond_to do |format|
             if !@preuser.nil?
-                cookies[:h_email] = { :value => @preuser.email }
+                cookies[:h_email] = @preuser.email
                 format.html { redirect_to '/refer-a-friend' }
             else
                 format.html { redirect_to root_path, :alert => "Something went wrong!" }
@@ -72,6 +68,6 @@ class PreusersController < ApplicationController
   private
 
   def preuser_params
-  	params.require(:preuser).permit(:id, :email, :referral_code, :referrer_id, :created_at, :updated_at)
+  	params.require(:preuser).permit(:id, :email, :referral_code, :referrer_id, :referrals, :created_at, :updated_at)
   end
 end

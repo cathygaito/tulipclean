@@ -4,11 +4,15 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Welcome to Tulip, <%= @user.first %>!</h1>
+    <h1>Welcome to Tulip!</h1>
 
-    <p>You have successfully signed up for Tulip. See your referal code below.</p>
+    <p>You have successfully preregistered with us to recieve exclusive news.</p>
+	<p>See your referal code below to share with friends! The more you</p>
+	<p>share, the more prizes you'll rack up when we launch.</p>
 
     <p>Thanks for joining, we'll be in touch soon!</p>
+
+	<%= root_url %>?ref=<%= @preuser.referral_code %>
 
   </body>
 </html>

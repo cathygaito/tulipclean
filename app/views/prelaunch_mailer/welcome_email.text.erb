@@ -1,6 +1,10 @@
-Welcome to Tulip, <%= @user.first %>!
+Welcome to Tulip!
 ======================================
 
-You have successfully signed up for Tulip. See your referal code below.
+You have successfully preregistered with us to recieve exclusive news.
+See your referal code below to share with friends! The more you
+share, the more prizes you'll rack up when we launch.
 
 Thanks for joining, we'll be in touch soon!
+
+<%= root_url %>?ref=<%= @preuser.referral_code %>

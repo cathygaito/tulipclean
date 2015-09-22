@@ -5,9 +5,9 @@ class PrelaunchMailer < ApplicationMailer
   #
   #   en.prelaunch_mailer.welcome_email.subject
   #
-  def welcome_email(user)
-    @user = user
+  def welcome_email(preuser)
+    @preuser = preuser
 
-    mail to: user.email, subject: 'Welcome to Tulip!'
+    mail to: preuser.email, subject: 'Welcome to Tulip!'
   end
 end

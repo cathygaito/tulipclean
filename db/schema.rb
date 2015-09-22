@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150917205849) do
+ActiveRecord::Schema.define(version: 20150921215417) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,8 +42,9 @@ ActiveRecord::Schema.define(version: 20150917205849) do
     t.string   "email"
     t.string   "referral_code"
     t.string   "referrer_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.text     "referrals",     default: [],              array: true
   end
 
   create_table "products", force: :cascade do |t|
