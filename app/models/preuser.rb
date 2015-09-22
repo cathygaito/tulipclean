@@ -10,25 +10,25 @@ class Preuser < ActiveRecord::Base
     REFERRAL_STEPS = [
         {
             'count' => 5,
-            "html" => "Black<br>Mug",
+            "html" => "Toothbrush",
             "class" => "two",
             "image" =>  "black.jpg"
         },
         {
             'count' => 10,
-            "html" => "Grey<br>Mug",
+            "html" => "Toothpaste &amp; Floss",
             "class" => "three",
             "image" => "gray.jpg"
         },
         {
             'count' => 25,
-            "html" => "Orange<br>Mug",
+            "html" => "6-Month<br>Toothpaste Supply",
             "class" => "four",
             "image" => "orange.jpg"
         },
         {
             'count' => 50,
-            "html" => "Mint<br>Toothpaste",
+            "html" => "1-Year<br>Toothpaste Supply",
             "class" => "five",
             "image" => "mint.jpg"
         }

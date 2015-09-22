@@ -1,15 +1,16 @@
-<div class="hero">
-    <p>Hey, you with the teeth!</p>
-    <p>Tulip is coming.</p>
+<div class="prehero">
+    <h1>Hey, you with the teeth!</h1>
+    <h2>Tulip is coming.</h2>
+    <%= image_tag("placeholder.png") %>
 </div>
 
 <div>
     <% if !Rails.application.config.ended %>
-        <p>Be the first to know</p>
+    <h3>Be the first to know</h3>
         <%= form_for @preuser, url: { controller: "preusers", action: "create" } do |f| %>
             <%= f.text_field :email, :placeholder => "Your Email Address" %>
             <%= f.hidden_field :referrer_id, value: params[:ref] %>
-            <%= f.submit 'I WANT IN' %>
+            <%= f.submit 'I WANT IN', class: "button"%>
         <% end %>
     <% end %>
 </div>

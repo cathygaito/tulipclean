@@ -30,6 +30,8 @@ end
   get 'cart' => 'orders#cart'
   post '/orders/:id' => 'orders#payment'
 
+  get 'static_pages/home'
+
   #get 'coming_soon' => 'static_pages#prehome'
   #get '/', to: redirect('/coming_soon')
   
