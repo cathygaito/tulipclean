@@ -34,6 +34,9 @@ class PreusersController < ApplicationController
             if @preuser.save
                 cur_ip.count = cur_ip.count + 1
                 cur_ip.save
+                refering_preuser = Preuser.find_by_referral_code(@preuser.referrer_id)
+                refering_preuser.referrals.push(@preuser.referral_code).flatten unless refering_preuser.nil?
+                refering_preuser.save unless refering_preuser.nil?
                 PrelaunchMailer.welcome_email(@preuser).deliver_now
             end
         end
@@ -56,12 +59,12 @@ class PreusersController < ApplicationController
 
         @preuser = Preuser.find_by_email(email)
 
-        @count = 0
-        Preuser.all.each do |referrals|
-            if referrals.referrer_id == @preuser.referral_code
-                @count =+ 1
-            end
+        if @preuser.nil?
+            @count = 0
+        else
+            @count = @preuser.referrals.count
         end
+        
 
         respond_to do |format|
             if !@preuser.nil?

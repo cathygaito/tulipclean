@@ -4,6 +4,7 @@ class CreatePreusers < ActiveRecord::Migration
       t.string :email
       t.string :referral_code
       t.string :referrer_id
+      t.text :referrals, array: true, default: []
 
       t.timestamps null: false
     end

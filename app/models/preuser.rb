@@ -1,6 +1,4 @@
 class Preuser < ActiveRecord::Base
-	belongs_to :referrer, :class_name => "Preuser", :foreign_key => "referrer_id"
-    has_many :referrals, :class_name => "Preuser", :foreign_key => "referrer_id"
 
     validates :email, :uniqueness => true, :format => { :with => /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/i, :message => "Invalid email format." } 
     validates :referral_code, :uniqueness => true
@@ -22,13 +20,13 @@ class Preuser < ActiveRecord::Base
         },
         {
             'count' => 25,
-            "html" => "6-Month<br>Toothpaste Supply",
+            "html" => "6-Month Toothpaste Supply",
             "class" => "four",
             "image" => "orange.jpg"
         },
         {
             'count' => 50,
-            "html" => "1-Year<br>Toothpaste Supply",
+            "html" => "1-Year Toothpaste Supply",
             "class" => "five",
             "image" => "mint.jpg"
         }

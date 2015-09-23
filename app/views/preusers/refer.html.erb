@@ -1,22 +1,15 @@
-<div class="header">
-    <div class="content">
-        <p class="logo brandon">Harry&#8217;s</p>
-        <p class="byline brandon">THANK YOU FOR SIGNING UP</p>
-    </div>
-</div>
+<header>
+    <p>Tulip</p>
+</header>
 
 <div class="hero">
-    <div class="page-content clearfix">
-        <div class="mammoth">
-            <span class="need brandon">Shaving Is<br>Evolving</span>
-        </div>
-        <div class="share-wrap">
-            <p class="why brandon">Don't leave your friends behind</p>
-            <p class="title brandon">INVITE FRIENDS &<br>Earn Product</p>
-            <p class="subtitle brandon">Share your unique link via email, Facebook<br>or Twitter and earn Harry's goods for<br>each friend who signs up.</p>
-            <div class="copy-link brandon"><%= root_url %>?ref=<%= @preuser.referral_code %></div>
-            <% twitter_message = "#Shaving is evolving. Excited for @harrys to launch." %>
-
+    <div>
+        <div>
+            <p>TELL YOUR FRIENDS &amp; EARN PRIZES</p>
+            <p>Share this unique link via email, Facebook, or Twitter and earn Tulip goods for each friend who signs up.</p>
+            <div id="share"><%= root_url %>?ref=<%= @preuser.referral_code %></div>
+            <div id="share">FB<br>SHARE</div>
+            <div id="share">TWTR<br>SHARE</div>
         </div>
     </div>
 </div>
@@ -34,19 +27,15 @@
     }   
  %>
 <div class="prizes <% if found %>prize-<%= found["class"] %><% end %>">
-    <div class="page-content">
-        <p class="callout brandon">Here's How It Works:</p>
-        <ul class="products clearfix">
-            <li class="title brandon"><p class="friends">Friends Joined</p><p class="rewards">Harry's Product</p></li>
+        <ul>
             <% stops.each do |stop| %>
-                <li class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
-                    <div class="circle"><%= stop["count"] %></div>
-                    <div class="sep"></div>
+                <li class="product <% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
                     <p><%= stop["html"].html_safe %></p>
-
                     <div class="tooltip">
                         <img src="<%= ActionController::Base.helpers.asset_path(stop["image"]) %>" height="254">
                     </div>
+                    <div class="circle" id="<% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>circleselected<% end %>"><%= stop["count"] %></div>
+                    <div class="line" id="<% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>lineselected<% end %>"></div>
                 </li>
             <% end %>
         </ul>
@@ -67,13 +56,12 @@
         %>
 
         <% if @count == 0 %>
-            <p class="place brandon"><span>No</span> friends have joined...Yet!</p>
+            <p class="place"><span>No</span> friends have joined...Yet!</p>
+            <p class="check">Keep checking</p>
         <% else %>
-            <p class="place brandon"><span><%= @count %></span> <%= words %> joined</p>
+            <p class="place"><span><%= @count %></span> <%= words %> joined</p>
         <% end %>
-        <p class="check brandon">Keep checking</p>
 
-        <p class="ship brandon">We ship to the U.S. (& Canada Soon)</p>        
-        <a class="policy brandon" href="/privacy-policy" target="_blank">Privacy Policy</a>
-    </div>
+        <p class="ship">We ship to anywhere in the continental U.S.</p>        
+        <a class="policy" href="/privacy-policy" target="_blank">Privacy Policy</a>
 </div>
