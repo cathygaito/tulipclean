@@ -1,216 +1,188 @@
-html {
+/**************************************
+GENERAL STYLES 
+**************************************/
+
+body {
+	background-color: #E3F6FA;
+	color: #2D4974;
 	margin: 0;
 	padding: 0;
-	font-family: Sentinel;
 
-	body{
-		display: block;
+	section#prehome {
 		position: relative;
-		background-color: #ccf0f8;
-		color: #2C4977;
+		height: 100vh;
 		margin: 0;
 		padding: 0;
+		max-width: 85%;
+		margin: 0 auto;
 	}
 
-	header {
+/**************************************
+PREHOME HERO STYLES 
+**************************************/
+	
+	div.prehero {
 		display: block;
-		position: fixed;
+		margin-top: -5%;
+	}
+
+	div.prehero div.text {
+		margin: 13% auto 0;
 		width: 100%;
-		height: 3vh;
-		background-color: #ccf0f8;
-		margin: 0;
-		padding: 0;
-		border-bottom: 1px #2C4977 solid;
-		top: 0;
-		z-index: 100;
-
-		ul {
-			text-align: right;
-			margin: 4px 20px 2px 0;
-			padding: 0;
-
-			li{
-				display: inline-block;
-				margin: 0;
-				padding: 0 10px;
-				list-style: none;
-
-				a {
-					text-decoration: none;
-					color: #2C4977;
-				}
-
-				a:hover {
-					color: #8091ad;
-				}
-			}
-		}
-
-		p {
-			margin: 0;
-			padding: 10px 0;
-			text-align: center;
-			text-transform: uppercase;
-			font-size: 1.1em;
-			background-color: #2C4977;
-			color: #ccf0f8;
-		}
 	}
 
-	form.new_preuser{
-		width: 100vw;
-		height: 15vh;
-		margin: 0;
+	div.prehero div.image {
+		margin: 30% 0 0 0;
 		padding: 0;
-		position: fixed;
-		bottom: 0;
-		border: 1px #2C4977 solid;
-
-		input {
-			background-color: #ccf0f8;
-			color: #2C4977;
-			border: none;
-			width: 80vw;
-			height: 15vh;
-			display: inline-block;
-			position: fixed;
-			bottom: 0;
-			margin: 0;
-			padding: 0 0 0 10vw;
-			font-size: 2.3em;
-		}
-
-		input.button{
-			background-color: #2C4977;
-			color: #ccf0f8;
-			width: 19.5vw;
-			right: 0;
-			padding: 0;
-			margin: 0;
-			font-size: 1.3em;
-		}
+		width: 100%;
 	}
 
-	div.prehero h1,
-	div.prehero h2 {
+	div.prehero div.image img {
+		width: 100%;
 		margin: 0;
 		padding: 0;
-		position: fixed;
-		left: 20vw;
-
 	}
 
 	div.prehero h1 {
-		top: 34vh;
+		font-size: 2.75em;
+		margin: 0 0 0.6em 0;
+		padding: 0;
+		line-height: 1.2;
+		font-weight: normal;
 	}
 
 	div.prehero h2 {
-		top: 40vh;
-	}
-
-	div.prehero img {
-		height: 75vh;
-		width: 20vw;
-		right: 20vw;
-		top: 3vw;
-		display: inline-block;
-		position: fixed;
+		font-size: 1.125em;
+		color: #00B7DE;
+		font-weight: normal;
+		line-height: 1.75;
 		margin: 0;
 		padding: 0;
-	}
 
-	div h3 {
-		position: fixed;
-		display: inline-block;
-		bottom: 15vh;
-		left: 10vw;
-	}
-
-	div.hero {
-		display: block;
-		position: relative;
-		margin: 20px 0;
-		padding: 15px;
-		top: 3vh;
-		background-color: #FFA691;
-		text-align: center;
-
-		p {
+		span {
+			font-weight: bold;
 			margin: 0;
 			padding: 0;
 		}
-
-		div#share {
-			background-color: white;
-			display: inline-block;
-			padding: 2px 5px;
-		}
 	}
 
-	div.prizes{
-		margin: 0 auto;
-		text-align: center;
-		display: block;
-		position: absolute;
-		width: 100%;
-
-		ul {
-			padding: 0;
-    		list-style-type: none;
-		}
-
-		li.product {
-			display: inline-block;
-			display: relative;
-			margin: 0 auto;
-			padding: 0;
-			text-align: center;
-			min-width: 20vw;
-			max-width: 20vw;
-			height: 60vh;
-
-			div.circle {
-				border: 1px #2C4977 solid;
-				display: inline-block;
-				position: absolute;
-				width: 40px;
-				height: 30px;
-				margin: 0 0 0 -15px;
-				padding: 10px 0 0 0;
-				text-align: center;
-				border-radius: 2em;
-				background-color: #ccf0f8;
-				color: #2C4977;
+/**************************************
+PREHOME FORM STYLES
+**************************************/
 	
-			}
 
-			div.line {
-			border: 2px #587272 solid;
+	form.new_preuser {
+		position: absolute;
+		top: 35%;
+		width: 100%;
+		padding-top: 5%;
+
+		input#preuser_email {
+			font-size: 1.125em;
+			background-color: #E3F6FA;
+			border: none;
+			border-bottom: 3px solid #2D4974;
+			border-bottom-style: dotted;
+			padding: 0 0 7px;
+			margin: 0;
+			width: 100%;
+		}
+		input::-webkit-input-placeholder {
+			color: #89A1B9;
+			background-color: #E3F6FA;
+			border: none;
+		}
+		input:-moz-placeholder {
+    		color: #89A1B9;
+    		background-color: #E3F6FA;
+    		border: none;
+		}
+
+		input.button {
+			border-radius: 5px;
+			background-color: #2C4977;
+			color: white;
+			border: 1px black solid;
+			font-size: 0.8125em;
+			padding: 19px 30px;
+			letter-spacing: 1px;
+			margin: 35px 0 0 0;
+			display: block;
+		}
+	}
+}
+
+@media screen and (min-width: 480px) {
+	div.prehero div.text {
+		max-width: 55%;
+		float: left;
+		display: inline-block;
+	}
+
+	div.prehero div.image {
+		max-width: 45%;
+		float: right;
+		margin: 6.5% 0 0 0 !important;
+		display: inline-block;
+	}
+
+	form.new_preuser {
+		display: block;
+		position: relative !important;
+		top: 60%;
+		width: 100%;
+		margin: 0;
+		clear: both;
+	}	
+}
+
+@media screen and (min-width: 660px) {
+	div.prehero div.text {
+		max-width: 60.25 !important;
+		padding: 5% 0 0 10% !important;
+	}
+
+	div.prehero div.image {
+		width: 31.25% !important;
+		margin: 6.5% 0 0 0 !important;
+		padding: 0 !important;
+	}
+
+	div.prehero div.text h1 {
+		font-size: 4.5em;
+		margin: 0 0 0.4em 0;
+		padding: 0;
+		font-weight: normal;
+	}
+
+	div.prehero div.text h2 {
+		font-size: 1.25em;
+		margin: 0 0 0.6em 0;
+		padding: 0;
+		line-height: 1.2;
+		font-weight: normal;
+	}
+
+	form.new_preuser {
+		display: block;
+		top: 0;
+		width: 100%;
+		margin: 0;
+		clear: left;
+		padding: 0 0 0 10%;
+
+		input#preuser_email {
 			display: inline-block;
-			position: relative;
-			top: 9px;
-			z-index: -1;
-			width: 21vw;
-			margin: 0px auto;
+			width: 35% !important;
 		}
+	}
+}
 
-			div img {
-				width: 100%;
-				opacity: 0.4;
-			}
-		}
+@media screen and (min-width: 1166px) {
+	form.new_preuser {
 
-		div#circleselected{
-				background-color: #2C4977;
-				color: #ccf0f8;
-		}
-
-		li.selected div img{
-			opacity: 1;
-		}
-
-		div#lineselected {
-			border: 2px #2C4977 solid;
+		input#preuser_email {
+			width: 27.5% !important;
 		}
 	}
 }

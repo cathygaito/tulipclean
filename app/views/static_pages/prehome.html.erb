@@ -1,15 +1,22 @@
-<div class="prehero">
-    <h1>Hey, you with the teeth!</h1>
-    <h2>Tulip is coming.</h2>
-    <%= image_tag("placeholder.png") %>
-</div>
+<section id="prehome">
+    <div class="prehero">
+        <div class="text">
+            <h1>Hey you, with the teeth.</h1>
+            <h2><span>Tulip is coming.</span> Your own mouth may want to kiss you.</h2>
+            <h2>Come inside for exclusive access to our limited early bird shipment.</h2>
+        </div>
+        <div class="image">
+            <%= image_tag("tulip-regimen.png") %>
+        </div>
+    </div>
 
-<div>
-    <% if !Rails.application.config.ended %>
-        <%= form_for @preuser, url: { controller: "preusers", action: "create" } do |f| %>
-            <%= f.text_field :email, :placeholder => "Your Email Address" %>
-            <%= f.hidden_field :referrer_id, value: params[:ref] %>
-            <%= f.submit 'I WANT IN', class: "button"%>
+    <div>
+        <% if !Rails.application.config.ended %>
+            <%= form_for @preuser, url: { controller: "preusers", action: "create" }, class: "preform" do |f| %>
+                <%= f.text_field :email, :placeholder => "crown@teethmail.com" %>
+                <%= f.hidden_field :referrer_id, value: params[:ref] %>
+                <%= f.submit 'GIVE ME ACCESS', class: "button"%>
+            <% end %>
         <% end %>
-    <% end %>
-</div>
+    </div>
+</section>
