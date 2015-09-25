@@ -21,7 +21,6 @@ class PreusersController < ApplicationController
             end
 
             if cur_ip.count > 2
-                :alert => "Sorry, we only allow 2 sign-ups per computer! Please spread the word to your friends!"
                 return redirect_to root_path
             end
 
