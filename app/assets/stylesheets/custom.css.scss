@@ -56,10 +56,12 @@ PREHOME HERO STYLES
 	div.prehero h2 {
 		font-size: 1.125em;
 		color: #00B7DE;
-		font-weight: normal;
 		line-height: 1.75;
 		margin: 0;
 		padding: 0;
+		font-family: "Gotham SSm A", "Gotham SSm B";
+		font-style: normal;
+		font-weight: 400;
 
 		span {
 			font-weight: bold;
@@ -88,6 +90,9 @@ PREHOME FORM STYLES
 			padding: 0 0 7px;
 			margin: 0;
 			width: 100%;
+			font-family: "Gotham SSm A", "Gotham SSm B";
+			font-style: normal;
+			font-weight: 400;
 		}
 		input::-webkit-input-placeholder {
 			color: #89A1B9;
@@ -164,7 +169,9 @@ PREHOME FORM STYLES
 		margin: 0 0 0.6em 0;
 		padding: 0;
 		line-height: 1.2;
-		font-weight: normal;
+		font-family: "Gotham SSm A", "Gotham SSm B";
+		font-style: normal;
+		font-weight: 400;
 	}
 
 	form.new_preuser {
