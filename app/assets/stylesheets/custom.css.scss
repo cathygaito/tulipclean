@@ -2,6 +2,10 @@
 GENERAL STYLES 
 **************************************/
 
+* {
+	border: 1px black dashed;
+}
+
 body {
 	background-color: #E3F6FA;
 	color: #2D4974;
@@ -51,6 +55,7 @@ PREHOME HERO STYLES
 		font-family: "Sentinel SSm A", "Sentinel SSm B";
 		font-style: normal;
 		font-weight: 300;
+		display: inline-block;
 	}
 
 	div.prehero h2 {
@@ -62,6 +67,7 @@ PREHOME HERO STYLES
 		font-family: "Gotham SSm A", "Gotham SSm B";
 		font-style: normal;
 		font-weight: 400;
+		display: inline-block;
 
 		span {
 			font-weight: bold;
