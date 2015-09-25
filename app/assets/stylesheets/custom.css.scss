@@ -1,11 +1,6 @@
 /**************************************
 GENERAL STYLES 
 **************************************/
-
-* {
-	border: 1px black dashed;
-}
-
 body {
 	background-color: #E3F6FA;
 	color: #2D4974;
@@ -164,7 +159,7 @@ PREHOME FORM STYLES
 	div.prehero div.text h1 {
 		font-size: 4.5em !important;
 		margin: 0 0 0.4em 0 !important;
-		padding: 0 0 0 10% !important;
+		padding: 0 0 0 6% !important;
 		font-family: "Sentinel SSm A", "Sentinel SSm B";
 		font-style: normal;
 		font-weight: 300;
@@ -173,7 +168,7 @@ PREHOME FORM STYLES
 	div.prehero div.text h2 {
 		font-size: 1.25em;
 		margin: 0 0 0.6em 0;
-		padding: 0 0 0 10% !important;
+		padding: 0 0 0 6% !important;
 		line-height: 1.2;
 		font-family: "Gotham SSm A", "Gotham SSm B";
 		font-style: normal;
@@ -186,7 +181,7 @@ PREHOME FORM STYLES
 		width: 100%;
 		margin: 0;
 		clear: left;
-		padding: 0 0 0 6.75%;
+		padding: 0 0 0 4%;
 
 		input#preuser_email {
 			display: inline-block;
