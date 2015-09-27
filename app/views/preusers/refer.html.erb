@@ -1,32 +1,57 @@
-<header>
-    <p>Tulip</p>
+<header id="refhome">
+    <% 
+        words = ''
+        if @count == 1
+            words = 'friend refered. See rewards below.'
+        else 
+            words = 'friends refered. See rewards below.'
+        end
+    %>
+
+    <% if @count == 0 %>
+        <p class="place"><span>No</span> friends R! Keep checking</p>
+    <% else %>
+        <p class="place"><span id="placenum"><%= @count %></span> <%= words %></p>
+    <% end %>
 </header>
 
-<div class="hero">
-    <div>
+<section id="refer">
+    <div class="hero">
         <div>
-            <p>TELL YOUR FRIENDS &amp; EARN PRIZES</p>
-            <p>Share this unique link via email, Facebook, or Twitter and earn Tulip goods for each friend who signs up.</p>
-            <div id="share"><%= root_url %>?ref=<%= @preuser.referral_code %></div>
-            <div id="share">FB<br>SHARE</div>
-            <div id="share">TWTR<br>SHARE</div>
+            <div>
+                <h1>Share Tulip, and get rewarded.</h1>
+                <p>Go tell your friends all about it.</p>
+                <div id="share"><%= root_url %>?ref=<%= @preuser.referral_code %></div>
+                <div id="share"><%= image_tag('email-icon.png') %></div>
+                <div id="share"><%= image_tag('facebook-icon.png') %></div>
+                <div id="share"><%= image_tag('twitter-icon.png') %></div>
+            </div>
         </div>
     </div>
-</div>
 
-<% 
-    stops = Preuser::REFERRAL_STEPS
-    found = nil
-    stops.reverse_each { |stop|
-        if stop["count"] <= @count and !found
-            stop["selected"] = true
-            found = stop
-        else
-            stop["selected"] = false
-        end
-    }   
- %>
-<div class="prizes <% if found %>prize-<%= found["class"] %><% end %>">
+    <% 
+        stops = Preuser::REFERRAL_STEPS
+        found = nil
+        stops.reverse_each { |stop|
+            if stop["count"] <= @count and !found
+                stop["selected"] = true
+                found = stop
+            else
+                stop["selected"] = false
+            end
+        }   
+     %>
+
+
+
+     <div class="progress">
+            <% stops.each do |stop| %>
+                <div class="counter <% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>selected<% end %> <% if stop["class"] == 'five' %>final<% end %>"><p><%= stop["count"] %></p><% if stop["count"] > 5%><% end %></div>
+            <% end %>
+    </div>
+
+
+    <div class="prizes <% if found %>prize-<%= found["class"] %><% end %>">
         <ul>
             <% stops.each do |stop| %>
                 <li class="product <% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
@@ -34,34 +59,11 @@
                     <div class="tooltip">
                         <img src="<%= ActionController::Base.helpers.asset_path(stop["image"]) %>" height="254">
                     </div>
-                    <div class="circle" id="<% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>circleselected<% end %>"><%= stop["count"] %></div>
-                    <div class="line" id="<% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>lineselected<% end %>"></div>
                 </li>
             <% end %>
         </ul>
 
-        <div class="progress">
-            <div class="mover">
-                <div class="bar clearfix"></div>
-            </div>
-        </div>
-
-        <% 
-            words = ''
-            if @count == 1
-                words = 'friend has'
-            else 
-                words = 'friends have'
-            end
-        %>
-
-        <% if @count == 0 %>
-            <p class="place"><span>No</span> friends have joined...Yet!</p>
-            <p class="check">Keep checking</p>
-        <% else %>
-            <p class="place"><span><%= @count %></span> <%= words %> joined</p>
-        <% end %>
-
         <p class="ship">We ship to anywhere in the continental U.S.</p>        
         <a class="policy" href="/privacy-policy" target="_blank">Privacy Policy</a>
-</div>
+    </div>
+</section>

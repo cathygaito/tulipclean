@@ -144,6 +144,10 @@ PREHOME FORM STYLES
 	}	
 }
 
+/**************************************
+PREHOME MEDIA QUERIES
+**************************************/
+
 @media screen and (min-width: 660px) {
 	div.prehero div.text {
 		max-width: 68% !important;
@@ -195,6 +199,113 @@ PREHOME FORM STYLES
 
 		input#preuser_email {
 			width: 27.5% !important;
+		}
+	}
+}
+
+/**************************************
+REFER STYLES
+**************************************/
+
+header#refhome{
+	height: 55px;
+	color: #fff;
+	background-color: #2D4974;
+	font-size: 15px;
+	margin: 0;
+	padding: 15px 0 17.5px 0;
+	display: block;
+	position: relative;
+	text-align: center;
+	box-sizing: border-box;
+
+	#placenum {
+		color: #00B7DE;
+		font-size: 20px;
+		margin: 0;
+		padding: 0;
+	}
+
+	.place {
+		display: inline-block;
+		display: absolute;
+		text-transform: uppercase;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+section#refer {
+	margin: 0 auto;
+	padding: 0;
+	width: 85%;
+	text-align: center;
+	
+	.progress {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		background-color: #E3F6FA;
+		border: 1px #2D4974 solid;
+		opacity: 0.4;
+		border-radius: 15px;
+
+		p {
+			margin: 0;
+			padding: 0;
+			color: #2D4974;
+		}
+
+		div.counter {
+			position: relative;
+			background: #E3F6FA;
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			width: 24.5%;
+
+		}
+		div.counter:after, div.counter:before {
+			left: 100%;
+			top: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			z-index: 100;
+		}
+		div.counter:after {
+			border-color: rgba(255, 165, 0, 0);
+			border-left-color: #E3F6FA;
+			border-width: 9px;
+			margin-top: -9px;
+			z-index: 100;
+		}
+		div.counter:before {
+			border-color: rgba(45, 73, 116, 0);
+			border-left-color: #2D4974;
+			border-width: 10px;
+			margin-top: -10px;
+			z-index: 100;
+		}
+		div.final:before, div.final:after {
+			border: none;
+		}
+	}
+
+	.prizes {
+		
+		ul {
+			list-style: none;
+			margin: 0;
+				padding: 0;
+
+			li {
+				margin: 0;
+				padding: 0;
+			}
 		}
 	}
 }
