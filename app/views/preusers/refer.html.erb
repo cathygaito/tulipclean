@@ -9,7 +9,7 @@
     %>
 
     <% if @count == 0 %>
-        <p class="place"><span>No</span> friends R! Keep checking</p>
+        <p class="place"><span>No</span> friends refered! Keep checking.</p>
     <% else %>
         <p class="place"><span id="placenum"><%= @count %></span> <%= words %></p>
     <% end %>
@@ -45,9 +45,11 @@
 
 
      <div class="progress">
+            <div id="<% if found != nil %>first<% end %>"></div>
             <% stops.each do |stop| %>
                 <div class="counter <% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>selected<% end %> <% if stop["class"] == 'five' %>final<% end %>"><p><%= stop["count"] %></p><% if stop["count"] > 5%><% end %></div>
             <% end %>
+            <div id="<% if found && found["count"] === 50 %>close<% end %>"></div>
     </div>
 
 
