@@ -64,7 +64,7 @@ PREHOME HERO STYLES
 		padding: 0;
 		font-family: "Gotham SSm A", "Gotham SSm B";
 		font-style: normal;
-		font-weight: 400;
+		font-weight: 300;
 		display: inline-block;
 
 		span {
@@ -236,6 +236,9 @@ REFER HEADER STYLES
 			font-size: 20px;
 			margin: 0;
 			padding: 0;
+			font-family: "Gotham SSm A", "Gotham SSm B";
+			font-style: normal;
+			font-weight: 700;
 		}
 
 		.place {
@@ -244,6 +247,9 @@ REFER HEADER STYLES
 			text-transform: uppercase;
 			margin: 0;
 			padding: 0;
+			font-family: "Gotham SSm A", "Gotham SSm B";
+			font-style: normal;
+			font-weight: 700;
 		}
 	}
 
@@ -260,20 +266,26 @@ REFER HERO STYLES
 
 		h1 {
 			margin: 0;
-			padding: 2.5% 0 0 0;
+			padding: 45px 0 0 0;
 			font-size: 60px;
+			font-family: "Sentinel SSm A", "Sentinel SSm B";
+			font-style: normal;
+			font-weight: 100;
 		}
 
 		p {
-			margin: 5% 0 3% 0;
+			margin: 50px 0 40px 0;
 			padding: 0;
 			font-size: 20px;
 			color: #00B7DE;
+			font-family: "Gotham SSm A", "Gotham SSm B";
+			font-style: normal;
+			font-weight: 500;
 		}
 
 		img {
 			margin: 0 0 -23px 0;
-			padding: 20px 0 0 0;
+			padding: 20px 5px 0 5px;
 			width: 60px;
 		}
 
@@ -314,6 +326,9 @@ REFER PRIZE PROGRESS STYLES
 				margin: 1px 0 0 0;
 				padding: 0;
 				color: #2D4974;
+				font-family: "Gotham SSm A", "Gotham SSm B";
+				font-style: normal;
+				font-weight: 500;
 			}
 
 			div.counter {
