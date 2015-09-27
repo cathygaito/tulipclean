@@ -1,71 +1,74 @@
-<header id="refhome">
-    <% 
-        words = ''
-        if @count == 1
-            words = 'friend refered. See rewards below.'
-        else 
-            words = 'friends refered. See rewards below.'
-        end
-    %>
-
-    <% if @count == 0 %>
-        <p class="place"><span>No</span> friends refered! Keep checking.</p>
-    <% else %>
-        <p class="place"><span id="placenum"><%= @count %></span> <%= words %></p>
-    <% end %>
-</header>
-
 <section id="refer">
-    <div class="hero">
-        <div>
+    <header id="refhome">
+        <% 
+            words = ''
+            if @count == 1
+                words = 'friend refered. See rewards below.'
+            else 
+                words = 'friends refered. See rewards below.'
+            end
+        %>
+
+        <% if @count == 0 %>
+            <p class="place"><span>No</span> friends refered! Keep checking.</p>
+        <% else %>
+            <p class="place"><span id="placenum"><%= @count %></span> <%= words %></p>
+        <% end %>
+    </header>
+
+
+        <div class="hero">
             <div>
-                <h1>Share Tulip, and get rewarded.</h1>
-                <p>Go tell your friends all about it.</p>
-                <div id="share"><%= root_url %>?ref=<%= @preuser.referral_code %></div>
-                <div id="share"><%= image_tag('email-icon.png') %></div>
-                <div id="share"><%= image_tag('facebook-icon.png') %></div>
-                <div id="share"><%= image_tag('twitter-icon.png') %></div>
+                <div>
+                    <h1>Share Tulip, and get rewarded.</h1>
+                    <p>Go tell your friends all about it.</p>
+                    <div class="share"><p><%= root_url %>?ref=<%= @preuser.referral_code %></p></div>
+                    <div class="share"><%= image_tag('email-icon.png') %></div>
+                    <div class="share"><%= image_tag('facebook-icon.png') %></div>
+                    <div class="share"><%= image_tag('twitter-icon.png') %></div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <% 
-        stops = Preuser::REFERRAL_STEPS
-        found = nil
-        stops.reverse_each { |stop|
-            if stop["count"] <= @count and !found
-                stop["selected"] = true
-                found = stop
-            else
-                stop["selected"] = false
-            end
-        }   
-     %>
+    <section id="prizehero">
+        <% 
+            stops = Preuser::REFERRAL_STEPS
+            found = nil
+            stops.reverse_each { |stop|
+                if stop["count"] <= @count and !found
+                    stop["selected"] = true
+                    found = stop
+                else
+                    stop["selected"] = false
+                end
+            }   
+         %>
+
+         <p>FRIENDS INVITED</p>
+
+         <div class="progress">
+                <div id="<% if found != nil %>first<% end %>"></div>
+                <% stops.each do |stop| %>
+                    <div class="counter <% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>selected<% end %> <% if stop["class"] == 'five' %>final<% end %>"><p><%= stop["count"] %></p><% if stop["count"] > 5%><% end %></div>
+                <% end %>
+                <div id="<% if found && found["count"] === 50 %>close<% end %>"></div>
+        </div>
 
 
+        <div class="prizes <% if found %>prize-<%= found["class"] %><% end %>">
+            <ul>
+                <% stops.each do |stop| %>
+                    <li class="product <% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
+                        <p><%= stop["html"].html_safe %></p>
+                        <div class="tooltip">
+                            <img src="<%= ActionController::Base.helpers.asset_path(stop["image"]) %>" height="254">
+                        </div>
+                    </li>
+                <% end %>
+            </ul>
 
-     <div class="progress">
-            <div id="<% if found != nil %>first<% end %>"></div>
-            <% stops.each do |stop| %>
-                <div class="counter <% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>selected<% end %> <% if stop["class"] == 'five' %>final<% end %>"><p><%= stop["count"] %></p><% if stop["count"] > 5%><% end %></div>
-            <% end %>
-            <div id="<% if found && found["count"] === 50 %>close<% end %>"></div>
-    </div>
-
-
-    <div class="prizes <% if found %>prize-<%= found["class"] %><% end %>">
-        <ul>
-            <% stops.each do |stop| %>
-                <li class="product <% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
-                    <p><%= stop["html"].html_safe %></p>
-                    <div class="tooltip">
-                        <img src="<%= ActionController::Base.helpers.asset_path(stop["image"]) %>" height="254">
-                    </div>
-                </li>
-            <% end %>
-        </ul>
-
-        <p class="ship">We ship to anywhere in the continental U.S.</p>        
-        <a class="policy" href="/privacy-policy" target="_blank">Privacy Policy</a>
-    </div>
+            <p class="ship">We ship to anywhere in the continental U.S.</p>        
+            <a class="policy" href="/privacy-policy" target="_blank">Privacy Policy</a>
+        </div>
+    </section>
 </section>

@@ -207,168 +207,228 @@ PREHOME MEDIA QUERIES
 REFER STYLES
 **************************************/
 
-header#refhome{
-	height: 55px;
-	color: #fff;
-	background-color: #2D4974;
-	font-size: 15px;
+section#refer{ 
+	background-color: #fff;
 	margin: 0;
-	padding: 15px 0 17.5px 0;
-	display: block;
-	position: relative;
-	text-align: center;
-	box-sizing: border-box;
-
-	#placenum {
-		color: #00B7DE;
-		font-size: 20px;
-		margin: 0;
-		padding: 0;
-	}
-
-	.place {
-		display: inline-block;
-		display: absolute;
-		text-transform: uppercase;
-		margin: 0;
-		padding: 0;
-	}
-}
-
-section#refer {
-	margin: 0 auto;
 	padding: 0;
-	width: 85%;
-	text-align: center;
-	
-	.progress {
-		width: 100%;
-		height: 20px;
+
+/**************************************
+REFER HEADER STYLES
+**************************************/
+
+	header#refhome{
+		height: 55px;
+		color: #fff;
+		background-color: #2D4974;
+		font-size: 15px;
+		margin: 0;
+		padding: 15px 0 17.5px 0;
+		display: block;
+		position: relative;
+		text-align: center;
+		box-sizing: border-box;
+
+		#placenum {
+			color: #00B7DE;
+			font-size: 20px;
+			margin: 0;
+			padding: 0;
+		}
+
+		.place {
+			display: inline-block;
+			display: absolute;
+			text-transform: uppercase;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+/**************************************
+REFER HERO STYLES
+**************************************/
+
+	.hero {
+		background-color: #E3F6FA;
 		margin: 0;
 		padding: 0;
-		border: 1px #2D4974 solid;
-		border-radius: 15px;
+		text-align: center;
+		height: 375px;
+
+		h1 {
+			margin: 0;
+			padding: 2.5% 0 0 0;
+			font-size: 60px;
+		}
 
 		p {
-			margin: 1px 0 0 0;
+			margin: 5% 0 3% 0;
 			padding: 0;
-			color: #2D4974;
+			font-size: 20px;
+			color: #00B7DE;
 		}
 
-		div.counter {
-			position: relative;
-			background: #E3F6FA;
+		img {
+			margin: 0 0 -23px 0;
+			padding: 20px 0 0 0;
+			width: 60px;
+		}
+
+		.share {
 			display: inline-block;
 			margin: 0;
 			padding: 0;
-			width: 24.5%;
-			height: 20px;
-		}
-		div.counter:after, div.counter:before {
-			left: 100%;
-			top: 50%;
-			border: solid transparent;
-			content: " ";
-			height: 0;
-			width: 0;
-			position: absolute;
-			pointer-events: none;
-			z-index: 100;
-		}
-		div.counter:after {
-			border-color: rgba(255, 165, 0, 0);
-			border-left-color: #E3F6FA;
-			border-width: 9px;
-			margin-top: -9px;
-			z-index: 100;
-		}
-		div.counter:before {
-			border-color: rgba(45, 73, 116, 0);
-			border-left-color: #2D4974;
-			border-width: 10px;
-			margin-top: -10px;
-			z-index: 100;
-		}
-		div.final:before, div.final:after {
-			border: none;
-		}
 
-		div.selected {
-			position: relative;
-			background: #2D4974;
-			display: inline-block;
-			margin: 0 0 0 -2px;
-			padding: 0;
-			width: 24.5%;
-			opacity: 1.4;
-		}
-		div.selected:after, div.selected:before {
-			left: 100%;
-			top: 50%;
-			border: solid transparent;
-			content: " ";
-			height: 0;
-			width: 0;
-			position: absolute;
-			pointer-events: none;
-			z-index: 100;
-		}
-		div.selected:after {
-			border-color: rgba(255, 165, 0, 0);
-			border-left-color: #2D4974;
-			border-width: 9px;
-			margin-top: -9px;
-			z-index: 100;
-		}
-		div.selected:before {
-			border-color: rgba(45, 73, 116, 0);
-			border-left-color: #E3F6FA;
-			border-width: 10px;
-			margin-top: -10px;
-			z-index: 100;
-		}
-		div.selected p {
-			color: #fff;
-		}
-		div#first {
-			display: block;
-			background-color: #2D4974;
-			position: relative;
-			width: 20px;
-			height: 20px;
-			margin: 0 0 -20px -1px;
-			padding: 0;
-			border-radius: 15px;
-		}
-		div#close {
-			display: inline-block;
-			background-color: #2D4974;
-			position: relative;
-			width: 20px;
-			height: 20px;
-			margin: -20px -1px 0 -1px;
-			padding: 0 0 0 10px;
-			border-radius: 15px;
-			float: right;
-			z-index: 101;
+			p {
+				background-color: #fff;
+				font-size: 20px;
+				color: #2D4974;
+				margin: 0;
+				padding: 20px 30px;
+			}
 		}
 	}
 
-	.prizes {
-		border: 1px black dashed;
-		width: 100%;
+/**************************************
+REFER PRIZE PROGRESS STYLES
+**************************************/
 
-		ul {
-			list-style: none;
+	section#prizehero {
+		margin: 0 auto;
+		padding: 0;
+		width: 85%;
+		text-align: center;
+		
+		.progress {
+			width: 100%;
+			height: 20px;
 			margin: 0;
+			padding: 0;
+			border: 1px #00B7DE solid;
+			border-radius: 15px;
+
+			p {
+				margin: 1px 0 0 0;
+				padding: 0;
+				color: #2D4974;
+			}
+
+			div.counter {
+				position: relative;
+				background: #fff;
+				display: inline-block;
+				margin: 0;
+				padding: 0;
+				width: 24.5%;
+				height: 20px;
+			}
+			div.counter:after, div.counter:before {
+				left: 100%;
+				top: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+				z-index: 100;
+			}
+			div.counter:after {
+				border-color: rgba(255, 165, 0, 0);
+				border-left-color: #fff;
+				border-width: 9px;
+				margin-top: -9px;
+				z-index: 100;
+			}
+			div.counter:before {
+				border-color: rgba(45, 73, 116, 0);
+				border-left-color: #2D4974;
+				border-width: 10px;
+				margin-top: -10px;
+				z-index: 100;
+			}
+			div.final:before, div.final:after {
+				border: none;
+			}
+
+			div.selected {
+				position: relative;
+				background: #2D4974;
+				display: inline-block;
+				margin: 0 0 0 -2px;
+				padding: 0;
+				width: 24.5%;
+				opacity: 1.4;
+			}
+			div.selected:after, div.selected:before {
+				left: 100%;
+				top: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+				z-index: 100;
+			}
+			div.selected:after {
+				border-color: rgba(255, 165, 0, 0);
+				border-left-color: #2D4974;
+				border-width: 9px;
+				margin-top: -9px;
+				z-index: 100;
+			}
+			div.selected:before {
+				border-color: rgba(45, 73, 116, 0);
+				border-left-color: #E3F6FA;
+				border-width: 10px;
+				margin-top: -10px;
+				z-index: 100;
+			}
+			div.selected p {
+				color: #fff;
+			}
+			div#first {
+				display: block;
+				background-color: #2D4974;
+				position: relative;
+				width: 20px;
+				height: 20px;
+				margin: 0 0 -20px -1px;
+				padding: 0;
+				border-radius: 15px;
+			}
+			div#close {
+				display: inline-block;
+				background-color: #2D4974;
+				position: relative;
+				width: 20px;
+				height: 20px;
+				margin: -20px -1px 0 -1px;
+				padding: 0 0 0 10px;
+				border-radius: 15px;
+				float: right;
+				z-index: 101;
+			}
+		}
+
+/**************************************
+REFER PRIZE STYLES
+**************************************/
+
+		.prizes {
+			width: 100%;
+
+			ul {
+				list-style: none;
+				margin: 0;
 				padding: 0;
 				width: 100%;
 
-			li {
-				margin: 0 auto;
-				padding: 0;
-				display: inline-block;
-				width: 24%;
+				li {
+					margin: 0 auto;
+					padding: 0;
+				}
 			}
 		}
 	}
