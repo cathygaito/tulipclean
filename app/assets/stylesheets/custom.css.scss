@@ -579,6 +579,25 @@ REFER PRIZE STYLES
 	}
 }
 
+@media screen and (min-width: 740px) {
+	section#refer {
+
+		.hero {
+			height: 375px;
+
+			h1 {
+				padding: 60px 0 25px 0;
+				font-size: 60px;
+			}
+
+			p {
+				margin: 4.5% 0;
+				padding: 0;
+			}
+		}
+	}
+}
+
 @media screen and (min-width: 1080px) {
 	section#refer {
 

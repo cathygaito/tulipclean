@@ -4,6 +4,7 @@ class Preuser < ActiveRecord::Base
     validates :referral_code, :uniqueness => true
 
     before_create :create_referral_code
+    before_save { self.email.downcase! }
 
     REFERRAL_STEPS = [
         {
