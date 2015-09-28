@@ -1,10 +1,10 @@
 class Preuser < ActiveRecord::Base
-
+    before_save { self.email.downcase! }
+    
     validates :email, :uniqueness => true, :format => { :with => /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/i, :message => "Invalid email format." } 
     validates :referral_code, :uniqueness => true
 
     before_create :create_referral_code
-    before_create { self.email.downcase! }
 
     REFERRAL_STEPS = [
         {
