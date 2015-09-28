@@ -547,10 +547,6 @@ REFER PRIZE STYLES
 
 @media screen and (min-width: 480px) {
 	section#refer {
-		
-		.mobileonly {
-			display: inline-block !important;
-		}
 
 		.progress {
 			display: block !important;
@@ -579,7 +575,7 @@ REFER PRIZE STYLES
 	}
 }
 
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 892px) {
 	section#refer {
 
 		.hero {
@@ -598,7 +594,7 @@ REFER PRIZE STYLES
 	}
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1081px) {
 	section#refer {
 
 		section#prizehero {
@@ -628,6 +624,21 @@ REFER PRIZE STYLES
 
 				p {
 					display: inline-block;
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 1106px) {
+		section#refer {
+
+			section#prizehero {
+				.prizes {
+					ul{
+						li{
+							max-width: 24%;
+						}
+					}
 				}
 			}
 		}

@@ -17,18 +17,18 @@
     </header>
 
 
-        <div class="hero">
+    <div class="hero">
+        <div>
             <div>
-                <div>
-                    <h1>Share Tulip, and get rewarded.</h1>
-                    <p>Go tell your friends all about it.</p>
-                    <div class="share mobileonly"><p><%= root_url %>?ref=<%= @preuser.referral_code %></p></div>
-                    <div class="share"><%= image_tag('email-icon.png') %></div>
-                    <div class="share"><%= image_tag('facebook-icon.png') %></div>
-                    <div class="share"><%= image_tag('twitter-icon.png') %></div>
-                </div>
+                <h1>Share Tulip, and get rewarded.</h1>
+                <p>Go tell your friends all about it.</p>
+                <div class="share mobileonly"><p><%= root_url %>?ref=<%= @preuser.referral_code %></p></div>
+                <div class="share"><%= image_tag('email-icon.png') %></div>
+                <div class="share"><%= image_tag('facebook-icon.png') %></div>
+                <div class="share"><%= image_tag('twitter-icon.png') %></div>
             </div>
         </div>
+    </div>
 
     <section id="prizehero">
         <% 
@@ -65,7 +65,7 @@
                         </div>
                         <p class="prizedesc"><%= stop["html"].html_safe %></p>
                         <div class="circle <% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>checked<% end %>"><% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %><%= image_tag( stop["check"] ) %><% end %></div>
-                    </li><br class="mobileonly">
+                    </li>
                 <% end %>
             </ul>
         </div>
