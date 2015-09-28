@@ -10,25 +10,29 @@ class Preuser < ActiveRecord::Base
             'count' => 5,
             "html" => "Toothbrush",
             "class" => "two",
-            "image" =>  "black.jpg"
+            "image" =>  "black.jpg",
+            "check" => "check-icon-green.png"
         },
         {
             'count' => 10,
             "html" => "Toothpaste &amp; Floss",
             "class" => "three",
-            "image" => "gray.jpg"
+            "image" =>  "black.jpg",
+            "check" => "check-icon-yellow.png"
         },
         {
             'count' => 25,
             "html" => "6-Month Toothpaste Supply",
             "class" => "four",
-            "image" => "orange.jpg"
+            "image" =>  "black.jpg",
+            "check" => "check-icon-coral.png"
         },
         {
             'count' => 50,
             "html" => "1-Year Toothpaste Supply",
             "class" => "five",
-            "image" => "mint.jpg"
+            "image" =>  "black.jpg",
+            "check" => "check-icon-orange.png"
         }
     ]
 

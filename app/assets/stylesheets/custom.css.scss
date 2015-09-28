@@ -323,15 +323,15 @@ REFER PRIZE PROGRESS STYLES
 
 		.progress {
 			width: 100%;
-			height: 20px;
+			height: 26px;
 			margin: 0;
 			padding: 0;
-			border: 1px #00B7DE solid;
+			border: 1px #2D4974 solid;
 			border-radius: 15px;
 
 			p {
 				margin: 1px 0 0 0;
-				padding: 0;
+				padding: 3px 0 3px 0;
 				color: #00B7DE;
 				font-size: 15px;
 				font-family: "Gotham SSm A", "Gotham SSm B";
@@ -346,7 +346,7 @@ REFER PRIZE PROGRESS STYLES
 				margin: 0;
 				padding: 0;
 				width: 24.5%;
-				height: 20px;
+				height: 26px;
 			}
 			div.counter:after, div.counter:before {
 				left: 100%;
@@ -362,15 +362,15 @@ REFER PRIZE PROGRESS STYLES
 			div.counter:after {
 				border-color: rgba(255, 255, 255, 0);
 				border-left-color: #ffffff;
-				border-width: 9px;
-				margin-top: -9px;
+				border-width: 12px;
+				margin-top: -12px;
 				z-index: 100;
 			}
 			div.counter:before {
 				border-color: rgba(45, 73, 116, 0);
-				border-left-color: #00B7DE;
-				border-width: 10px;
-				margin-top: -10px;
+				border-left-color: #2D4974;
+				border-width: 13px;
+				margin-top: -13px;
 				z-index: 100;
 			}
 			div.final:before, div.final:after {
@@ -379,9 +379,9 @@ REFER PRIZE PROGRESS STYLES
 
 			div.selected {
 				position: relative;
-				background: #2D4974;
+				background: #00B7DE;
 				display: inline-block;
-				margin: 0 0 0 -2px;
+				margin: 0 0 0 -3px;
 				padding: 0;
 				width: 24.5%;
 				opacity: 1.4;
@@ -399,38 +399,38 @@ REFER PRIZE PROGRESS STYLES
 			}
 			div.selected:after {
 				border-color: rgba(255, 165, 0, 0);
-				border-left-color: #2D4974;
-				border-width: 9px;
-				margin-top: -9px;
+				border-left-color: #00B7DE;
+				border-width: 12px;
+				margin-top: -12px;
 				z-index: 100;
 			}
 			div.selected:before {
 				border-color: rgba(45, 73, 116, 0);
 				border-left-color: #E3F6FA;
-				border-width: 10px;
-				margin-top: -10px;
+				border-width: 13px;
+				margin-top: -13px;
 				z-index: 100;
 			}
 			div.selected p {
-				color: #00B7DE;
+				color: #fff;
 			}
 			div#first {
 				display: block;
-				background-color: #2D4974;
+				background-color: #00B7DE;
 				position: relative;
-				width: 20px;
-				height: 20px;
-				margin: 0 0 -20px -1px;
+				width: 26px;
+				height: 26px;
+				margin: 0 0 -26px -1px;
 				padding: 0;
 				border-radius: 15px;
 			}
 			div#close {
 				display: inline-block;
-				background-color: #2D4974;
+				background-color: #00B7DE;
 				position: relative;
-				width: 20px;
-				height: 20px;
-				margin: -20px -1px 0 -1px;
+				width: 26px;
+				height: 26px;
+				margin: -26px -1px 0 -1px;
 				padding: 0 0 0 10px;
 				border-radius: 15px;
 				float: right;
@@ -447,13 +447,92 @@ REFER PRIZE STYLES
 
 			ul {
 				list-style: none;
-				margin: 0;
+				margin: 20px 0 0 0;
 				padding: 0;
-				width: 100%;
+				display: inline-block;
 
 				li {
-					margin: 0 auto;
+					margin: 5px 0;
 					padding: 0;
+					border: 2px #2D4974 solid;
+					max-width: 70%;
+					display: inline-block;
+					border-radius: 7px;
+					opacity: 0.4;
+
+					div.prizephoto { 
+						width: 85%;
+						height: 85%;
+						margin: 0 auto;
+
+						img {
+							max-width: 100%;
+							height: auto;
+							margin: 0;
+							padding: 0;
+						}
+					}
+
+					h2.prizecount {
+						color: #2D4974;
+						position: relative;
+						font-size: 40px;
+						font-family: "Gotham SSm A", "Gotham SSm B";
+						font-style: normal;
+						font-weight: 400;
+						margin: 30px 0 -30px 0;
+						padding: 0;
+						z-index: 100;
+					}
+					p.prizedesc {
+						color: #2D4974;
+						font-size: 20px;
+						font-family: "Gotham SSm A", "Gotham SSm B";
+						font-style: normal;
+						font-weight: 400;
+						margin: -30px 0 30px 0;
+						padding: 0;
+						z-index: 100;
+					}
+					div.circle {
+						width: 2.5em;
+						height: 2.5em;
+						border: 2px #2D4974 solid;
+						margin: 0 auto 25px;
+						padding: 0;
+						border-radius: 100%;
+					}
+
+					div.circle img {
+						width: 2.5em;
+						height: 2.5em;
+					}
+				}
+
+				li.selected {
+					opacity: 1;
+					border: none;
+				}
+
+				li.selected:nth-of-type(1n) {
+					background-color: #98E02C;
+				}
+
+				li.selected:nth-of-type(2n) {
+					background-color: #FDDA31;
+				}
+
+				li.selected:nth-of-type(3n) {
+					background-color: #FFA691;
+				}
+
+				li.selected:nth-of-type(4n) {
+					background-color: #FC7F3A;
+				}
+
+				.checked {
+					background-color: #fff;
+					border: 2px #fff solid !important;
 				}
 			}
 		}
