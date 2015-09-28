@@ -58,7 +58,7 @@
         <div class="prizes <% if found %>prize-<%= found["class"] %><% end %>">
             <ul>
                 <% stops.each do |stop| %>
-                    <li class="product <% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>selected<% end %><% if stop["class"] == 'five' %> last<% end %>">
+                    <li class="<% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>selected<% end %><% if stop["class"] == 'five' %> last<% end %>">
                         <h2 class="prizecount"><%= stop["count"] %></h2>
                         <div class="prizephoto">
                             <img src="<%= ActionController::Base.helpers.asset_path(stop["image"]) %>" height="254">
