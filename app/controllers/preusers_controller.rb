@@ -6,7 +6,7 @@ class PreusersController < ApplicationController
 
   def create
   	# Get user to see if they have already signed up
-        @preuser = Preuser.find_by_email(params[:preuser][:email]);
+        @preuser = Preuser.find_by_email(params[:preuser][:email.downcase]);
             
         # If user doesnt exist, make them, and attach referrer
         if @preuser.nil?
