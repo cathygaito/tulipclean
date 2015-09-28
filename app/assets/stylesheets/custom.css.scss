@@ -492,7 +492,7 @@ REFER PRIZE STYLES
 					}
 					p.prizedesc {
 						color: #2D4974;
-						font-size: 20px;
+						font-size: 16px;
 						font-family: "Gotham SSm A", "Gotham SSm B";
 						font-style: normal;
 						font-weight: 400;
@@ -636,7 +636,7 @@ REFER PRIZE STYLES
 					.prizes {
 						ul{
 							li{
-								max-width: 10%;
+								max-width: 20%;
 							}
 						}
 					}
@@ -652,6 +652,10 @@ REFER PRIZE STYLES
 					ul{
 						li{
 							max-width: 24%;
+
+							p.prizedesc {
+								font-size: 20px;
+							}
 						}
 					}
 				}
