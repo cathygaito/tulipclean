@@ -22,7 +22,7 @@
                 <div>
                     <h1>Share Tulip, and get rewarded.</h1>
                     <p>Go tell your friends all about it.</p>
-                    <div class="share"><p><%= root_url %>?ref=<%= @preuser.referral_code %></p></div>
+                    <div class="share mobileonly"><p><%= root_url %>?ref=<%= @preuser.referral_code %></p></div>
                     <div class="share"><%= image_tag('email-icon.png') %></div>
                     <div class="share"><%= image_tag('facebook-icon.png') %></div>
                     <div class="share"><%= image_tag('twitter-icon.png') %></div>
@@ -46,7 +46,7 @@
 
          <p>FRIENDS INVITED</p>
 
-         <div class="progress">
+         <div class="progress mobileonly">
                 <div id="<% if found != nil %>first<% end %>"></div>
                 <% stops.each do |stop| %>
                     <div class="counter <% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>selected<% end %> <% if stop["class"] == 'five' %>final<% end %>"><p><%= stop["count"] %></p><% if stop["count"] > 5%><% end %></div>
@@ -65,7 +65,7 @@
                         </div>
                         <p class="prizedesc"><%= stop["html"].html_safe %></p>
                         <div class="circle <% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>checked<% end %>"><% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %><%= image_tag( stop["check"] ) %><% end %></div>
-                    </li><br>
+                    </li><br class="mobileonly">
                 <% end %>
             </ul>
         </div>

@@ -215,6 +215,10 @@ section#refer{
 	margin: 0;
 	padding: 0;
 
+	.mobileonly {
+		display: none !important;
+	}
+
 /**************************************
 REFER HEADER STYLES
 **************************************/
@@ -262,19 +266,19 @@ REFER HERO STYLES
 		margin: 0;
 		padding: 0;
 		text-align: center;
-		height: 375px;
+		height: 275px;
 
 		h1 {
 			margin: 0;
 			padding: 45px 0 0 0;
-			font-size: 60px;
+			font-size: 45px;
 			font-family: "Sentinel SSm A", "Sentinel SSm B";
 			font-style: normal;
 			font-weight: 100;
 		}
 
 		p {
-			margin: 50px 0 40px 0;
+			margin: 10px 0 -5px 0;
 			padding: 0;
 			font-size: 20px;
 			color: #00B7DE;
@@ -345,7 +349,7 @@ REFER PRIZE PROGRESS STYLES
 				display: inline-block;
 				margin: 0;
 				padding: 0;
-				width: 24.5%;
+				width: 23%;
 				height: 26px;
 			}
 			div.counter:after, div.counter:before {
@@ -383,8 +387,10 @@ REFER PRIZE PROGRESS STYLES
 				display: inline-block;
 				margin: 0 0 0 -3px;
 				padding: 0;
-				width: 24.5%;
 				opacity: 1.4;
+			}
+			div.selected:nth-of-type(1n) {
+				max-width: 23%;
 			}
 			div.selected:after, div.selected:before {
 				left: 100%;
@@ -418,7 +424,7 @@ REFER PRIZE PROGRESS STYLES
 				display: block;
 				background-color: #00B7DE;
 				position: relative;
-				width: 26px;
+				width: 200px;
 				height: 26px;
 				margin: 0 0 -26px -1px;
 				padding: 0;
@@ -533,6 +539,76 @@ REFER PRIZE STYLES
 				.checked {
 					background-color: #fff;
 					border: 2px #fff solid !important;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 480px) {
+	section#refer {
+		
+		.mobileonly {
+			display: inline-block !important;
+		}
+
+		.progress {
+			display: block !important;
+		}
+			
+		.hero {
+			height: 325px;
+
+			h1 {
+				padding: 45px 0 5px 0;
+				font-size: 60px;
+			}
+
+			p {
+				margin: 10px 0 0 0;
+				padding: 0;
+			}
+
+			.share {
+
+				p {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 660px) {
+	section#refer {
+
+		section#prizehero {
+
+			.progress {
+
+				div.counter {
+					width: 24.5%;
+				}
+			}
+		}
+
+		.hero {
+			height: 375px;
+
+			h1 {
+				padding: 60px 0 25px 0;
+				font-size: 60px;
+			}
+
+			p {
+				margin: 2.5% 0;
+				padding: 0;
+			}
+
+			.share {
+
+				p {
+					display: inline-block;
 				}
 			}
 		}
