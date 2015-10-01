@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 if Rails.application.config.ended
   root 'static_pages#home'
 else
+  get 'prelaunch' => 'static_pages#prehome'
+  get '/', to: redirect('/prelaunch')
   root 'static_pages#prehome'
 end
 
@@ -31,8 +33,5 @@ end
   post '/orders/:id' => 'orders#payment'
 
   get 'static_pages/home'
-
-  #get 'coming_soon' => 'static_pages#prehome'
-  #get '/', to: redirect('/coming_soon')
   
 end
