@@ -261,6 +261,20 @@ PREHOME MEDIA QUERIES
 	}
 }
 
+@media screen and (min-width: 1475px) {
+	form.new_preuser {
+
+		input::-webkit-input-placeholder:after {
+			left: 3em !important;
+			top: 47% !important;
+		}
+		input:-moz-input-placeholder:after {
+			left: 3em !important;
+			top: 47% !important;
+		}
+	}
+}
+
 /**************************************
 REFER STYLES
 **************************************/
