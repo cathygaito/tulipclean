@@ -20,8 +20,8 @@
     <div class="hero">
         <div>
             <div>
-                <h1>Share Tulip, and get rewarded.</h1>
-                <p>Go tell your friends all about it.</p>
+                <h1>Like free stuff? Get rewarded.</h1>
+                <p>Tell your friends about Tulip and get rewarded. Plus you'll avoid having to tell them they have food in their teeth.</p>
                 <div class="share mobileonly"><p><%= root_url %>?ref=<%= @preuser.referral_code %></p></div>
                 <div class="share"><%= mail_to "", image_tag('email-icon.png'), subject: "Gotta check out Tulip!", body: "You've got to check out Tulip! They're changing the way you brush your teeth.\r\n\r\nCheck out this link: #{root_url}" + "?ref=" + "#{@preuser.referral_code} to preregister and get free stuff!" %></div>
                 <div class="share"><%= link_to image_tag('facebook-icon.png'), "https://www.facebook.com/dialog/feed?app_id=809985155766136&display=popup&caption=Tulip%20is%20coming&description=Click%20this%20link%20to%20learn%20more%20and%20get%20free%20stuff%21%20#{root_url}%3Fref%3D#{@preuser.referral_code}&redirect_uri=#{root_url}&link=#{root_url}%3Fref%3D#{@preuser.referral_code}&picture=#{root_url}assets%2Ftulip%2Dregimen%2D7f427e3e15d011e36136ed50e33b8fb0d322f964aad6247eaac15a933014c562%2Epng" %></div>
@@ -54,13 +54,12 @@
                 <div id="<% if found && found["count"] >= 50 %>close<% end %>"></div>
         </div>
 
-
         <div class="prizes <% if found %>prize-<%= found["class"] %><% end %>">
             <ul>
                 <% stops.each do |stop| %>
                     <li class="<% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>selected<% end %><% if stop["class"] == 'five' %> last<% end %>">
                         <h2 class="prizecount"><%= stop["count"] %></h2>
-                        <div class="prizephoto">
+                        <div class="prizephoto <% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>selected<% end %>">
                             <img src="<%= ActionController::Base.helpers.asset_path(stop["image"]) %>" height="254">
                         </div>
                         <p class="prizedesc"><%= stop["html"].html_safe %></p>
