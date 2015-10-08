@@ -1,8 +1,8 @@
 <section id="prehome">
     <div class="prehero">
         <div class="text">
-            <h1>Hey you, with the teeth.</h1>
-            <h2><span>The oral care revolution is near.</span> If it could, your own mouth would kiss you.</h2>
+            <h1>Hey, you with the teeth.</h1>
+            <h2><span>The oral care revolution is near.</span></h2>
             <h2>Be in the know when it gets here. Your don't even have to slip us a $20.</h2>
         </div>
         <div class="image">
@@ -13,7 +13,7 @@
     <div>
         <% if !Rails.application.config.ended %>
             <%= form_for @preuser, url: { controller: "preusers", action: "create" }, class: "preform" do |f| %>
-                <%= f.text_field :email, :placeholder => "crown@teethmail.com" %>
+                <%= f.text_field :email, :placeholder => "crown@teethmail.com\n" %>
                 <%= f.hidden_field :referrer_id, value: params[:ref] %>
                 <%= f.submit 'GIVE ME ACCESS', class: "button"%>
             <% end %>
