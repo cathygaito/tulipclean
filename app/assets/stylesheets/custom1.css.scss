@@ -131,7 +131,6 @@ PREHOME FORM STYLES
 			border-radius: 5px;
 			background-color: #D3FFBA;
 			color: #4F6177;
-			border: 1px black solid;
 			font-size: 0.8125em;
 			padding: 19px 30px;
 			letter-spacing: 1px;
@@ -517,15 +516,13 @@ REFER PRIZE STYLES
 					background-color: #F7F3F2;
 					margin: 5px 0;
 					padding: 0 0 25px 0;
-					border: 2px #4F6177 solid;
-					width: 60vw;
-					height: 60vw;
+					width: 70%;
 					display: inline-block;
 					border-radius: 100%;
 					
 
 					div.prizephoto { 
-						height: 70%;
+						height: 40vh;
 						margin: 1em auto 0;
 
 						img {
@@ -551,7 +548,7 @@ REFER PRIZE STYLES
 						font-family: "Gotham SSm A", "Gotham SSm B";
 						font-style: normal;
 						font-weight: 400;
-						margin: -120px 0 -10px 0;
+						margin: -20px 0 -10px 0;
 						padding: 70px 0 0 0;
 						z-index: 100;
 					}
@@ -640,6 +637,22 @@ REFER PRIZE STYLES
 				}
 			}
 		}
+
+		section#prizehero {
+			.prizes {
+				ul{
+					li{
+						width: 40vw;
+						display: block;
+						margin-bottom: 1em;
+
+						p.prizedesc {
+							font-size: 15px;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -659,6 +672,22 @@ REFER PRIZE STYLES
 				padding: 0;
 			}
 		}
+
+		section#prizehero {
+			.prizes {
+				ul{
+					li{
+						width: 35vw;
+						display: block;
+						margin-bottom: 1em;
+
+						p.prizedesc {
+							font-size: 15px;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -671,6 +700,19 @@ REFER PRIZE STYLES
 
 				div.counter {
 					width: 24%;
+				}
+			}
+			.prizes {
+				ul{
+					li{
+						width: 30vw;
+						display: block;
+						margin-bottom: 1em;
+
+						p.prizedesc {
+							font-size: 15px;
+						}
+					}
 				}
 			}
 		}
@@ -708,8 +750,8 @@ REFER PRIZE STYLES
 					.prizes {
 						ul{
 							li{
-								max-width: 24%;
-								max-height: 18.5vw;
+								width: 20vw;
+								display: inline-block;
 
 								p.prizedesc {
 									font-size: 15px;
@@ -728,7 +770,8 @@ REFER PRIZE STYLES
 				.prizes {
 					ul{
 						li{
-							max-width: 24%;
+							width: 20vw;
+							display: inline-block;
 
 							p.prizedesc {
 								font-size: 20px;
