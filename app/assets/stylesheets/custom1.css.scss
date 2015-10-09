@@ -248,12 +248,12 @@ PREHOME MEDIA QUERIES
 		}
 		input::-webkit-input-placeholder:after {
 			content: '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .' !important;
-			left: 2em !important;
+			left: 2.5em !important;
 			top: 40% !important;
 		}
 		input:-moz-input-placeholder:after {
 			content: '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .' !important;
-			left: 2em !important;
+			left: 2.5em !important;
 			top: 40% !important;
 		}
 	}
