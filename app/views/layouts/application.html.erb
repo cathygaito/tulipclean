@@ -6,22 +6,6 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Facebook Conversion Code for Landing Page Signups -->
-	<script>(function() {
-	 var _fbq = window._fbq || (window._fbq = []);
-	 if (!_fbq.loaded) {
-	   var fbds = document.createElement('script');
-	   fbds.async = true;
-	   fbds.src = '//connect.facebook.net/en_US/fbds.js';
-	   var s = document.getElementsByTagName('script')[0];
-	   s.parentNode.insertBefore(fbds, s);
-	   _fbq.loaded = true;
-	 }
-	})();
-	window._fbq = window._fbq || [];
-	window._fbq.push(['track', '6028528631081', {'value':'0.00','currency':'USD'}]);
-	</script>
-	<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6028528631081&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -74,5 +58,21 @@ $(document).ready(function(){
   });
 });
 </script>
+<!-- Facebook Conversion Code for Landing Page Signups -->
+	<script>(function() {
+	 var _fbq = window._fbq || (window._fbq = []);
+	 if (!_fbq.loaded) {
+	   var fbds = document.createElement('script');
+	   fbds.async = true;
+	   fbds.src = '//connect.facebook.net/en_US/fbds.js';
+	   var s = document.getElementsByTagName('script')[0];
+	   s.parentNode.insertBefore(fbds, s);
+	   _fbq.loaded = true;
+	 }
+	})();
+	window._fbq = window._fbq || [];
+	window._fbq.push(['track', '6028528631081', {'value':'0.00','currency':'USD'}]);
+	</script>
+	<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6028528631081&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
 </body>
 </html>

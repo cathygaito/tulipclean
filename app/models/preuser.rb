@@ -23,14 +23,14 @@ class Preuser < ActiveRecord::Base
         },
         {
             'count' => 25,
-            "html" => "6-Month Toothpaste Supply",
+            "html" => "6-Month Supply",
             "class" => "four",
             "image" =>  "tulip-regimen.png",
             "check" => "check-icon-coral.png"
         },
         {
             'count' => 50,
-            "html" => "1-Year Toothpaste Supply",
+            "html" => "1-Year Supply",
             "class" => "five",
             "image" =>  "tulip-regimen.png",
             "check" => "check-icon-orange.png"

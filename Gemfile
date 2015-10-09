@@ -16,6 +16,7 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'bxslider-rails'
 gem 'rails_serve_static_assets'
 gem 'rails_stdout_logging'
+gem 'puma'
 
 group :development, :test do
   gem 'byebug'
