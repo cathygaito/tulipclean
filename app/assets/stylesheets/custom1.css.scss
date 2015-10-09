@@ -34,7 +34,7 @@ PREHOME HERO STYLES
 	}
 
 	div.prehero div.image {
-		margin: 47% 0 0 0;
+		margin: 80% 0 0 0;
 		padding: 0;
 		width: 100%;
 	}
@@ -212,6 +212,31 @@ PREHOME MEDIA QUERIES
 			display: inline-block;
 			width: 35% !important;
 		}
+		input::-webkit-input-placeholder:after {
+			content: ' . . . . . . . . . . . . . . . . . . . . . . . . . .' !important;
+			left: 14px !important;
+			top: 30% !important;
+		}
+		input:-moz-input-placeholder:after {
+			content: ' . . . . . . . . . . . . . . . . . . . . . . . . . .' !important;
+			left: 14px !important;
+			top: 30% !important;
+		}
+	}
+}
+
+@media screen and (min-width: 800px) {
+	form.new_preuser {
+		input::-webkit-input-placeholder:after {
+			content: ' . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .' !important;
+			left: 23px !important;
+			top: 35% !important;
+		}
+		input:-moz-input-placeholder:after {
+			content: ' . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .' !important;
+			left: 23px !important;
+			top: 35% !important;
+		}
 	}
 }
 
@@ -220,6 +245,16 @@ PREHOME MEDIA QUERIES
 
 		input#preuser_email {
 			width: 27.5% !important;
+		}
+		input::-webkit-input-placeholder:after {
+			content: '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .' !important;
+			left: 2em !important;
+			top: 40% !important;
+		}
+		input:-moz-input-placeholder:after {
+			content: '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .' !important;
+			left: 2em !important;
+			top: 40% !important;
 		}
 	}
 }
