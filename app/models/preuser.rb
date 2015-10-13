@@ -9,7 +9,7 @@ class Preuser < ActiveRecord::Base
     REFERRAL_STEPS = [
         {
             'count' => 5,
-            "html" => "Toothbrush",
+            "html" => "Limited Edition Toothbrush",
             "class" => "two",
             "image" =>  "tulip-regimen.png",
             "check" => "check-icon-green.png"
