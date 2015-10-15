@@ -12,28 +12,28 @@ class Preuser < ActiveRecord::Base
             "html" => "Limited Edition Toothbrush",
             "class" => "two",
             "image" =>  "tulip-regimen.png",
-            "check" => "check-icon-green.png"
+            "check" => "check-icon-new-light-blue.png"
         },
         {
             'count' => 10,
             "html" => "Toothpaste &amp; Floss",
             "class" => "three",
             "image" =>  "tulip-regimen.png",
-            "check" => "check-icon-yellow.png"
+            "check" => "check-icon-new-light-blue.png"
         },
         {
             'count' => 25,
             "html" => "6-Month Supply",
             "class" => "four",
             "image" =>  "tulip-regimen.png",
-            "check" => "check-icon-coral.png"
+            "check" => "check-icon-new-light-blue.png"
         },
         {
             'count' => 50,
             "html" => "1-Year Supply",
             "class" => "five",
             "image" =>  "tulip-regimen.png",
-            "check" => "check-icon-orange.png"
+            "check" => "check-icon-new-light-blue.png"
         }
     ]
 
