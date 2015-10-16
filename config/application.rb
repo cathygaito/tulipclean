@@ -22,6 +22,8 @@ module Tulip
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.serve_static_assets = true
     config.ended = false
+
   end
 end
