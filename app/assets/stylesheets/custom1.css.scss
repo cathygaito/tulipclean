@@ -30,14 +30,12 @@ PREHOME HERO STYLES
 	div.prehero {
 		display: block;
 		margin-top: -5%;
-		border: 1px black dashed;
 	}
 
 	div.prehero div.text {
 		margin: 13% auto;
 		width: 100%;
 		text-align: center;
-		border: 1px black dashed;
 
 		div{
 			display: block;
@@ -87,7 +85,7 @@ PREHOME HERO STYLES
 			display: block;
 			position: relative;
 			top: 5em;
-			border: 1px black dashed;
+
 			text-transform: uppercase;
 			font-family: "Gotham SSm A", "Gotham SSm B";
 			font-style: normal;
@@ -115,6 +113,7 @@ PREHOME FORM STYLES
 			border: 1.5px black solid;
 			padding: 0;
 			margin: 0;
+			height: 3em;
 			width: 100%;
 			font-family: "Gotham SSm A", "Gotham SSm B";
 			font-style: normal;
@@ -125,21 +124,23 @@ PREHOME FORM STYLES
 			color: #89A1B9;
 			background-color: #F7F3F2;
 			border: none;
-			text-align: center;
+			text-align: left;
+			padding: 0 0 0 15px;
 		}
 		input:-moz-placeholder {
     		color: #89A1B9;
     		background-color: #F7F3F2;
     		border: none;
-    		text-align: center;
+    		text-align: left;
+    		padding: 0 0 0 15px;
 		}
 
 		input.button {
 			border-radius: 5px;
-			background-color: #D3FFBA;
-			color: #4F6177;
+			background-color: #4F6177;
+			color: #FFFFFF;
 			font-size: 0.8125em;
-			padding: 19px 30px;
+			padding: 19px 50px;
 			letter-spacing: 1px;
 			margin: 35px 0 0 0;
 			display: inline-block;
@@ -193,7 +194,6 @@ PREHOME MEDIA QUERIES
 		
 		clear: left;
 		padding: 0;
-		border: 1px black dashed;
 
 		input#preuser_email {
 			display: inline-block;

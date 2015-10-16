@@ -15,7 +15,7 @@
             <%= form_for @preuser, url: { controller: "preusers", action: "create" }, class: "preform" do |f| %>
                 <%= f.text_field :email, :placeholder => "crown@teethmail.com\n" %>
                 <%= f.hidden_field :referrer_id, value: params[:ref] %>
-                <%= f.submit 'GIVE ME ACCESS', class: "button"%>
+                <%= f.submit 'I WANT IN', class: "button"%>
             <% end %>
         <% end %>
     </div>
