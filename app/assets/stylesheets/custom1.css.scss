@@ -2,7 +2,11 @@
 GENERAL STYLES 
 **************************************/
 body {
-	background-color: #F7F3F2;
+	background: url(tulip_landing.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	color: #4F6177;
 	margin: 0;
 	padding: 0;
@@ -17,6 +21,7 @@ body {
 		padding: 0;
 		max-width: 90%;
 		margin: 0 auto;
+		text-align: center;
 	}
 
 /**************************************
@@ -26,17 +31,20 @@ PREHOME HERO STYLES
 	div.prehero {
 		display: block;
 		margin-top: -5%;
+		border: 1px black dashed;
 	}
 
 	div.prehero div.text {
-		margin: 13% auto 0;
+		margin: 13% auto;
 		width: 100%;
-	}
+		text-align: center;
+		border: 1px black dashed;
 
-	div.prehero div.image {
-		margin: 80% 0 0 0;
-		padding: 0;
-		width: 100%;
+		div{
+			display: block;
+			position: relative;
+			bottom: 4em;
+		}
 	}
 
 	div.prehero div.image img {
@@ -47,7 +55,7 @@ PREHOME HERO STYLES
 
 	div.prehero h1 {
 		font-size: 2.75em;
-		margin: 0 0 0.6em 0;
+		margin: 0;
 		padding: 0;
 		line-height: 1.2;
 		font-family: "Sentinel SSm A", "Sentinel SSm B";
@@ -73,6 +81,14 @@ PREHOME HERO STYLES
 			padding: 0;
 		}
 	}
+	div {
+		h3 {
+			display: block;
+			position: relative;
+			top: 5em;
+			border: 1px black dashed;
+		}
+	}
 
 /**************************************
 PREHOME FORM STYLES
@@ -80,51 +96,36 @@ PREHOME FORM STYLES
 	
 
 	form.new_preuser {
-		position: absolute;
-		top: 55%;
+		position: relative;
+		top: 0;
 		width: 100%;
 		padding-top: 5%;
+		text-align: center;
 
 		input#preuser_email {
 			font-size: 1.125em;
-			background-color: #F7F3F2;
-			border: none;
-			padding: 0 0 7px;
+			background-color: transparent;
+			border-radius: 5px;
+			border: 1.5px black solid;
+			padding: 0;
 			margin: 0;
 			width: 100%;
 			font-family: "Gotham SSm A", "Gotham SSm B";
 			font-style: normal;
 			font-weight: 400;
-		}
-		input::-webkit-input-placeholder:after {
-			content: '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .';
-			position: absolute;
-			bottom: 2px;
-			left: -3px;
-			height: 1px;
-			width: 50%;
-			top: 25%;
-			color: #2D4974;
-		}
-		input:-moz-input-placeholder:after {
-			content: '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .';
-			position: absolute;
-			bottom: 2px;
-			left: -3px;
-			height: 1px;
-			width: 50%;
-			top: 25%;
-			color: #2D4974;
+			text-align: center;
 		}
 		input::-webkit-input-placeholder {
 			color: #89A1B9;
 			background-color: #F7F3F2;
 			border: none;
+			text-align: center;
 		}
 		input:-moz-placeholder {
     		color: #89A1B9;
     		background-color: #F7F3F2;
     		border: none;
+    		text-align: center;
 		}
 
 		input.button {
@@ -135,29 +136,19 @@ PREHOME FORM STYLES
 			padding: 19px 30px;
 			letter-spacing: 1px;
 			margin: 35px 0 0 0;
-			display: block;
+			display: inline-block;
 		}
 	}
 }
 
 @media screen and (min-width: 480px) {
 	div.prehero div.text {
-		max-width: 55%;
-		float: left;
-		display: inline-block;
-	}
-
-	div.prehero div.image {
-		max-width: 45%;
-		float: right;
-		margin: 6.5% 0 0 0 !important;
 		display: inline-block;
 	}
 
 	form.new_preuser {
 		display: block;
 		position: relative !important;
-		top: 60%;
 		width: 100%;
 		margin: 0;
 		clear: both;
@@ -169,30 +160,20 @@ PREHOME MEDIA QUERIES
 **************************************/
 
 @media screen and (min-width: 660px) {
-	div.prehero div.text {
-		max-width: 68% !important;
-		padding: 5% 0 0 0 !important;
-	}
-
-	div.prehero div.image {
-		width: 31.25% !important;
-		margin: 6.5% 0 0 0 !important;
-		padding: 0 !important;
-	}
-
 	div.prehero div.text h1 {
 		font-size: 4.5em !important;
-		margin: 0 0 0.4em 0 !important;
-		padding: 0 0 0 6% !important;
+		margin: 0;
+		padding: 0;
 		font-family: "Sentinel SSm A", "Sentinel SSm B";
 		font-style: normal;
 		font-weight: 300;
+		display: block;
 	}
 
 	div.prehero div.text h2 {
 		font-size: 1.25em;
-		margin: 0 0 0.6em 0;
-		padding: 0 0 0 6% !important;
+		margin: 0;
+		padding: 0;
 		line-height: 1.2;
 		font-family: "Gotham SSm A", "Gotham SSm B";
 		font-style: normal;
@@ -201,40 +182,16 @@ PREHOME MEDIA QUERIES
 
 	form.new_preuser {
 		display: block;
-		top: 0;
+		position: relative;
 		width: 100%;
-		margin: 0;
+		
 		clear: left;
-		padding: 0 0 0 4%;
+		padding: 0;
+		border: 1px black dashed;
 
 		input#preuser_email {
 			display: inline-block;
 			width: 35% !important;
-		}
-		input::-webkit-input-placeholder:after {
-			content: ' . . . . . . . . . . . . . . . . . . . . . . . . . .' !important;
-			left: 20px !important;
-			top: 30% !important;
-		}
-		input:-moz-input-placeholder:after {
-			content: ' . . . . . . . . . . . . . . . . . . . . . . . . . .' !important;
-			left: 20px !important;
-			top: 30% !important;
-		}
-	}
-}
-
-@media screen and (min-width: 800px) {
-	form.new_preuser {
-		input::-webkit-input-placeholder:after {
-			content: ' . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .' !important;
-			left: 23px !important;
-			top: 35% !important;
-		}
-		input:-moz-input-placeholder:after {
-			content: ' . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .' !important;
-			left: 23px !important;
-			top: 35% !important;
 		}
 	}
 }
@@ -244,16 +201,6 @@ PREHOME MEDIA QUERIES
 
 		input#preuser_email {
 			width: 27.5% !important;
-		}
-		input::-webkit-input-placeholder:after {
-			content: '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .' !important;
-			left: 2.5em !important;
-			top: 40% !important;
-		}
-		input:-moz-input-placeholder:after {
-			content: '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .' !important;
-			left: 2.5em !important;
-			top: 40% !important;
 		}
 	}
 }
@@ -378,7 +325,7 @@ REFER PRIZE PROGRESS STYLES
 			font-style: normal;
 			font-weight: 500;
 			color: #2D4974;
-			margin: 5% 0 2% 0;
+			margin: 1% 0;
 		}
 
 		.progress {
@@ -436,7 +383,7 @@ REFER PRIZE PROGRESS STYLES
 			div.final:before, div.final:after {
 				border: none;
 			}
-
+			/* ---- SELECTED STYLES ----*/
 			div.selected {
 				position: relative;
 				background: #4F6177;
@@ -478,9 +425,26 @@ REFER PRIZE PROGRESS STYLES
 				color: #fff;
 				z-index: 102;
 			}
+
+			div.selected:nth-of-type(1n) {
+				background-color: #89CFD7;
+			}
+
+			div.selected:nth-of-type(2n) {
+				background-color: #FFC866;
+			}
+
+			div.selected:nth-of-type(3n) {
+				background-color: #D3FFBA;
+			}
+
+			div.selected:nth-of-type(4n) {
+				background-color: #4F6177;
+			}
+
 			div#first {
 				display: block;
-				background-color: #4F6177;
+				background-color: #FFC866;
 				position: relative;
 				width: 200px;
 				height: 26px;
@@ -490,7 +454,7 @@ REFER PRIZE PROGRESS STYLES
 			}
 			div#close {
 				display: inline-block;
-				background-color: #4F6177;
+				background-color: #89CFD7;
 				position: relative;
 				width: 200px;
 				height: 26px;
@@ -511,7 +475,7 @@ REFER PRIZE STYLES
 
 			ul {
 				list-style: none;
-				margin: 0 0 0 0;
+				margin: 0;
 				padding: 0;
 				display: inline-block;
 
@@ -522,10 +486,9 @@ REFER PRIZE STYLES
 					width: 70%;
 					display: inline-block;
 					border-radius: 20%;
-					
 
 					div.prizephoto { 
-						height: 40vh;
+						height: 26vh;
 						margin: 1em auto 0;
 
 						img {
@@ -582,22 +545,6 @@ REFER PRIZE STYLES
 					opacity: 1;
 				}
 
-				li.selected:nth-of-type(1n) {
-					background-color: #89CFD7;
-				}
-
-				li.selected:nth-of-type(2n) {
-					background-color: #FFC866;
-				}
-
-				li.selected:nth-of-type(3n) {
-					background-color: #89CFD7;
-				}
-
-				li.selected:nth-of-type(4n) {
-					background-color: #FFC866;
-				}
-
 				.checked {
 					background-color: #fff;
 					border: 2px #fff solid !important;
@@ -623,7 +570,7 @@ REFER PRIZE STYLES
 		.hero {
 
 			h1 {
-				padding: 45px 0 5px 0;
+				padding: 20px 0 5px 0;
 				font-size: 45px;
 			}
 
@@ -666,12 +613,12 @@ REFER PRIZE STYLES
 		.hero {
 
 			h1 {
-				padding: 30px 0 12.5px 0;
-				font-size: 60px;
+				padding: 20px 0 12.5px 0;
+				font-size: 45px;
 			}
 
 			p {
-				margin: 1.25% 0;
+				margin: 0.5% 0;
 				padding: 0;
 				font-size: 20px;
 			}
@@ -724,12 +671,12 @@ REFER PRIZE STYLES
 		.hero {
 
 			h1 {
-				padding: 30px 0 12.5px 0;
-				font-size: 60px;
+				padding: 20px 0 12.5px 0;
+				font-size: 45px;
 			}
 
 			p {
-				margin: 1.25% 0;
+				margin: 0.5% 0;
 				padding: 0;
 			}
 
@@ -773,7 +720,8 @@ REFER PRIZE STYLES
 				.prizes {
 					ul{
 						li{
-							width: 20vw;
+							width: 18vw;
+							margin: 0 1vw;
 							display: inline-block;
 
 							p.prizedesc {

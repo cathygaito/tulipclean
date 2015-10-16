@@ -1,16 +1,17 @@
 <section id="prehome">
     <div class="prehero">
         <div class="text">
-            <h1>Hey, you with the teeth.</h1>
-            <h2><span>The oral care revolution is near.</span> <br>Be in the know when it gets here. Your don't even have to slip us a $20.</h2>
-        </div>
-        <div class="image">
-            <%= image_tag("tulip-regimen.png") %>
+            <div>
+                <h1>LOGO!</h1>
+            </div>
+            <h1>Tulip is coming.</h1>
+            <h2>The much needed facelift for oral care and your bathroom</h2>
         </div>
     </div>
 
     <div>
         <% if !Rails.application.config.ended %>
+            <h3>Be the first to know, and you don't even need to slip us a $20 bill.</h3>
             <%= form_for @preuser, url: { controller: "preusers", action: "create" }, class: "preform" do |f| %>
                 <%= f.text_field :email, :placeholder => "crown@teethmail.com\n" %>
                 <%= f.hidden_field :referrer_id, value: params[:ref] %>

@@ -58,7 +58,6 @@
             <ul>
                 <% stops.each do |stop| %>
                     <li class="<% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>selected<% end %><% if stop["class"] == 'five' %> last<% end %>">
-                        <h2 class="prizecount"><%= stop["count"] %></h2>
                         <div class="prizephoto <% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>selected<% end %>">
                             <img src="<%= ActionController::Base.helpers.asset_path(stop["image"]) %>" height="254">
                         </div>
