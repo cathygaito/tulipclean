@@ -75,6 +75,7 @@ PREHOME HERO STYLES
 		font-weight: 300;
 		display: inline-block;
 		letter-spacing: 1px;
+		text-transform: uppercase;
 
 		span {
 			font-weight: bold;
@@ -88,6 +89,10 @@ PREHOME HERO STYLES
 			position: relative;
 			top: 5em;
 			border: 1px black dashed;
+			text-transform: uppercase;
+			font-family: "Gotham SSm A", "Gotham SSm B";
+			font-style: normal;
+			font-weight: 300;
 		}
 	}
 
