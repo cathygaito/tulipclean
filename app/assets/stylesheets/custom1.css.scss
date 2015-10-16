@@ -44,12 +44,6 @@ PREHOME HERO STYLES
 		}
 	}
 
-	div.prehero div.image img {
-		width: 100%;
-		margin: 0;
-		padding: 0;
-	}
-
 	div.prehero h1 {
 		font-size: 2.75em;
 		margin: 0;
@@ -65,7 +59,7 @@ PREHOME HERO STYLES
 		font-size: 1.125em;
 		color: #4F6177;
 		line-height: 1.75;
-		margin: 5px 0 0 0;
+		margin: 15px 0 0 0;
 		padding: 0;
 		font-family: "Gotham SSm A", "Gotham SSm B";
 		font-style: normal;
@@ -179,7 +173,7 @@ PREHOME MEDIA QUERIES
 
 	div.prehero div.text h2 {
 		font-size: 1.25em;
-		margin: 0;
+		margin: 15px 0 0 0;
 		padding: 0;
 		line-height: 1.2;
 		font-family: "Gotham SSm A", "Gotham SSm B";
@@ -191,7 +185,6 @@ PREHOME MEDIA QUERIES
 		display: block;
 		position: relative;
 		width: 100%;
-		
 		clear: left;
 		padding: 0;
 
@@ -204,7 +197,6 @@ PREHOME MEDIA QUERIES
 
 @media screen and (min-width: 1237px) {
 	form.new_preuser {
-
 		input#preuser_email {
 			width: 27.5% !important;
 		}
