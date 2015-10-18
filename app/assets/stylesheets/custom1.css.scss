@@ -527,6 +527,11 @@ REFER PRIZE STYLES
 					display: inline-block;
 					border-radius: 20%;
 
+					div.noShow {
+						color: #4F6177;
+						font-size: 1.35em;
+					}
+
 					div.prizephoto { 
 						height: 26vh;
 						margin: 1em auto 0;
@@ -643,6 +648,12 @@ REFER PRIZE STYLES
 				}
 			}
 		}
+	}
+}
+
+@media screen and (min-width: 660px) {
+	div.noShow {
+		display: none;
 	}
 }
 
