@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "Do_Not_Reply@TulipClean.com"
+  default from: "hello@tulipclean.com"
   layout 'mailer'
 end
