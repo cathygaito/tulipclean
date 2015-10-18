@@ -6,6 +6,7 @@ body {
 	background-size: cover;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
+	height: 100%;
 	color: #4F6177;
 	margin: 0;
 	padding: 0;
@@ -83,7 +84,7 @@ PREHOME HERO STYLES
 		h3 {
 			display: block;
 			position: relative;
-			top: 8em;
+			bottom: -32vh;
 			font-size: 1.05em;
 			text-transform: uppercase;
 			font-family: "Gotham SSm A", "Gotham SSm B";
@@ -100,9 +101,8 @@ PREHOME FORM STYLES
 
 	form.new_preuser {
 		position: relative;
-		top: 0;
 		width: 100%;
-		padding-top: 45%;
+		bottom: -33vh;
 		text-align: center;
 
 		input#preuser_email {
@@ -150,7 +150,7 @@ PREHOME FORM STYLES
 @media screen and (min-width: 480px) {
 	div {
 		h3 {
-			top: 9em !important;
+			top: 3.5em !important;
 		}
 	}
 	div.prehero div.text {
@@ -163,7 +163,7 @@ PREHOME FORM STYLES
 		width: 100%;
 		margin: 0;
 		clear: both;
-		padding-top: 35% !important;
+		padding-top: 4em !important;
 	}	
 }
 
@@ -174,7 +174,7 @@ PREHOME MEDIA QUERIES
 @media screen and (min-width: 660px) {
 	div {
 		h3 {
-			top: 10em !important;
+			top: 4em !important;
 		}
 	}
 	div.prehero div.text {
@@ -206,7 +206,7 @@ PREHOME MEDIA QUERIES
 		width: 100%;
 		clear: left;
 		padding: 0;
-		padding-top: 20% !important;
+		padding-top: 2em !important;
 
 		input#preuser_email {
 			display: inline-block;
@@ -217,28 +217,28 @@ PREHOME MEDIA QUERIES
 
 @media screen and (min-width: 980px) {
 	form.new_preuser {
-		padding-top: 14% !important;
+		padding-top: 0em !important;
 		input#preuser_email {
 			width: 27.5% !important;
 		}
 	}
 	div {
 		h3 {
-			top: 10em !important;
+			top: 1em !important;
 		}
 	}
 }
 
 @media screen and (min-width: 1237px) {
 	form.new_preuser {
-		padding-top: 6.5% !important;
+		margin-top: -0.75em !important;
 		input#preuser_email {
 			width: 27.5% !important;
 		}
 	}
 	div {
 		h3 {
-			top: 7.5em !important;
+			top: 0.5em !important;
 		}
 	}
 }
