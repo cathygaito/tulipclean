@@ -358,6 +358,7 @@ REFER PRIZE PROGRESS STYLES
 		padding: 0;
 		width: 85%;
 		text-align: center;
+		height: 70vh;
 		
 		p {
 			font-family: "Gotham SSm A", "Gotham SSm B";
@@ -459,6 +460,113 @@ REFER PRIZE PROGRESS STYLES
 				margin-top: -13px;
 				z-index: 100;
 			}
+
+
+			div.selected:nth-of-type(1n):after, div.selected:nth-of-type(1n):before {
+				left: 100%;
+				top: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+				z-index: 100;
+			}
+			div.selected:nth-of-type(1n):after {
+				border-color: rgba(255, 165, 0, 0);
+				border-left-color: #89CFD7;
+				border-width: 12px;
+				margin-top: -12px;
+				z-index: 100;
+			}
+			div.selected:nth-of-type(1n):before {
+				border-color: rgba(45, 73, 116, 0);
+				border-left-color: #89CFD7;
+				border-width: 13px;
+				margin-top: -13px;
+				z-index: 100;
+			}
+
+
+			div.selected:nth-of-type(2n):after, div.selected:nth-of-type(2n):before {
+				left: 100%;
+				top: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+				z-index: 100;
+			}
+			div.selected:nth-of-type(2n):after {
+				border-color: rgba(255, 165, 0, 0);
+				border-left-color: #FFC866;
+				border-width: 12px;
+				margin-top: -12px;
+				z-index: 100;
+			}
+			div.selected:nth-of-type(2n):before {
+				border-color: rgba(45, 73, 116, 0);
+				border-left-color: #FFC866;
+				border-width: 13px;
+				margin-top: -13px;
+				z-index: 100;
+			}
+
+			div.selected:nth-of-type(3n):after, div.selected:nth-of-type(3n):before {
+				left: 100%;
+				top: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+				z-index: 100;
+			}
+			div.selected:nth-of-type(3n):after {
+				border-color: rgba(255, 165, 0, 0);
+				border-left-color: #D3FFBA;
+				border-width: 12px;
+				margin-top: -12px;
+				z-index: 100;
+			}
+			div.selected:nth-of-type(3n):before {
+				border-color: rgba(45, 73, 116, 0);
+				border-left-color: #D3FFBA;
+				border-width: 13px;
+				margin-top: -13px;
+				z-index: 100;
+			}
+
+			div.selected:nth-of-type(4n):after, div.selected:nth-of-type(4n):before {
+				left: 100%;
+				top: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+				z-index: 100;
+			}
+			div.selected:nth-of-type(4n):after {
+				border-color: rgba(255, 165, 0, 0);
+				border-left-color: #4F6177;
+				border-width: 12px;
+				margin-top: -12px;
+				z-index: 100;
+			}
+			div.selected:nth-of-type(4n):before {
+				border-color: rgba(45, 73, 116, 0);
+				border-left-color: #4F6177;
+				border-width: 13px;
+				margin-top: -13px;
+				z-index: 100;
+			}
+
 			div.selected p {
 				position: relative;
 				color: #fff;
@@ -495,9 +603,9 @@ REFER PRIZE PROGRESS STYLES
 				display: inline-block;
 				background-color: #89CFD7;
 				position: relative;
-				width: 200px;
+				width: 80px;
 				height: 26px;
-				margin: -26px 0 0 0;
+				margin: 0 0 0 -80px;
 				padding: 0;
 				border-radius: 15px;
 				float: right;
