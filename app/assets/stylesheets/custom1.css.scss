@@ -151,7 +151,7 @@ PREHOME FORM STYLES
 @media screen and (min-width: 480px) {
 	div {
 		h3 {
-			top: 3.5em !important;
+			bottom: -5vh !important;
 		}
 	}
 	div.prehero div.text {
@@ -164,7 +164,7 @@ PREHOME FORM STYLES
 		width: 100%;
 		margin: 0;
 		clear: both;
-		padding-top: 4em !important;
+		bottom: -7vh !important;
 	}	
 }
 
@@ -175,7 +175,7 @@ PREHOME MEDIA QUERIES
 @media screen and (min-width: 660px) {
 	div {
 		h3 {
-			top: 4em !important;
+			bottom: -5vh !important;
 		}
 	}
 	div.prehero div.text {
@@ -207,7 +207,7 @@ PREHOME MEDIA QUERIES
 		width: 100%;
 		clear: left;
 		padding: 0;
-		padding-top: 2em !important;
+		bottom: -7vh !important;
 
 		input#preuser_email {
 			display: inline-block;
@@ -218,28 +218,28 @@ PREHOME MEDIA QUERIES
 
 @media screen and (min-width: 980px) {
 	form.new_preuser {
-		padding-top: 0em !important;
+		bottom: -23vh !important;
 		input#preuser_email {
 			width: 27.5% !important;
 		}
 	}
 	div {
 		h3 {
-			top: 1em !important;
+			bottom: -25vh !important;
 		}
 	}
 }
 
 @media screen and (min-width: 1237px) {
 	form.new_preuser {
-		margin-top: -0.75em !important;
+		bottom: -13vh !important;
 		input#preuser_email {
 			width: 27.5% !important;
 		}
 	}
 	div {
 		h3 {
-			top: 0.5em !important;
+			bottom: -15vh !important;
 		}
 	}
 }
