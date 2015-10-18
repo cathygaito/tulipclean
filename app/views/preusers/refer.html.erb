@@ -20,7 +20,7 @@
     <div class="hero">
         <div>
             <div>
-                <h1>Like free stuf<span>f</span>? Tell your friends!</h1>
+                <h1>Share with friends and get rewards!</h1>
                 <p>Tell your friends about Tulip and get rewarded.<br>Plus you'll avoid having to tell them they have food in their teeth.</p>
                 <div class="share mobileonly"><p><%= root_url %>?ref=<%= @preuser.referral_code %></p></div>
                 <div class="share"><%= mail_to "", image_tag('email-icon.png'), subject: "Tulip is coming", body: "I'm smiling ear to ear, Tulip is coming! My bathroom is going to be fresh for free.\r\n\r\nCheck out this link: #{root_url}" + "?ref=" + "#{@preuser.referral_code}!" %></div>
