@@ -148,6 +148,10 @@ PREHOME FORM STYLES
 	}
 }
 
+/**************************************
+PREHOME MEDIA QUERIES
+**************************************/
+
 @media screen and (min-width: 480px) {
 	div {
 		h3 {
@@ -167,10 +171,6 @@ PREHOME FORM STYLES
 		bottom: -7vh !important;
 	}	
 }
-
-/**************************************
-PREHOME MEDIA QUERIES
-**************************************/
 
 @media screen and (min-width: 660px) {
 	div {
@@ -266,7 +266,7 @@ REFER HEADER STYLES
 		background-color: #4F6177;
 		font-size: 15px;
 		margin: 0;
-		padding: 15px 0 17.5px 0;
+		padding: 20px 0 0 0;
 		display: block;
 		position: relative;
 		text-align: center;
@@ -274,7 +274,7 @@ REFER HEADER STYLES
 
 		#placenum {
 			color: #89CFD7;
-			font-size: 20px;
+			font-size: 15px;
 			margin: 0;
 			padding: 0;
 			font-family: "Gotham SSm A", "Gotham SSm B";
@@ -448,118 +448,12 @@ REFER PRIZE PROGRESS STYLES
 			}
 			div.selected:after {
 				border-color: rgba(255, 165, 0, 0);
-				border-left-color: #4F6177;
+				border-left-color: #FFC866;
 				border-width: 12px;
 				margin-top: -12px;
 				z-index: 100;
 			}
 			div.selected:before {
-				border-color: rgba(45, 73, 116, 0);
-				border-left-color: #89CFD7;
-				border-width: 13px;
-				margin-top: -13px;
-				z-index: 100;
-			}
-
-
-			div.selected:nth-of-type(1n):after, div.selected:nth-of-type(1n):before {
-				left: 100%;
-				top: 50%;
-				border: solid transparent;
-				content: " ";
-				height: 0;
-				width: 0;
-				position: absolute;
-				pointer-events: none;
-				z-index: 100;
-			}
-			div.selected:nth-of-type(1n):after {
-				border-color: rgba(255, 165, 0, 0);
-				border-left-color: #89CFD7;
-				border-width: 12px;
-				margin-top: -12px;
-				z-index: 100;
-			}
-			div.selected:nth-of-type(1n):before {
-				border-color: rgba(45, 73, 116, 0);
-				border-left-color: #89CFD7;
-				border-width: 13px;
-				margin-top: -13px;
-				z-index: 100;
-			}
-
-
-			div.selected:nth-of-type(2n):after, div.selected:nth-of-type(2n):before {
-				left: 100%;
-				top: 50%;
-				border: solid transparent;
-				content: " ";
-				height: 0;
-				width: 0;
-				position: absolute;
-				pointer-events: none;
-				z-index: 100;
-			}
-			div.selected:nth-of-type(2n):after {
-				border-color: rgba(255, 165, 0, 0);
-				border-left-color: #FFC866;
-				border-width: 12px;
-				margin-top: -12px;
-				z-index: 100;
-			}
-			div.selected:nth-of-type(2n):before {
-				border-color: rgba(45, 73, 116, 0);
-				border-left-color: #FFC866;
-				border-width: 13px;
-				margin-top: -13px;
-				z-index: 100;
-			}
-
-			div.selected:nth-of-type(3n):after, div.selected:nth-of-type(3n):before {
-				left: 100%;
-				top: 50%;
-				border: solid transparent;
-				content: " ";
-				height: 0;
-				width: 0;
-				position: absolute;
-				pointer-events: none;
-				z-index: 100;
-			}
-			div.selected:nth-of-type(3n):after {
-				border-color: rgba(255, 165, 0, 0);
-				border-left-color: #D3FFBA;
-				border-width: 12px;
-				margin-top: -12px;
-				z-index: 100;
-			}
-			div.selected:nth-of-type(3n):before {
-				border-color: rgba(45, 73, 116, 0);
-				border-left-color: #D3FFBA;
-				border-width: 13px;
-				margin-top: -13px;
-				z-index: 100;
-			}
-
-			div.selected:nth-of-type(4n):after, div.selected:nth-of-type(4n):before {
-				left: 100%;
-				top: 50%;
-				border: solid transparent;
-				content: " ";
-				height: 0;
-				width: 0;
-				position: absolute;
-				pointer-events: none;
-				z-index: 100;
-			}
-			div.selected:nth-of-type(4n):after {
-				border-color: rgba(255, 165, 0, 0);
-				border-left-color: #4F6177;
-				border-width: 12px;
-				margin-top: -12px;
-				z-index: 100;
-			}
-			div.selected:nth-of-type(4n):before {
 				border-color: rgba(45, 73, 116, 0);
 				border-left-color: #4F6177;
 				border-width: 13px;
@@ -574,7 +468,7 @@ REFER PRIZE PROGRESS STYLES
 			}
 
 			div.selected:nth-of-type(1n) {
-				background-color: #89CFD7;
+				background-color: #FFC866;
 			}
 
 			div.selected:nth-of-type(2n) {
@@ -582,11 +476,11 @@ REFER PRIZE PROGRESS STYLES
 			}
 
 			div.selected:nth-of-type(3n) {
-				background-color: #D3FFBA;
+				background-color: #FFC866;
 			}
 
 			div.selected:nth-of-type(4n) {
-				background-color: #4F6177;
+				background-color: #FFC866;
 			}
 
 			div#first {
@@ -601,7 +495,7 @@ REFER PRIZE PROGRESS STYLES
 			}
 			div#close {
 				display: inline-block;
-				background-color: #89CFD7;
+				background-color: #FFC866;
 				position: relative;
 				width: 80px;
 				height: 26px;
@@ -644,7 +538,6 @@ REFER PRIZE STYLES
 							height: auto;
 							margin: 0;
 							padding: 0;
-							opacity: 0.4;
 							z-index: 99;
 						}
 					}
