@@ -29,6 +29,17 @@ PREHOME HERO STYLES
 **************************************/
 	div.prehero {
 		display: block;
+
+		div#logo {
+			text-align: left;
+			img{
+				position: relative;
+				height: 2.5em;
+				width: auto;
+				left: 20px;
+				top: 20px;
+			}
+		}
 	}
 
 	div.prehero div.text {
@@ -42,16 +53,6 @@ PREHOME HERO STYLES
 			display: block;
 			position: relative;
 			bottom: 4em;
-		}
-		h1 {
-			img{
-				position: relative;
-				height: 0.75em;
-				width: auto;
-				float: left;
-				top: -1.5em;
-				left: 0.5em;
-			}
 		}
 	}
 
