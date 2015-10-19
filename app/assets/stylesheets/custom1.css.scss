@@ -3,11 +3,12 @@ GENERAL STYLES
 **************************************/
 html {height: 100%;}
 body {
-	background-image: url("tulip_landing_2b.jpg");
-	background-size: cover;
-	background-position: 50% 50%;
+	background: url("tulip_landing_2b.jpg") no-repeat fixed 100% 100%;
+	background-size: 100%;
+	background-position: 50%;
 	background-repeat: no-repeat;
 	height: 100%;
+	width: 100%;
 	color: #4F6177;
 	margin: 0;
 	padding: 0;
