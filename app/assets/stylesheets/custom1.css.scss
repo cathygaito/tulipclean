@@ -166,6 +166,10 @@ PREHOME MEDIA QUERIES
 		display: inline-block;
 	}
 
+	div.formtext {
+		bottom: -3em !important;
+	}
+
 	form.new_preuser {
 		display: block;
 		position: relative !important;
