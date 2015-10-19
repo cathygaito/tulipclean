@@ -9,7 +9,7 @@
         </div>
     </div>
 
-    <div>
+    <div class="formtext">
         <% if !Rails.application.config.ended %>
             <h3>Be the first to know, and you don't even need to slip us a $20 bill.</h3>
             <%= form_for @preuser, url: { controller: "preusers", action: "create" }, class: "preform" do |f| %>
