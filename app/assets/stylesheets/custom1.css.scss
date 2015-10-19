@@ -45,8 +45,12 @@ PREHOME HERO STYLES
 		}
 		h1 {
 			img{
+				position: relative;
 				height: 0.75em;
 				width: auto;
+				float: left;
+				top: -0.5em;
+				left: -0.5em;
 			}
 		}
 	}
@@ -307,7 +311,7 @@ REFER HERO STYLES
 		text-align: center;
 
 		h1 {
-			margin: 0 0 30px 0 !important;
+			margin: 20px 0 20px 0 !important;
 			padding: 0 !important;
 			font-size: 40px;
 			font-family: "Sentinel SSm A", "Sentinel SSm B";
