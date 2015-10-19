@@ -56,7 +56,7 @@ PREHOME HERO STYLES
 	}
 
 	div.prehero h1 {
-		font-size: 2.75em;
+		font-size: 4em;
 		margin: 0;
 		padding: 0;
 		line-height: 1.2;
@@ -68,7 +68,7 @@ PREHOME HERO STYLES
 
 	div.prehero h2 {
 		font-size: 1.125em;
-		color: #4F6177;
+		color: #F7F3F2;
 		line-height: 1.75;
 		margin: 15px 0 0 0;
 		padding: 0;
@@ -127,7 +127,7 @@ PREHOME FORM STYLES
 			font-family: "Gotham SSm A", "Gotham SSm B";
 			font-style: normal;
 			font-weight: 400;
-			text-align: center;
+			padding-left: 15px;
 		}
 		input::-webkit-input-placeholder {
 			color: #89A1B9;
@@ -184,7 +184,7 @@ PREHOME MEDIA QUERIES
 	div.formtext {
 		bottom: -3em !important;
 	}
-	
+
 	div.prehero div.text {
 		margin: 9% auto !important;
 	}
