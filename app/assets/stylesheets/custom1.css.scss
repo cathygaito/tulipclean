@@ -181,6 +181,10 @@ PREHOME MEDIA QUERIES
 
 @media screen and (min-width: 660px) {
 	
+	div.formtext {
+		bottom: -3em !important;
+	}
+	
 	div.prehero div.text {
 		margin: 9% auto !important;
 	}
@@ -218,6 +222,10 @@ PREHOME MEDIA QUERIES
 }
 
 @media screen and (min-width: 980px) {
+	div.formtext{
+		bottom: 0 !important;
+	}
+
 	form.new_preuser {
 		input#preuser_email {
 			width: 27.5% !important;
@@ -231,6 +239,10 @@ PREHOME MEDIA QUERIES
 }
 
 @media screen and (min-width: 1237px) {
+	div.formtext {
+		bottom: 0 !important;
+	}
+
 	form.new_preuser {
 		input#preuser_email {
 			width: 27.5% !important;
