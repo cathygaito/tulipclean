@@ -25,14 +25,14 @@ class Preuser < ActiveRecord::Base
             'count' => 25,
             "html" => "6-Month Supply",
             "class" => "four",
-            "image" =>  "tulip-regimen-3.png",
+            "image" =>  "tulip-regimen-5.png",
             "check" => "check-icon-new-light-blue.png"
         },
         {
             'count' => 50,
             "html" => "1-Year Supply",
             "class" => "five",
-            "image" =>  "tulip-regimen-4.png",
+            "image" =>  "tulip-regimen-5.png",
             "check" => "check-icon-new-light-blue.png"
         }
     ]
