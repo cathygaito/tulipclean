@@ -3,14 +3,14 @@
         <% 
             words = ''
             if @count == 1
-                words = 'friend refered. See rewards below.'
+                words = 'friend referred. See rewards below.'
             else 
-                words = 'friends refered. See rewards below.'
+                words = 'friends referred. See rewards below.'
             end
         %>
 
         <% if @count == 0 %>
-            <p class="place"><span>No</span> friends refered! See rewards below.</p>
+            <p class="place"><span>No</span> friends referred! See rewards below.</p>
         <% else %>
             <p class="place"><span id="placenum"><%= @count %></span> <%= words %></p>
         <% end %>
