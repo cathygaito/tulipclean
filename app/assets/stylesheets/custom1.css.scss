@@ -185,6 +185,14 @@ PREHOME MEDIA QUERIES
 
 	div#logo {
 		display: initial !important;
+		text-align: left;
+		img{
+			position: relative;
+			height: 2.5em;
+			width: auto;
+			left: 20px;
+			top: 20px;
+		}
 	}
 	
 	div.formtext {
