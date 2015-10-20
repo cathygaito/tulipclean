@@ -1,6 +1,6 @@
 namespace :emails do
-  desc "TODO"
-  task email_task: :environment do
+  desc "This task does nothing"
+  task :nothing do
+    DanielTest.fake_email.deliver_now
   end
-
 end
