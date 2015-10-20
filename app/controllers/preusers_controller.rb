@@ -32,14 +32,13 @@ class PreusersController < ApplicationController
             puts '------------'
 
             if @preuser.save
+                puts "THERE WAS A DATABASE ERROR"
                 cur_ip.count = cur_ip.count + 1
                 cur_ip.save
                 refering_preuser = Preuser.find_by_referral_code(@preuser.referrer_id)
                 refering_preuser.referrals.push(@preuser.referral_code).flatten unless refering_preuser.nil?
                 refering_preuser.save unless refering_preuser.nil?
                 PrelaunchMailer.welcome_email(@preuser).deliver_now
-            else
-                puts "THERE WAS A DATABASE ERROR"
             end
         end
 

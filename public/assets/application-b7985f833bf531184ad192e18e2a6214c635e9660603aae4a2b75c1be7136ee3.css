@@ -1,0 +1,902 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+ */
+
+/**
+ * BxSlider v4.0 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2012
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+
+
+/** RESET AND LAYOUT
+===================================*/
+
+
+.bx-wrapper {
+	position: relative;
+	margin: 0 auto 60px;
+	padding: 0;
+	*zoom: 1;
+}
+
+.bx-wrapper img {
+	max-width: 100%;
+	display: block;
+}
+
+/** THEME
+===================================*/
+
+.bx-wrapper .bx-viewport {
+	-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+	box-shadow: 0 0 5px #ccc;
+	border: solid #fff 5px;
+	left: -5px;
+	background: #fff;
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+	position: absolute;
+	bottom: -30px;
+	width: 100%;
+}
+
+/* LOADER */
+
+.bx-wrapper .bx-loading {
+	min-height: 50px;
+	background: url(/assets/bx_loader.gif) center center no-repeat #fff;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+}
+
+/* PAGER */
+
+.bx-wrapper .bx-pager {
+	text-align: center;
+	font-size: .85em;
+	font-family: Arial;
+	font-weight: bold;
+	color: #666;
+	padding-top: 20px;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+	background: #666;
+	text-indent: -9999px;
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	outline: 0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: #000;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+
+.bx-wrapper .bx-prev {
+	left: 10px;
+	background: url(/assets/controls.png) no-repeat 0 -32px;
+}
+
+.bx-wrapper .bx-next {
+	right: 10px;
+	background: url(/assets/controls.png) no-repeat -43px -32px;
+}
+
+.bx-wrapper .bx-prev:hover {
+	background-position: 0 0;
+}
+
+.bx-wrapper .bx-next:hover {
+	background-position: -43px 0;
+}
+
+.bx-wrapper .bx-controls-direction a {
+	position: absolute;
+	top: 50%;
+	margin-top: -16px;
+	outline: 0;
+	width: 32px;
+	height: 32px;
+	text-indent: -9999px;
+	z-index: 9999;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+	display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+
+.bx-wrapper .bx-controls-auto {
+	text-align: center;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+	display: block;
+	text-indent: -9999px;
+	width: 10px;
+	height: 11px;
+	outline: 0;
+	background: url(/assets/controls.png) -86px -11px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+	background-position: -86px 0;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+	display: block;
+	text-indent: -9999px;
+	width: 9px;
+	height: 11px;
+	outline: 0;
+	background: url(/assets/controls.png) -86px -44px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+	background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+	text-align: left;
+	width: 80%;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+	right: 0;
+	width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+
+.bx-wrapper .bx-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #666\9;
+	background: rgba(80, 80, 80, 0.75);
+	width: 100%;
+}
+
+.bx-wrapper .bx-caption span {
+	color: #fff;
+	font-family: Arial;
+	display: block;
+	font-size: .85em;
+	padding: 10px;
+}
+/**************************************
+GENERAL STYLES 
+**************************************/
+/* line 5, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+body {
+  background: url(tulip_landing.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #4F6177;
+  margin: 0;
+  padding: 0;
+  font-family: "Sentinel SSm A", "Sentinel SSm B";
+  font-style: normal;
+  font-weight: 300;
+  /**************************************
+  PREHOME HERO STYLES 
+  **************************************/
+  /**************************************
+  PREHOME FORM STYLES
+  **************************************/
+}
+/* line 18, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+body section#prehome {
+  position: relative;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 32, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+body div.prehero {
+  display: block;
+  margin-top: -5%;
+  border: 1px black dashed;
+}
+/* line 38, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+body div.prehero div.text {
+  margin: 13% auto;
+  width: 100%;
+  text-align: center;
+  border: 1px black dashed;
+}
+/* line 44, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+body div.prehero div.text div {
+  display: block;
+  position: relative;
+  bottom: 4em;
+}
+/* line 51, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+body div.prehero div.image img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* line 57, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+body div.prehero h1 {
+  font-size: 2.75em;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  font-family: "Sentinel SSm A", "Sentinel SSm B";
+  font-style: normal;
+  font-weight: 300;
+  display: inline-block;
+}
+/* line 68, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+body div.prehero h2 {
+  font-size: 1.125em;
+  color: #89CFD7;
+  line-height: 1.75;
+  margin: 0;
+  padding: 0;
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-style: normal;
+  font-weight: 300;
+  display: inline-block;
+}
+/* line 79, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+body div.prehero h2 span {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+/* line 86, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+body div h3 {
+  display: block;
+  position: relative;
+  top: 5em;
+  border: 1px black dashed;
+}
+/* line 99, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+body form.new_preuser {
+  position: relative;
+  top: 0;
+  width: 100%;
+  padding-top: 5%;
+  text-align: center;
+}
+/* line 106, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+body form.new_preuser input#preuser_email {
+  font-size: 1.125em;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1.5px black solid;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+}
+/* line 119, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+body form.new_preuser input::-webkit-input-placeholder {
+  color: #89A1B9;
+  background-color: #F7F3F2;
+  border: none;
+  text-align: center;
+}
+/* line 125, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+body form.new_preuser input:-moz-placeholder {
+  color: #89A1B9;
+  background-color: #F7F3F2;
+  border: none;
+  text-align: center;
+}
+/* line 132, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+body form.new_preuser input.button {
+  border-radius: 5px;
+  background-color: #D3FFBA;
+  color: #4F6177;
+  font-size: 0.8125em;
+  padding: 19px 30px;
+  letter-spacing: 1px;
+  margin: 35px 0 0 0;
+  display: inline-block;
+}
+
+@media screen and (min-width: 480px) {
+  /* line 146, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  div.prehero div.text {
+    display: inline-block;
+  }
+
+  /* line 150, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  form.new_preuser {
+    display: block;
+    position: relative !important;
+    width: 100%;
+    margin: 0;
+    clear: both;
+  }
+}
+/**************************************
+PREHOME MEDIA QUERIES
+**************************************/
+@media screen and (min-width: 660px) {
+  /* line 164, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  div.prehero div.text h1 {
+    font-size: 4.5em !important;
+    margin: 0;
+    padding: 0;
+    font-family: "Sentinel SSm A", "Sentinel SSm B";
+    font-style: normal;
+    font-weight: 300;
+    display: block;
+  }
+
+  /* line 174, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  div.prehero div.text h2 {
+    font-size: 1.25em;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    font-family: "Gotham SSm A", "Gotham SSm B";
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  /* line 184, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  form.new_preuser {
+    display: block;
+    position: relative;
+    width: 100%;
+    clear: left;
+    padding: 0;
+    border: 1px black dashed;
+  }
+  /* line 193, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  form.new_preuser input#preuser_email {
+    display: inline-block;
+    width: 35% !important;
+  }
+}
+@media screen and (min-width: 1237px) {
+  /* line 203, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  form.new_preuser input#preuser_email {
+    width: 27.5% !important;
+  }
+}
+/**************************************
+REFER STYLES
+**************************************/
+/* line 213, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  /**************************************
+  REFER HEADER STYLES
+  **************************************/
+  /**************************************
+  REFER HERO STYLES
+  **************************************/
+  /**************************************
+  REFER PRIZE PROGRESS STYLES
+  **************************************/
+}
+/* line 218, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer .mobileonly {
+  display: none !important;
+}
+/* line 226, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer header#refhome {
+  height: 55px;
+  color: #fff;
+  background-color: #4F6177;
+  font-size: 15px;
+  margin: 0;
+  padding: 15px 0 17.5px 0;
+  display: block;
+  position: relative;
+  text-align: center;
+  box-sizing: border-box;
+}
+/* line 238, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer header#refhome #placenum {
+  color: #89CFD7;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-style: normal;
+  font-weight: 700;
+}
+/* line 248, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer header#refhome .place {
+  display: inline-block;
+  display: absolute;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-style: normal;
+  font-weight: 700;
+}
+/* line 264, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer .hero {
+  background-color: #F7F3F2;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+/* line 270, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer .hero h1 {
+  margin: 0;
+  padding: 45px 0 0 0;
+  font-size: 40px;
+  font-family: "Sentinel SSm A", "Sentinel SSm B";
+  font-style: normal;
+  font-weight: 100;
+}
+/* line 278, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer .hero h1 span {
+  letter-spacing: 3px;
+}
+/* line 283, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer .hero p {
+  margin: 10px 0 -5px 0;
+  padding: 0;
+  font-size: 15px;
+  color: #89CFD7;
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-style: normal;
+  font-weight: 500;
+}
+/* line 293, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer .hero img {
+  margin: 0 0 -23px 0;
+  padding: 20px 5px 0 5px;
+  width: 60px;
+}
+/* line 299, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer .hero .share {
+  display: inline-block;
+  margin: 0;
+  padding-bottom: 25px;
+}
+/* line 304, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer .hero .share p {
+  background-color: #fff;
+  font-size: 20px;
+  color: #2D4974;
+  margin: 0;
+  padding: 20px 30px;
+}
+/* line 318, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero {
+  margin: 0 auto;
+  padding: 0;
+  width: 85%;
+  text-align: center;
+  /**************************************
+  REFER PRIZE STYLES
+  **************************************/
+}
+/* line 324, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero p {
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-style: normal;
+  font-weight: 500;
+  color: #2D4974;
+  margin: 1% 0;
+}
+/* line 332, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .progress {
+  width: 100%;
+  height: 26px;
+  margin: 0;
+  padding: 0;
+  border: 1px #4F6177 solid;
+  border-radius: 15px;
+  /* ---- SELECTED STYLES ----*/
+}
+/* line 340, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .progress p {
+  margin: 1px 0 0 0;
+  padding: 3px 0 3px 0;
+  color: #89CFD7;
+  font-size: 15px;
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-style: normal;
+  font-weight: 500;
+}
+/* line 350, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .progress div.counter {
+  position: relative;
+  background: #fff;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 23%;
+  height: 26px;
+}
+/* line 359, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .progress div.counter:after, section#refer section#prizehero .progress div.counter:before {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  z-index: 100;
+}
+/* line 370, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .progress div.counter:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-left-color: #ffffff;
+  border-width: 12px;
+  margin-top: -12px;
+  z-index: 100;
+}
+/* line 377, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .progress div.counter:before {
+  border-color: rgba(79, 97, 119, 0);
+  border-left-color: #4F6177;
+  border-width: 13px;
+  margin-top: -13px;
+  z-index: 100;
+}
+/* line 384, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .progress div.final:before, section#refer section#prizehero .progress div.final:after {
+  border: none;
+}
+/* line 388, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .progress div.selected {
+  position: relative;
+  background: #4F6177;
+  display: inline-block;
+  margin: 0 0 0 -3px;
+  padding: 0;
+  opacity: 1.4;
+}
+/* line 396, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .progress div.selected:nth-of-type(1n) {
+  max-width: 23%;
+}
+/* line 399, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .progress div.selected:after, section#refer section#prizehero .progress div.selected:before {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  z-index: 100;
+}
+/* line 410, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .progress div.selected:after {
+  border-color: rgba(255, 165, 0, 0);
+  border-left-color: #4F6177;
+  border-width: 12px;
+  margin-top: -12px;
+  z-index: 100;
+}
+/* line 417, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .progress div.selected:before {
+  border-color: rgba(45, 73, 116, 0);
+  border-left-color: #89CFD7;
+  border-width: 13px;
+  margin-top: -13px;
+  z-index: 100;
+}
+/* line 424, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .progress div.selected p {
+  position: relative;
+  color: #fff;
+  z-index: 102;
+}
+/* line 430, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .progress div.selected:nth-of-type(1n) {
+  background-color: #89CFD7;
+}
+/* line 434, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .progress div.selected:nth-of-type(2n) {
+  background-color: #FFC866;
+}
+/* line 438, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .progress div.selected:nth-of-type(3n) {
+  background-color: #D3FFBA;
+}
+/* line 442, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .progress div.selected:nth-of-type(4n) {
+  background-color: #4F6177;
+}
+/* line 446, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .progress div#first {
+  display: block;
+  background-color: #FFC866;
+  position: relative;
+  width: 200px;
+  height: 26px;
+  margin: 0 0 -26px 0;
+  padding: 0;
+  border-radius: 15px;
+}
+/* line 456, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .progress div#close {
+  display: inline-block;
+  background-color: #89CFD7;
+  position: relative;
+  width: 200px;
+  height: 26px;
+  margin: -26px 0 0 0;
+  padding: 0;
+  border-radius: 15px;
+  float: right;
+  z-index: 101;
+}
+/* line 474, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .prizes {
+  width: 100%;
+}
+/* line 477, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .prizes ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+/* line 483, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .prizes ul li {
+  background-color: #F7F3F2;
+  margin: 0;
+  padding: 0 0 25px 0;
+  width: 70%;
+  display: inline-block;
+  border-radius: 20%;
+}
+/* line 491, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .prizes ul li div.prizephoto {
+  height: 26vh;
+  margin: 1em auto 0;
+}
+/* line 495, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .prizes ul li div.prizephoto img {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  opacity: 0.4;
+  z-index: 99;
+}
+/* line 507, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .prizes ul li div.selected img {
+  opacity: 1;
+}
+/* line 511, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .prizes ul li h2.prizecount {
+  color: #4F6177;
+  position: relative;
+  font-size: 40px;
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-style: normal;
+  font-weight: 400;
+  margin: -20px 0 -10px 0;
+  padding: 70px 0 0 0;
+  z-index: 100;
+}
+/* line 522, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .prizes ul li p.prizedesc {
+  position: relative;
+  color: #4F6177;
+  font-size: 16px;
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-style: normal;
+  font-weight: 400;
+  margin: 0 0 10px 0;
+  padding: 0;
+  z-index: 100;
+}
+/* line 533, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .prizes ul li div.circle {
+  width: 2.5em;
+  height: 2.5em;
+  border: 2px #4F6177 solid;
+  margin: 0 auto 0;
+  padding: 0;
+  border-radius: 100%;
+  display: inline-block;
+  position: relative;
+}
+/* line 545, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .prizes ul li.selected {
+  opacity: 1;
+}
+/* line 549, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .prizes ul .checked {
+  background-color: #fff;
+  border: 2px #fff solid !important;
+}
+/* line 554, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+section#refer section#prizehero .prizes ul div.circle img {
+  width: 2em;
+  height: 2em;
+  margin: 0.25em 0;
+}
+
+@media screen and (min-width: 480px) {
+  /* line 567, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer .progress {
+    display: block !important;
+  }
+  /* line 573, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer .hero h1 {
+    padding: 20px 0 5px 0;
+    font-size: 45px;
+  }
+  /* line 578, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer .hero p {
+    margin: 10px 0 0 0;
+    padding: 0;
+  }
+  /* line 583, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer .hero .share {
+    padding-bottom: 25px;
+  }
+  /* line 585, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer .hero .share p {
+    display: none;
+  }
+  /* line 595, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer section#prizehero .prizes ul li {
+    margin: 40px 0 0 0;
+    width: 40vw;
+    display: block;
+    margin-bottom: 1em;
+  }
+  /* line 601, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer section#prizehero .prizes ul li p.prizedesc {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 892px) {
+  /* line 616, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer .hero h1 {
+    padding: 20px 0 12.5px 0;
+    font-size: 45px;
+  }
+  /* line 621, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer .hero p {
+    margin: 0.5% 0;
+    padding: 0;
+    font-size: 20px;
+  }
+  /* line 631, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer section#prizehero .prizes ul li {
+    width: 35vw;
+    display: block;
+    margin-bottom: 1em;
+  }
+  /* line 636, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer section#prizehero .prizes ul li p.prizedesc {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1081px) {
+  /* line 653, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer section#prizehero .progress div.counter {
+    width: 24%;
+  }
+  /* line 659, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer section#prizehero .prizes ul li {
+    width: 30vw;
+    display: block;
+    margin-bottom: 1em;
+  }
+  /* line 664, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer section#prizehero .prizes ul li p.prizedesc {
+    font-size: 15px;
+  }
+  /* line 674, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer .hero h1 {
+    padding: 20px 0 12.5px 0;
+    font-size: 45px;
+  }
+  /* line 679, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer .hero p {
+    margin: 0.5% 0;
+    padding: 0;
+  }
+  /* line 684, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer .hero .share {
+    padding-bottom: 25px;
+  }
+  /* line 686, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer .hero .share p {
+    display: inline-block;
+  }
+  /* line 692, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer .mobileonly {
+    display: inline-block !important;
+  }
+}
+@media screen and (min-width: 1081px) and (min-width: 1139px) {
+  /* line 703, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer section#prizehero .prizes ul li {
+    width: 20vw;
+    display: inline-block;
+  }
+  /* line 707, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer section#prizehero .prizes ul li p.prizedesc {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1081px) and (min-width: 1447px) {
+  /* line 723, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer section#prizehero .prizes ul li {
+    width: 18vw;
+    margin: 0 1vw;
+    display: inline-block;
+  }
+  /* line 728, /Users/Daniel/rails_projects/Tulip/app/assets/stylesheets/custom1.css.scss */
+  section#refer section#prizehero .prizes ul li p.prizedesc {
+    font-size: 20px;
+  }
+}
