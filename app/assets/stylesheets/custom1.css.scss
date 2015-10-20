@@ -184,8 +184,9 @@ PREHOME MEDIA QUERIES
 @media screen and (min-width: 660px) {
 
 	div#logo {
-		display: initial !important;
+		display: block !important;
 		text-align: left !important;
+
 		img{
 			position: relative !important;
 			height: 2.5em !important;
