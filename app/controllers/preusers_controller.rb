@@ -37,7 +37,7 @@ class PreusersController < ApplicationController
                 refering_preuser = Preuser.find_by_referral_code(@preuser.referrer_id)
                 refering_preuser.referrals.push(@preuser.referral_code).flatten unless refering_preuser.nil?
                 refering_preuser.save unless refering_preuser.nil?
-                
+                PrelaunchMailer.welcome_email(@preuser).deliver_now
             end
         end
 
