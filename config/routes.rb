@@ -15,7 +15,7 @@ if Rails.application.config.ended
   root 'static_pages#home'
 else
   get 'prelaunch' => 'static_pages#prehome'
-  get '/', to: redirect('/prelaunch')
+ # get '/', to: redirect('/prelaunch')
   root 'static_pages#prehome'
 end
 
