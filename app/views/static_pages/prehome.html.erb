@@ -11,7 +11,7 @@
 
     <div class="formtext">
         <% if !Rails.application.config.ended %>
-            <h3>Be the first to know, and you don't even need to slip us a $20 bill.</h3>
+            <h3>Be the first to know, and you don't even need to slip us a $20.</h3>
             <%= form_for @preuser, url: { controller: "preusers", action: "create" }, class: "preform" do |f| %>
                 <%= f.text_field :email, :placeholder => "crown@teethmail.com\n" %>
                 <%= f.hidden_field :referrer_id, value: params[:ref] %>
