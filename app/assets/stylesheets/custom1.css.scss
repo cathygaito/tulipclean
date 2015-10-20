@@ -32,6 +32,7 @@ PREHOME HERO STYLES
 
 		div#logo {
 			text-align: left;
+			display: none;
 			img{
 				position: relative;
 				height: 2.5em;
@@ -181,6 +182,10 @@ PREHOME MEDIA QUERIES
 }
 
 @media screen and (min-width: 660px) {
+
+	div#logo {
+		display: inherit;
+	}
 	
 	div.formtext {
 		bottom: -3em !important;
