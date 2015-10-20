@@ -8,6 +8,6 @@ class PrelaunchMailer < ApplicationMailer
   def welcome_email(preuser)
     @preuser = preuser
 
-    mail to: preuser.email, from: 'founders@tulipclean.com', subject: 'Welcome to Tulip!'
+    mail to: preuser.email, from: 'Sanjiv and Cathy at Tulip<founders@tulipclean.com>', subject: 'Welcome to Tulip!'
   end
 end
