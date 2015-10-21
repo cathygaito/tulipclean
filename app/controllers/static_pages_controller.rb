@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
   end
 
   def prehome
+    @is_mobile = mobile_device?
   	@preuser = Preuser.new
   end
 
