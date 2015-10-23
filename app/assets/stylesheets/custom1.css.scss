@@ -76,7 +76,7 @@ PREHOME HERO STYLES
 
 	div.prehero h2 {
 		font-size: 1.125em;
-		color: #616161;
+		color: #798491;
 		line-height: 1.75;
 		margin: 15px 0 0 0;
 		padding: 0;
@@ -123,6 +123,19 @@ PREHOME FORM STYLES
 		text-align: center;
 		top: 0;
 		padding: 0 0 30px 0;
+
+		div.alert-ip_error {
+			margin: 25px auto -20px;
+			padding: 5px 0;
+			display: block;
+			position: relative;
+			border: 2px #FFC866 solid;
+			width: 50%;
+			border-radius: 10px;
+			background-color: #FFEED1;
+			color: #798491;
+		}
+
 		input#preuser_email {
 			font-size: 1.125em;
 			background-color: transparent;
