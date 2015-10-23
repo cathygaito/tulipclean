@@ -354,10 +354,6 @@ REFER HERO STYLES
 			font-family: "Sentinel SSm A", "Sentinel SSm B";
 			font-style: normal;
 			font-weight: 100;
-
-			span{
-				letter-spacing: 3px;
-			}
 		}
 
 		p.heropar {
@@ -386,6 +382,10 @@ REFER HERO STYLES
 				color: #2D4974;
 				margin: 0;
 				padding: 20px 30px;
+			}
+			p.no-box {
+				background-color: transparent;
+				padding: 20px 5px;
 			}
 		}
 	}
