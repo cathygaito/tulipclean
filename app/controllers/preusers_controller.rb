@@ -20,7 +20,7 @@ class PreusersController < ApplicationController
                 )
             end
 
-            if cur_ip.count > 2
+            if cur_ip.count >= 2
                 flash[:ip_error] = "Thanks for your support, but you can only sign up twice from the same device!"
                 return redirect_to root_path
             end
