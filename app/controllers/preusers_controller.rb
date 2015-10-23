@@ -48,7 +48,7 @@ class PreusersController < ApplicationController
                 cookies[:h_email] = @preuser.email
                 format.html { redirect_to '/refer-a-friend' }
             else
-                format.html { redirect_to root_path, :alert => "Something went wrong!" }
+                format.html { redirect_to root_path  }
             end
         end
   end
