@@ -18,7 +18,7 @@ class Preuser < ActiveRecord::Base
             'count' => 10,
             "html" => "Toothpaste &amp; Floss",
             "class" => "three",
-            "image" =>  "tulip_toothpaste_floss.png",
+            "image" =>  "tulip-regimen-5.png",
             "check" => "check-icon-new-light-blue.png"
         },
         {
