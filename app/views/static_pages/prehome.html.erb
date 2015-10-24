@@ -18,7 +18,7 @@
                 <% end %>
                 <%= f.text_field :email, :placeholder => "crown@teethmail.com\n" %>
                 <%= f.hidden_field :referrer_id, value: params[:ref] %>
-                <%= f.submit 'I WANT IN', class: "button"%>
+                <%= f.submit 'I WANT IN', class: "button", :onClick => "ga('send', 'event', { eventCategory: 'Email Form', eventAction: 'click', eventLabel: 'Preuser form submission'});" %>
             <% end %>
         <% end %>
     </div>
