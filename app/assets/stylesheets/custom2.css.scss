@@ -132,9 +132,8 @@ body {
 			header {
 				height: 80px;
 				img {
-					position: relative;
-					width: 20%;
-					top: 20%;
+					width: 20% !important;
+					top: 20% !important;
 				}
 			}
 		}
@@ -155,7 +154,7 @@ body {
 		}
 		.formtext{
 			top: -130.5px !important;
-			
+
 			h3 {
 				padding: 55px 0 27.5px 0 !important;
 			}
