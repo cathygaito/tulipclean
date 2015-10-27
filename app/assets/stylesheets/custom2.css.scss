@@ -140,24 +140,22 @@ body {
 		}
 		.headline {
 			h1 {
+				margin: 47.5px 0 0 0 !important;
 				font-size: 45px !important;
 			}
 			img {
-				width: 100%;
-				position: relative;
-				display: block;
-				z-index: 1;
-				top: -83px;
-				margin: 0;
-				padding: 0;
+				height: auto !important;
+				top: -130.5px !important;
 			}
 		}
 		.tagline {
 			font-size: 18px !important;
 			padding: 40px !important;
+			top: -130.5px !important;
 		}
 		.formtext{
-
+			top: -130.5px !important;
+			
 			h3 {
 				padding: 55px 0 27.5px 0 !important;
 			}
