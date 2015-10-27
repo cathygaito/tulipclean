@@ -1,17 +1,21 @@
 <section id="prehome">
-    <div class="prehero">
-        <div id="logo">
-            <%= image_tag('tulip-logo-blue.png') %>
-        </div>
-        <div class="text">
-            <h1>Tulip is coming.</h1>
-            <h2>The much needed facelift for oral care and your bathroom</h2>
-        </div>
+        
+    <header id="logo">
+        <%= image_tag('tulip-logo-light-blue.png') %>
+    </header>
+
+    <div class="headline">
+        <h1>Tulip is coming.</h1>
+        <%= image_tag('tulip_landing_2b.jpg') %>
+    </div>
+
+    <div class="tagline">
+        A FACELIFT FOR ORAL CARE AND YOUR BATHROOM
     </div>
 
     <div class="formtext">
         <% if !Rails.application.config.ended %>
-            <h3>Be the first to know, and you don't even need to slip us a $20.</h3>
+            <h3>BE THE FIRST TO KNOW.<br>AND YOU DON'T EVEN NEED TO SLIP US A $20.</h3>
             <%= form_for @preuser, url: { controller: "preusers", action: "create" }, class: "preform" do |f| %>
                 <% flash.each do |message_type, message| %>
                     <div class="alert alert-<%= message_type %>"><%= message %></div>

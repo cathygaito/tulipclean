@@ -14,273 +14,166 @@ body {
 
 	section#prehome {
 		position: relative;
-		background: url("tulip_landing_2b.jpg") no-repeat fixed 100% 100%;
-		background-size: cover;
-		background-position: 50% 50%;
-		background-repeat: no-repeat;
 		height: 100vh;
 		margin: 0;
 		padding: 0;
 		margin: 0 auto;
 		text-align: center;
-	}
 
-	p#emailbreak {
-		padding-top: 0;
-		margin-top: 0;	
-	}
-
-/**************************************
-PREHOME HERO STYLES 
-**************************************/
-	div.prehero {
-		display: block;
-
-		div#logo {
-			text-align: left;
-			display: none;
-			img{
+		header {
+			height: 95px;
+			img {
 				position: relative;
-				height: 2.5em;
-				width: auto;
-				left: 20px;
-				top: 20px;
+				width: 20%;
+				top: 20%;
+			}
+		}
+
+		.headline {
+			margin: 0;
+			padding: 0;
+			h1 {
+				position: relative;
+				display: block;
+				color: #fff;
+				font-size: 72px;
+				text-shadow: 1px 4px 50px rgba(0,0,0,0.08);
+				padding: 0;
+				margin: 95px 0 0 0;
+				z-index: 2;
+			}
+			img {
+				width: 100%;
+				height: 495px;
+				position: relative;
+				display: block;
+				z-index: 1;
+				top: -178px;
+				margin: 0;
+				padding: 0;
+			}
+		}
+
+		.tagline {
+			font-size: 25px;
+			padding: 60px;
+			background-color: #4f6177;
+			color: white;
+			position: relative;
+			display: block;
+			top: -178px;
+			margin: 0;
+		}
+
+		.formtext{
+		    position: relative;
+			display: block;
+			top: -178px;
+			margin: 0;
+			padding: 0;
+
+			h3 {
+				padding: 110px 0 55px 0;
+				font-size: 16px;
+			}
+
+			form{ 
+				margin: 0 auto;
+				width: 84%;
+				input {
+					display: block;
+					width: 100%;
+					height: 90px;
+					margin: 0;
+					padding: 0;
+					border-radius: 5px;
+					border: 2px #798491 solid;
+					outline: none;
+					font-size: 25px;
+					margin-bottom: 30px;
+					text-align: center;
+					color: #89CFD7;
+				}
+				.button{
+					background-color: #4f6177;
+					color: white;
+					border: 2px #4f6177 solid;
+					width: 101%;
+				}
+				input::-webkit-input-placeholder {
+				   color: #89CFD7;
+				   text-align: center;
+				   font-size: 25px;
+				}
+
+				input:-moz-placeholder { /* Firefox 18- */
+				   color: #89CFD7;
+				   text-align: center;
+				   font-size: 25px;
+				}
+
+				input::-moz-placeholder {  /* Firefox 19+ */
+				   color: #89CFD7;
+				   text-align: center;
+				   font-size: 25px;
+				}
+
+				input:-ms-input-placeholder {  
+				   color: #89CFD7;
+				   text-align: center;
+				   font-size: 25px;
+				}
 			}
 		}
 	}
 
-	div.prehero div.text {
-		position: relative;
-		top: 0.5em;
-		margin: 0 auto;
-		width: 100%;
-		text-align: center;
-
-		div{
-			display: block;
-			position: relative;
-			bottom: 4em;
+	@media only screen and (max-width : 494px) {
+		section#prehome {
+			header {
+				height: 80px;
+				img {
+					position: relative;
+					width: 15%;
+					top: 12%;
+				}
+			}
 		}
-	}
-
-	div.prehero h1 {
-		font-size: 4em;
-		margin: 0;
-		padding: 0;
-		line-height: 1.2;
-		font-family: "Sentinel SSm A", "Sentinel SSm B";
-		font-style: normal;
-		font-weight: 300;
-		display: inline-block;
-	}
-
-	div.prehero h2 {
-		font-size: 1.125em;
-		color: #798491;
-		line-height: 1.75;
-		margin: 15px 0 0 0;
-		padding: 0;
-		font-family: "Gotham SSm A", "Gotham SSm B";
-		font-style: normal;
-		font-weight: 100;
-		display: inline-block;
-		letter-spacing: 1px;
-		text-transform: uppercase;
-
-		span {
-			font-weight: bold;
-			margin: 0;
-			padding: 0;
+		.headline {
+			h1 {
+				font-size: 45px !important;
+			}
+			img {
+				width: 100%;
+				position: relative;
+				display: block;
+				z-index: 1;
+				top: -83px;
+				margin: 0;
+				padding: 0;
+			}
 		}
-	}
-	div.formtext {
-		position: absolute;
-		display: block;
-		width: 100%;
-		bottom: -1em;
-
-		h3 {
-			display: block;
-			position: relative;
-			top: 1em;
-			font-size: 1.05em;
-			text-transform: uppercase;
-			font-family: "Gotham SSm A", "Gotham SSm B";
-			font-style: normal;
-			font-weight: 300;
+		.tagline {
+			font-size: 18px !important;
+			padding: 40px !important;
 		}
-	}
+		.formtext{
 
-/**************************************
-PREHOME FORM STYLES
-**************************************/
-	
-
-
-	form.new_preuser {
-		position: relative;
-		width: 100%;
-		text-align: center;
-		top: 0;
-		padding: 0 0 30px 0;
-
-		div.alert-ip_error {
-			margin: 25px auto -20px;
-			padding: 5px 0;
-			display: block;
-			position: relative;
-			border: 2px #FFC866 solid;
-			width: 50%;
-			border-radius: 10px;
-			background-color: #FFEED1;
-			color: #798491;
-		}
-
-		input#preuser_email {
-			font-size: 1.125em;
-			background-color: transparent;
-			border-radius: 5px;
-			border: 1.5px black solid;
-			padding: 0;
-			margin: 0;
-			height: 3em;
-			width: 100%;
-			font-family: "Gotham SSm A", "Gotham SSm B";
-			font-style: normal;
-			font-weight: 400;
-			padding-left: 15px;
-		}
-		input::-webkit-input-placeholder {
-			color: #89A1B9;
-			background-color: transparent;
-			border: none;
-			text-align: left;
-			padding: 0 0 0 15px;
-		}
-		input:-moz-placeholder {
-    		color: #89A1B9;
-    		background-color: transparent;
-    		border: none;
-    		text-align: left;
-    		padding: 0 0 0 15px;
-		}
-
-		input.button {
-			border-radius: 5px;
-			background-color: #4F6177;
-			color: #FFFFFF;
-			font-size: 0.8125em;
-			padding: 19px 50px;
-			letter-spacing: 1px;
-			margin: 35px 0 0 0;
-			display: inline-block;
-		}
-	}
-}
-
-/**************************************
-PREHOME MEDIA QUERIES
-**************************************/
-
-@media screen and (min-width: 480px) {
-	div.prehero div.text {
-		display: inline-block;
-	}
-
-	div.formtext {
-		bottom: -3em !important;
-	}
-
-	form.new_preuser {
-		display: block;
-		position: relative !important;
-		width: 100%;
-		margin: 0;
-		clear: both;
-	}	
-}
-
-@media screen and (min-width: 660px) {
-
-	div#logo {
-		display: block !important;
-		text-align: left !important;
-
-		img{
-			position: relative !important;
-			height: 2.5em !important;
-			width: auto !important;
-			left: 20px !important;
-			top: 20px !important;
+			h3 {
+				padding: 55px 0 27.5px 0 !important;
+			}
 		}
 	}
 	
-	div.formtext {
-		bottom: -3em !important;
+	@media only screen and (min-width : 495px) {
+		
+	}
+	
+	@media only screen and (min-device-width : 768px) and (max-device-width : 1223px) {
+		
 	}
 
-	div.prehero div.text {
-		margin: 9% auto !important;
-	}
-	div.prehero div.text h1 {
-		margin: 0;
-		padding: 0;
-		font-family: "Sentinel SSm A", "Sentinel SSm B";
-		font-style: normal;
-		font-weight: 300;
-		display: block;
-	}
-
-	div.prehero div.text h2 {
-		font-size: 1.25em;
-		margin: 15px 0 0 0;
-		padding: 0;
-		line-height: 1.2;
-		font-family: "Gotham SSm A", "Gotham SSm B";
-		font-style: normal;
-		font-weight: 400;
-	}
-
-	form.new_preuser {
-		display: block;
-		position: relative;
-		width: 100%;
-		clear: left;
-		padding: 0;
-
-		input#preuser_email {
-			display: inline-block;
-			width: 35% !important;
-		}
-	}
-}
-
-@media screen and (min-width: 980px) {
-	div.formtext{
-		bottom: 0 !important;
-	}
-
-	form.new_preuser {
-		input#preuser_email {
-			width: 27.5% !important;
-		}
-	}
-	div {
-		h3 {
-			
-		}
-	}
-}
-
-@media screen and (min-width: 1237px) {
-	div.formtext {
-		bottom: 0 !important;
-	}
-
-	form.new_preuser {
-		input#preuser_email {
-			width: 27.5% !important;
-		}
+	@media only screen  and (min-width : 1224px) {
+		
 	}
 }
 
