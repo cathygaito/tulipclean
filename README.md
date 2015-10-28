@@ -1,3 +1,3 @@
 # TULIP
 
-CURRENT DEV BRANCH AT: [https://tulip-init.herokuapp.com/](https://tulip-init.herokuapp.com/)
+THE ORAL CARE REVOLUTION IS COMING: [http://www.tulipclean.com](http://www.tulipclean.com)
