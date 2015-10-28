@@ -237,32 +237,12 @@ body {
 
 	@media only screen  and (min-width : 1224px) {
 		header {
-			height: 95px;
+			height: 45px;
 			img {
 				position: relative;
 				height: 80% !important;
 				width: auto;
 				padding: 9.5px 0 !important;
-			}
-		}
-
-		.headline {
-			margin: 0;
-			padding: 0;
-			h1 {
-				position: relative;
-				display: block;
-				color: #fff;
-				font-size: 72px;
-				text-shadow: 1px 4px 50px rgba(0,0,0,0.08);
-				padding: 0;
-				margin: 95px 0 0 0;
-				z-index: 2;
-				font-weight: 300;
-			}
-			img {
-				width: 100% !important;
-				height: auto !important;
 			}
 		}
 
@@ -329,9 +309,10 @@ body {
 				background-repeat: no-repeat;
 				background-size: cover;
 				background-position: center; 
-				height: 525px;
+				height: 50vh !important;
 				top: -83px;
-				padding-top: 160px !important;
+				padding-top: 100px !important;
+				padding-bottom: 120px !important;
 			}
 			img {
 				display: none !important;
@@ -343,7 +324,7 @@ body {
 			z-index: 4;
 			display: block;
 			background-color: transparent !important;
-			top: -560px !important;
+			top: -400px !important;
 			margin: 0;
 			letter-spacing: 1.1px;
 			font-weight: 700;
