@@ -58,7 +58,7 @@ body {
 
 		.tagline {
 			font-family: "Gotham SSm A", "Gotham SSm B";
-			font-size: 15px !important;
+			font-size: 15px;
 			padding: 30px !important;
 			background-color: #4f6177;
 			color: white;
@@ -209,7 +209,7 @@ body {
 			}
 		}
 		.tagline {
-			font-size: 15px !important;
+			font-size: 15px;
 			padding: 40px 0 !important;
 			top: -120px !important;
 			z-index: 4;
@@ -311,7 +311,7 @@ body {
 
 		.formtext{
 			h3 {
-				font-size: 20px !important;
+				font-size: 15px !important;
 				padding: 0 0 27.5px 0 !important;
 				margin-top: 50px;
 			}
@@ -374,8 +374,8 @@ body {
 				background-size: cover;
 				background-position: center; 
 				height: 45vh !important;
-				top: -103px;
-				padding-top: 100px !important;
+				top: -108px;
+				padding-top: 50px !important;
 				padding-bottom: 120px !important;
 			}
 			img {
@@ -388,10 +388,11 @@ body {
 			z-index: 4;
 			display: block;
 			background-color: transparent !important;
-			top: -400px !important;
+			top: -430px !important;
 			margin: 0;
 			letter-spacing: 1.1px;
 			font-weight: 700;
+			font-size: 25px !important;
 		}
 	}
 }
