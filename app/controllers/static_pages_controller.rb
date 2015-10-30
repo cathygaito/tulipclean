@@ -6,7 +6,28 @@ class StaticPagesController < ApplicationController
 
   def prehome
     @is_mobile = mobile_device?
-  	@preuser = Preuser.new
+    @preuser = Preuser.new
+    if request.path_info == '/prelaunch'
+      render 'prelaunch'
+    elsif request.path_info == '/pre-launch'
+      render 'pre-launch'
+    elsif request.path_info == '/prelauncher'
+      render 'prelauncher'
+    elsif request.path_info == '/pre-launcher'
+      render 'pre-launcher'
+    elsif request.path_info == '/pre-launchr'
+      render 'pre-launchr'
+    elsif request.path_info == '/launcher'
+      render 'launcher'
+    elsif request.path_info == '/prelaunchr'
+      render 'prelaunchr'
+    elsif request.path_info == '/launchr'
+      render 'launchr'
+    elsif request.path_info == '/alpha'
+      render 'alpha'
+    elsif request.path_info == '/'
+      render get_url
+    end
   end
 
   def about
@@ -23,5 +44,12 @@ class StaticPagesController < ApplicationController
                 cookies.delete :h_email
             end
         end
+    end
+
+    def get_url
+      subarray = ['prelaunch','pre-launch','prelauncher','pre-launcher','pre-launchr','launcher','prelaunchr','launchr','alpha']
+      random = rand(8)
+      subdomain = subarray[random].to_s
+      return subdomain
     end
 end

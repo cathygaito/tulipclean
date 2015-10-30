@@ -12,7 +12,7 @@ body {
 	font-style: normal;
 	font-weight: 300;
 
-	section#prehome {
+	section#prelaunch, section#pre-launch, section#pre-launchr, section#launchr, section#prelauncher, section#launcher, section#alpha, section#pre-launcher, section#prelaunchr {
 		position: relative;
 		height: 100vh;
 		margin: 0;
@@ -331,6 +331,26 @@ body {
 			font-weight: 700;
 			font-size: 25px !important;
 		}
+		section#pre-launch, section#pre-launchr, section#launchr {
+			.headline {
+				h1 {
+					background-image: url('blue.jpg');
+				}
+			}
+			.tagline {
+				color: #ffffff !important;
+			}
+		}
+		section#prelauncher, section#launcher, section#alpha {
+			.headline {
+				h1 {
+					background-image: url('copper.jpg');
+				}
+			}
+			.tagline {
+				color: #ffffff !important;
+			}
+		}
 	}
 
 	@media only screen  and (min-width : 1224px) {
@@ -432,6 +452,26 @@ body {
 			letter-spacing: 1.1px;
 			font-weight: 700;
 			font-size: 25px !important;
+		}
+		section#pre-launch, section#pre-launchr, section#launchr {
+			.headline {
+				h1 {
+					background-image: url('blue.jpg');
+				}
+			}
+			.tagline {
+				color: #ffffff !important;
+			}
+		}
+		section#prelauncher, section#launcher, section#alpha {
+			.headline {
+				h1 {
+					background-image: url('copper.jpg');
+				}
+			}
+			.tagline {
+				color: #ffffff !important;
+			}
 		}
 	}
 }

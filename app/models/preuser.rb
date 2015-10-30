@@ -42,6 +42,7 @@ class Preuser < ActiveRecord::Base
     def create_referral_code
         referral_code = SecureRandom.hex(5)
         @collision = Preuser.find_by_referral_code(referral_code)
+        selection = ''
 
         while !@collision.nil?
             referral_code = SecureRandom.hex(5)
@@ -50,4 +51,5 @@ class Preuser < ActiveRecord::Base
 
         self.referral_code = referral_code
     end
+
 end
