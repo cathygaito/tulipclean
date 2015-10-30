@@ -59,7 +59,7 @@ body {
 		.tagline {
 			font-family: "Gotham SSm A", "Gotham SSm B";
 			font-size: 15px !important;
-			padding: 40px !important;
+			padding: 30px !important;
 			background-color: #4f6177;
 			color: white;
 			position: relative;
@@ -72,6 +72,10 @@ body {
 
 		#copyright {
 			font-size: 8px;
+			font-family: "Gotham SSm A", "Gotham SSm B";
+			margin-bottom: 20px;
+			position: relative;
+			top: -60px;
 		}
 
 		.formtext{
@@ -86,10 +90,12 @@ body {
 				padding: 0 5% 0 5% !important;
 				font-size: 10px;
 				letter-spacing: 1.1px;
+				position: relative;
+				top: -10px;
 			}
 
 			form{ 
-				margin: 0 auto 20px;
+				margin: 0 auto;
 				width: 84%;
 				input {
 					display: block;
@@ -101,7 +107,7 @@ body {
 					border: 2px #798491 solid;
 					outline: none;
 					font-size: 15px;
-					margin-bottom: 5px;
+					margin-bottom: 10px;
 					text-align: center;
 					color: #89CFD7;
 				}
