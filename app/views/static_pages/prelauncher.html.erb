@@ -15,7 +15,7 @@
 
     <div class="formtext">
         <% if !Rails.application.config.ended %>
-            <h3>SIGN UP AND BE THE FIRST TO KNOW WHEN WE LAUNCH.  AS A BONUS - EARN FREE PRODUCTS!</h3>
+            <h3>SIGN UP TO LEARN MORE AND EARN FREE PRODUCTS!</h3>
             <%= form_for @preuser, url: { controller: "preusers", action: "create" }, class: "preform" do |f| %>
                 <% flash.each do |message_type, message| %>
                     <div class="alert alert-<%= message_type %>"><%= message %></div>
