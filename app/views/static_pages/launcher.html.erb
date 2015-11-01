@@ -5,17 +5,17 @@
     </header>
 
     <div class="headline">
-        <h1>Dental Care Delivered to your Door.</h1>
-        <%= image_tag('copper.jpg') %>
+        <h1>2x the Bristles.  1/2 the Hassle.</h1>
+        <%= image_tag('blue.jpg') %>
     </div>
 
     <div class="tagline">
-        A FACELIFT FOR ORAL CARE AND YOUR BATHROOM
+        A FACELIFT FOR YOUR ORAL CARE REGIMEN AND YOUR BATHROOM
     </div>
 
     <div class="formtext">
         <% if !Rails.application.config.ended %>
-            <h3>BE THE FIRST TO KNOW. AND YOU DON'T EVEN NEED TO SLIP US A $20.</h3>
+            <h3>SIGN UP AND BE THE FIRST TO KNOW WHEN WE LAUNCH. AS A BONUS - EARN FREE PRODUCTS!</h3>
             <%= form_for @preuser, url: { controller: "preusers", action: "create" }, class: "preform" do |f| %>
                 <% flash.each do |message_type, message| %>
                     <div class="alert alert-<%= message_type %>"><%= message %></div>
