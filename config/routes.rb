@@ -23,6 +23,8 @@ else
   get 'prelaunchr' => 'static_pages#prehome'
   get 'launchr' => 'static_pages#prehome'
   get 'alpha' => 'static_pages#prehome'
+  get 'alonzohome' => 'static_pages#prehome'
+  get 'alonzorefer' => 'preusers#refer'
   root 'static_pages#prehome'
 end
 

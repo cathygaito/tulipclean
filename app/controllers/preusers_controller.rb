@@ -38,25 +38,31 @@ class PreusersController < ApplicationController
   end
 
   def refer
-        email = cookies[:h_email]
-
-        @is_mobile = mobile_device?
-
-        @preuser = Preuser.find_by_email(email)
-
-        if @preuser.nil?
-            @count = 0
+        if request.path_info == '/alonzorefer'
+          @preuser = Preuser.find_by_email('nordbydaniel@gmail.com')
+          @count = 25
+          render 'alonzo'
         else
-            @count = @preuser.referrals.count
-        end
-        
+          email = cookies[:h_email]
 
-        respond_to do |format|
-            if !@preuser.nil?
-                format.html #refer.html.erb
-            else
-                format.html { redirect_to root_path, :alert => "Something went wrong!" }
-            end
+          @is_mobile = mobile_device?
+
+          @preuser = Preuser.find_by_email(email)
+
+          if @preuser.nil?
+              @count = 0
+          else
+              @count = @preuser.referrals.count
+          end
+          
+
+          respond_to do |format|
+              if !@preuser.nil?
+                  format.html #refer.html.erb
+              else
+                  format.html { redirect_to root_path, :alert => "Something went wrong!" }
+              end
+          end
         end
     end
 

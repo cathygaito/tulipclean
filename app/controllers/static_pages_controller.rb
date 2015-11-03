@@ -25,6 +25,8 @@ class StaticPagesController < ApplicationController
       render 'launchr'
     elsif request.path_info == '/alpha'
       render 'alpha'
+    elsif request.path_info == '/alonzohome'
+      render 'alonzo'
     elsif request.path_info == '/'
       render get_url
     end
