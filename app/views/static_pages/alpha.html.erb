@@ -10,12 +10,12 @@
     </div>
 
     <div class="tagline">
-        A FACELIFT FOR YOUR ORAL CARE REGIMEN AND YOUR BATHROOM
+        EFFECTIVE, BEAUTIFUL, DELIVERED.  THE LAST TOOTHBRUSH YOU'LL PURCHASE.
     </div>
 
     <div class="formtext">
         <% if !Rails.application.config.ended %>
-            <h3>BE THE FIRST TO KNOW. AND YOU DON'T EVEN NEED TO SLIP US A $20.</h3>
+            <h3>SIGN UP TO GET EARLY ACCESS - NO SPAM :)  AS AN ADDED BONUS, EARN FREE PRODUCTS.</h3>
             <%= form_for @preuser, url: { controller: "preusers", action: "create" }, class: "preform" do |f| %>
                 <% flash.each do |message_type, message| %>
                     <div class="alert alert-<%= message_type %>"><%= message %></div>

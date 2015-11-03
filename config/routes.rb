@@ -14,15 +14,6 @@ Rails.application.routes.draw do
 if Rails.application.config.ended
   root 'static_pages#home'
 else
-  get 'prelaunch' => 'static_pages#prehome'
-  get 'pre-launch' => 'static_pages#prehome'
-  get 'prelauncher' => 'static_pages#prehome'
-  get 'pre-launcher' => 'static_pages#prehome'
-  get 'pre-launchr' => 'static_pages#prehome'
-  get 'launcher' => 'static_pages#prehome'
-  get 'prelaunchr' => 'static_pages#prehome'
-  get 'launchr' => 'static_pages#prehome'
-  get 'alpha' => 'static_pages#prehome'
   get 'alonzohome' => 'static_pages#prehome'
   get 'alonzorefer' => 'preusers#refer'
   root 'static_pages#prehome'
