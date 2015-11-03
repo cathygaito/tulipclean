@@ -332,26 +332,6 @@ body {
 			font-weight: 700;
 			font-size: 25px !important;
 		}
-		section#pre-launch, section#pre-launchr, section#launchr {
-			.headline {
-				h1 {
-					background-image: url('blue.jpg');
-				}
-			}
-			.tagline {
-				color: #ffffff !important;
-			}
-		}
-		section#prelauncher, section#launcher, section#alpha {
-			.headline {
-				h1 {
-					background-image: url('blue.jpg');
-				}
-			}
-			.tagline {
-				color: #ffffff !important;
-			}
-		}
 	}
 
 	@media only screen  and (min-width : 1224px) {
@@ -455,26 +435,6 @@ body {
 			font-weight: 700;
 			font-size: 25px !important;
 		}
-		section#pre-launch, section#pre-launchr, section#launchr {
-			.headline {
-				h1 {
-					background-image: url('blue.jpg');
-				}
-			}
-			.tagline {
-				color: #ffffff !important;
-			}
-		}
-		section#prelauncher, section#launcher, section#alpha {
-			.headline {
-				h1 {
-					background-image: url('blue.jpg');
-				}
-			}
-			.tagline {
-				color: #ffffff !important;
-			}
-		}
 	}
 }
 
@@ -542,9 +502,7 @@ REFER HERO STYLES
 **************************************/
 
 	.hero {
-		background-image: url("marble.jpg");
-		background-size: cover;
-		background-repeat: no-repeat;
+		background-color: #F7F3F2;
 		margin: 0;
 		padding: 0;
 		text-align: center;
@@ -985,8 +943,11 @@ REFER PRIZE STYLES
 			}
 		}
 
-		.mobileonly {
-			display: inline-block !important;
+		div#referBlock {
+			display: block;
+			.mobileonly {
+				display: inline-block !important;
+			}
 		}
 	}
 
@@ -1007,6 +968,9 @@ REFER PRIZE STYLES
 						}
 					}
 				}
+			}
+			div#referBlock{
+				display: block !important;
 			}
 		}
 
