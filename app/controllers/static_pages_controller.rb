@@ -21,7 +21,7 @@ class StaticPagesController < ApplicationController
         if !Rails.application.config.ended
             email = cookies[:h_email]
             if email and !Preuser.find_by_email(email).nil?
-                redirect_to '/refer-a-friend'
+                redirect_to ('/' + get_url)
             else
                 cookies.delete :h_email
             end

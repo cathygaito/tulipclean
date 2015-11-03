@@ -30,7 +30,7 @@ class PreusersController < ApplicationController
         respond_to do |format|
             if !@preuser.nil?
                 cookies[:h_email] = @preuser.email
-                format.html { redirect_to '/refer-a-friend' }
+                format.html { redirect_to get_url }
             else
                 format.html { redirect_to root_path  }
             end
@@ -38,36 +38,45 @@ class PreusersController < ApplicationController
   end
 
   def refer
-        if request.path_info == '/alonzorefer'
-          @preuser = Preuser.find_by_email('nordbydaniel@gmail.com')
-          @count = 25
-          render 'alonzo'
-        else
-          email = cookies[:h_email]
-
-          @is_mobile = mobile_device?
-
-          @preuser = Preuser.find_by_email(email)
-
-          if @preuser.nil?
-              @count = 0
-          else
-              @count = @preuser.referrals.count
-          end
-          
-
-          respond_to do |format|
-              if !@preuser.nil?
-                  format.html #refer.html.erb
-              else
-                  format.html { redirect_to root_path, :alert => "Something went wrong!" }
-              end
-          end
-        end
+    email = cookies[:h_email]
+    @is_mobile = mobile_device?
+    @preuser = Preuser.find_by_email(email)
+    if @preuser.nil?
+        @count = 0
+    else
+        @count = @preuser.referrals.count
     end
+
+    if request.path_info == '/alonzorefer'
+      @preuser = Preuser.find_by_email('nordbydaniel@gmail.com')
+      @count = 25
+      render 'alonzo'
+    elsif request.path_info == '/alpha'
+      render 'alpha'
+    elsif request.path_info == '/launcher'
+      render 'launcher'
+    elsif request.path_info == '/launchr'
+      render 'launchr'
+    elsif request.path_info == '/pre-launch'
+      render 'pre-launch'
+    elsif request.path_info == '/pre-launcher'
+      render 'pre-launcher'
+    elsif request.path_info == '/pre-launchr'
+      render 'pre-launchr'
+    elsif request.path_info == '/prelaunch'
+      render 'prelaunch'
+    elsif request.path_info == '/prelauncher'
+      render 'prelauncher'
+    elsif request.path_info == '/prelaunchr'
+      render 'prelaunchr'
+    end
+
+    
+  end
 
   private
 
+    
   def preuser_params
   	params.require(:preuser).permit(:id, :email, :referral_code, :referrer_id, :referrals, :created_at, :updated_at)
   end
