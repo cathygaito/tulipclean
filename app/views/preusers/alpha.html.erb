@@ -50,7 +50,7 @@
 
          <p>FRIENDS INVITED</p>
 
-         <div class="progress ">
+         <div class="progress">
                 <div id="<% if found != nil %>first<% end %>"></div>
                 <% stops.each do |stop| %>
                     <div class="counter <% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>selected<% end %> <% if stop["class"] == 'five' %>final<% end %>"><p><%= stop["count"] %></p><% if stop["count"] > 5%><% end %></div>

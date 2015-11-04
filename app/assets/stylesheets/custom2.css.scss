@@ -575,13 +575,13 @@ REFER PRIZE PROGRESS STYLES
 			font-style: normal;
 			font-weight: 500;
 			color: #2D4974;
-			margin: 1% 0;
+			margin: 25px 0;
 		}
 
 		.progress {
 			width: 100%;
 			height: 26px;
-			margin: 0;
+			margin: 0 0 25px 0;
 			padding: 0;
 			border: 1px #4F6177 solid;
 			border-radius: 15px;
@@ -780,7 +780,7 @@ REFER PRIZE STYLES
 						font-size: 16px;
 						font-family: "Gotham SSm A", "Gotham SSm B";
 						font-style: normal;
-						font-weight: 400;
+						font-weight: 800;
 						margin: 0 0 10px 0;
 						padding: 0;
 						z-index: 100;
@@ -839,9 +839,6 @@ REFER PRIZE STYLES
 
 			.share {
 				padding-bottom: 25px;
-				p {
-					
-				}
 			}
 		}
 
@@ -857,6 +854,7 @@ REFER PRIZE STYLES
 
 						p.prizedesc {
 							font-size: 15px;
+							font-weight: 800;
 						}
 					}
 				}
@@ -868,6 +866,14 @@ REFER PRIZE STYLES
 @media screen and (min-width: 660px) {
 	div.noShow {
 		display: none;
+	}
+	section#prizehero {
+	}
+	.share {
+		padding-bottom: 25px;
+		p {
+			font-size: 15px !important;
+		}
 	}
 }
 
@@ -893,14 +899,21 @@ REFER PRIZE STYLES
 				ul{
 					li{
 						width: 35vw;
-						display: block;
+						display: inline-block !important;
 						margin-bottom: 1em;
 
 						p.prizedesc {
 							font-size: 15px;
+							font-weight: 800;
 						}
 					}
 				}
+			}
+		}
+		.share {
+			padding-bottom: 25px;
+			p {
+				font-size: 18px !important;
 			}
 		}
 	}
@@ -926,6 +939,7 @@ REFER PRIZE STYLES
 
 						p.prizedesc {
 							font-size: 15px;
+							font-weight: 800;
 						}
 					}
 				}
@@ -972,6 +986,7 @@ REFER PRIZE STYLES
 
 								p.prizedesc {
 									font-size: 15px;
+									font-weight: 800;
 								}
 							}
 						}
@@ -996,6 +1011,7 @@ REFER PRIZE STYLES
 
 							p.prizedesc {
 								font-size: 20px;
+								font-weight: 800;
 							}
 						}
 					}
