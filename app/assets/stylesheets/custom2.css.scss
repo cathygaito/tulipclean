@@ -541,17 +541,20 @@ REFER HERO STYLES
 			padding-bottom: 50px;
 
 			p {
+				font-family: "Sentinel SSm A", "Sentinel SSm B";
 				background-color: #fff;
 				font-size: 20px;
 				color: #2D4974;
 				margin: 0;
 				padding: 20px 30px;
+				font-weight: normal;
 			}
 			p.no-box {
 				background-color: transparent;
 				padding: 20px 5px;
 			}
 		}
+		
 	}
 
 /**************************************
@@ -835,7 +838,7 @@ REFER PRIZE STYLES
 			.share {
 				padding-bottom: 25px;
 				p {
-					display: none;
+					
 				}
 			}
 		}
