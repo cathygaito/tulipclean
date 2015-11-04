@@ -16,15 +16,6 @@ if Rails.application.config.ended
 else
   get 'alonzohome' => 'static_pages#prehome'
   get 'alonzorefer' => 'preusers#refer'
-  get 'alpha' => 'preusers#refer'
-  get 'launcher' => 'preusers#refer'
-  get 'launchr' => 'preusers#refer'
-  get 'pre-launch' => 'preusers#refer'
-  get 'pre-launcher' => 'preusers#refer'
-  get 'pre-launchr' => 'preusers#refer'
-  get 'prelaunch' => 'preusers#refer'
-  get 'prelauncher' => 'preusers#refer'
-  get 'prelaunchr' => 'preusers#refer'
   root 'static_pages#prehome'
 end
 

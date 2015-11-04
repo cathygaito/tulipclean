@@ -24,11 +24,4 @@ class ApplicationController < ActionController::Base
         end
     end
 
-    def get_url
-      subarray = ['/prelaunch','/pre-launch','/prelauncher','/pre-launcher','/pre-launchr','/launcher','/prelaunchr','/launchr','/alpha']
-      random = rand(8)
-      subdomain = subarray[random].to_s
-      return subdomain
-    end
-
 end

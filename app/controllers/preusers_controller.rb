@@ -30,7 +30,7 @@ class PreusersController < ApplicationController
         respond_to do |format|
             if !@preuser.nil?
                 cookies[:h_email] = @preuser.email
-                format.html { redirect_to get_url }
+                format.html { redirect_to '/refer-a-friend' }
             else
                 format.html { redirect_to root_path  }
             end
@@ -51,26 +51,7 @@ class PreusersController < ApplicationController
       @preuser = Preuser.find_by_email('nordbydaniel@gmail.com')
       @count = 25
       render 'alonzo'
-    elsif request.path_info == '/alpha'
-      render 'alpha'
-    elsif request.path_info == '/launcher'
-      render 'launcher'
-    elsif request.path_info == '/launchr'
-      render 'launchr'
-    elsif request.path_info == '/pre-launch'
-      render 'pre-launch'
-    elsif request.path_info == '/pre-launcher'
-      render 'pre-launcher'
-    elsif request.path_info == '/pre-launchr'
-      render 'pre-launchr'
-    elsif request.path_info == '/prelaunch'
-      render 'prelaunch'
-    elsif request.path_info == '/prelauncher'
-      render 'prelauncher'
-    elsif request.path_info == '/prelaunchr'
-      render 'prelaunchr'
     end
-
     
   end
 
