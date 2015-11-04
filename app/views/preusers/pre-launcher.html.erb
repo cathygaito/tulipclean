@@ -28,7 +28,7 @@
                 <div class="share"><%= link_to image_tag('twitter-icon.png'), "https://twitter.com/intent/tweet?text=I%27m%20%23smiling%20ear%20to%20ear%20%40TulipClean%20is%20coming!%20My%20bathroom%20is%20going%20to%20look%20%23fresh%20for%20free%20#{root_url}%3Fref%3D#{@preuser.referral_code}", target: "blank", :onClick => "ga('send', 'event', { eventCategory: 'Twitter Share', eventAction: 'click', eventLabel: 'User clicks Twitter share'});"%></div>
                 <div id="referBlock">
                     <div class="share mobileonly"><p class="no-box">Referral code:</p></div>
-                    <div class="share mobileonly"><p><%= root_url %>?ref=<%= @preuser.referral_code %></p></div>
+                    <div class="share "><p><%= root_url %>?ref=<%= @preuser.referral_code %></p></div>
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
 
          <p>FRIENDS INVITED</p>
 
-         <div class="progress mobileonly">
+         <div class="progress">
                 <div id="<% if found != nil %>first<% end %>"></div>
                 <% stops.each do |stop| %>
                     <div class="counter <% if stop["selected"] || ((stop["count"] >= 0) && (stop["count"] <= found["count"]) unless found.nil?) %>selected<% end %> <% if stop["class"] == 'five' %>final<% end %>"><p><%= stop["count"] %></p><% if stop["count"] > 5%><% end %></div>
@@ -73,5 +73,6 @@
             </ul>
         </div>
         <%= mail_to "hello@tulip.com", nil, class: "mailTo", subject: "Say Hello!" %>
+        <p id="copyright">&copy; 2015, TULIP PRODUCTS INC</p>
     </section>
 </section>
