@@ -10,7 +10,7 @@
         %>
 
         <% if @count == 0 %>
-            <p class="place"><span>No</span> friends referred! See rewards below.</p>
+            <p class="place"><span>No</span> friends referred. See rewards below.</p>
         <% else %>
             <p class="place"><span id="placenum"><%= @count %></span> <%= words %></p>
         <% end %>
@@ -22,10 +22,10 @@
             <div>
                 <p class="heropar">Don't Leave your friends behind</p>
                 <h1>Tell Friends about Tulip and Get Products.</h1>
-                <p>SHARE VIA:</p>
-                <div class="share"><%= mail_to "", image_tag('email-icon.png'), subject: "By Invitation Only", body: "Hey!  I just signed up for Tulip.  Join the oral care revolution and as an added bonus, get free stuff :)\r\n\r\nUse my referral code:\r\n#{root_url}" + "?ref=" + "#{@preuser.referral_code}!" %></div>
-                <div class="share"><%= link_to image_tag('facebook-icon.png'), "https://www.facebook.com/dialog/feed?app_id=500082056826203&display=popup&caption=Tulip%20is%20coming&description=I%27m%20%23smiling%20ear%20to%20ear%20%40TulipClean%20is%20coming%21%20My%20bathroom%20is%20going%20to%20look%20%23fresh%20for%20free&redirect_uri=#{root_url}&link=#{root_url}%3Fref%3D#{@preuser.referral_code}&picture=#{root_url}assets%2Ftulip%5Flanding%5F2b%2Epng" %></div>
-                <div class="share"><%= link_to image_tag('twitter-icon.png'), "https://twitter.com/intent/tweet?text=I%27m%20%23smiling%20ear%20to%20ear%20%40TulipClean%20is%20coming!%20My%20bathroom%20is%20going%20to%20look%20%23fresh%20for%20free%20#{root_url}%3Fref%3D#{@preuser.referral_code}", target: "blank" %></div>
+                <p>SHARE YOUR UNIQUE LINK VIA:</p>
+                <div class="share"><%= mail_to "", image_tag('email-icon.png'), subject: "By Invitation Only", body: "Hey!  I just signed up for Tulip.  Join the oral care revolution and as an added bonus, get free stuff :)\r\n\r\nUse my referral code:\r\n#{root_url}" + "?ref=" + "#{@preuser.referral_code}!", :onClick => "ga('send', 'event', { eventCategory: 'Email Share', eventAction: 'click', eventLabel: 'User clicks Email share'});" %></div>
+                <div class="share"><%= link_to image_tag('facebook-icon.png'), "https://www.facebook.com/dialog/feed?app_id=500082056826203&display=popup&caption=Tulip%20is%20coming&description=I%27m%20%23smiling%20ear%20to%20ear%20%40TulipClean%20is%20coming%21%20My%20bathroom%20is%20going%20to%20look%20%23fresh%20for%20free&redirect_uri=#{root_url}&link=#{root_url}%3Fref%3D#{@preuser.referral_code}&picture=#{root_url}assets%2Ftulip%5Flanding%5F2b%2Epng", :onClick => "ga('send', 'event', { eventCategory: 'Facebook Share', eventAction: 'click', eventLabel: 'User clicks Facebook share'});" %></div>
+                <div class="share"><%= link_to image_tag('twitter-icon.png'), "https://twitter.com/intent/tweet?text=I%27m%20%23smiling%20ear%20to%20ear%20%40TulipClean%20is%20coming!%20My%20bathroom%20is%20going%20to%20look%20%23fresh%20for%20free%20#{root_url}%3Fref%3D#{@preuser.referral_code}", target: "blank", :onClick => "ga('send', 'event', { eventCategory: 'Twitter Share', eventAction: 'click', eventLabel: 'User clicks Twitter share'});"%></div>
                 <div id="referBlock">
                     <div class="share mobileonly"><p class="no-box">Referral code:</p></div>
                     <div class="share mobileonly"><p><%= root_url %>?ref=<%= @preuser.referral_code %></p></div>

@@ -515,6 +515,9 @@ REFER HERO STYLES
 			font-style: normal;
 			font-weight: 100;
 		}
+		p {
+			font-family: "Gotham SSm A", "Gotham SSm B";
+		}
 
 		p.heropar {
 			margin: 0 !important;
@@ -534,7 +537,7 @@ REFER HERO STYLES
 		.share {
 			display: inline-block;
 			margin: 0;
-			padding-bottom: 25px;
+			padding-bottom: 50px;
 
 			p {
 				background-color: #fff;
