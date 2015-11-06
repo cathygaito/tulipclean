@@ -39,18 +39,22 @@ class PreusersController < ApplicationController
 
   def refer
     email = cookies[:h_email]
-    @is_mobile = mobile_device?
-    @preuser = Preuser.find_by_email(email)
-    if @preuser.nil?
-        @count = 0
+    if email.nil?
+      redirect_to root_path
     else
-        @count = @preuser.referrals.count
-    end
+      @is_mobile = mobile_device?
+      @preuser = Preuser.find_by_email(email)
+      if @preuser.nil?
+          @count = 0
+      else
+          @count = @preuser.referrals.count
+      end
 
-    if request.path_info == '/alonzorefer'
-      @preuser = Preuser.find_by_email('nordbydaniel@gmail.com')
-      @count = 25
-      render 'alonzo'
+      if request.path_info == '/alonzorefer'
+        @preuser = Preuser.find_by_email('nordbydaniel@gmail.com')
+        @count = 25
+        render 'alonzo'
+      end
     end
     
   end
