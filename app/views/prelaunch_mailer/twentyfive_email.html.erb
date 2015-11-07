@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+	<p>You are awesome.</p>
+
+	<p>You’ve referred 25 people to Tulip.  As a token of our appreciation, you’ve earned a 6 Month supply of Tulip products!  Isn’t free stuff great?  We’ll keep you posted on redemption as we get closer to launch.</p>
+
+	<p>If you love free stuff like we do, keep it up.  You’re next reward awaits!  Click below or share your referral code: http://www.tulipclean.com/?ref=<%= @preuser.referral_code %></p>
+
+	<p><%= mail_to "", "Share some more!", subject: "By Invitation Only", body: "Hey!  I just signed up for Tulip.  Join the oral care revolution and as an added bonus, get free stuff :)\r\n\r\nUse my referral code:\r\nhttp://www.tulipclean.com/?ref=" + "#{@preuser.referral_code}!"%></p>
+
+	<p>Keep flossin’,</p>
+	<p>The Tulip Team</p>
+	<p>Follow Us | <a href="https://www.facebook.com/TulipClean/">Facebook</a> | <a href="https://twitter.com/tulipclean">Twitter</a> | <a href="https://instagram.com/tulipclean/">Instagram</a></p>
+	</body>
+</html>
