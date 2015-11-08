@@ -9,7 +9,7 @@ namespace :emails do
     	@updated_date = user.updated_at.to_date
         count = user.referrals.count
     	puts user.email
-    	puts @created_date
+    	puts "#{@created_date} - created"
     	puts @updated_date
     	puts @current_date
     	puts count

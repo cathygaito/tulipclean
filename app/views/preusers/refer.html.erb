@@ -20,7 +20,7 @@
     <div class="hero">
         <div>
             <div>
-                <p class="heropar">Don't Leave your friends behind</p>
+                <p class="heropar">Don't leave your friends behind</p>
                 <h1>Share a better way to brush, so you can for free</h1>
                 <p>SHARE YOUR UNIQUE LINK VIA:</p>
                 <div class="share"><%= mail_to "", image_tag('email-icon.png'), subject: "By Invitation Only", body: "Hey!  I just signed up for Tulip.  Join the oral care revolution and as an added bonus, get free stuff :)\r\n\r\nUse my referral code:\r\n#{root_url}" + "?ref=" + "#{@preuser.referral_code}!", :onClick => "ga('send', 'event', { eventCategory: 'Email Share', eventAction: 'click', eventLabel: 'User clicks Email share'});" %></div>

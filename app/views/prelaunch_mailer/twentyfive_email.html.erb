@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-  </head>
-  <body>
-	<p>You are awesome.</p>
+<body style = "background-color: #f7F3F2;">
+<br>
+<div style="text-align: center; height: 20px"><%= image_tag "tulip-logo-blue.png", style: "height: 40px;" %></div>
+<br>
+<br>
+<p>You are awesome. You’ve referred 25 people to Tulip!</p>
 
-	<p>You’ve referred 25 people to Tulip.  As a token of our appreciation, you’ve earned a 6 Month supply of Tulip products!  Isn’t free stuff great?  We’ll keep you posted on redemption as we get closer to launch.</p>
+<p>As a token of our appreciation, you’ve earned a <span style="color: #4F6177; font-weight: bold">6 month supply of Tulip products</span>! Isn’t free stuff great?  We’ll keep you posted on redemption as we get closer to launch.</p>
 
-	<p>If you love free stuff like we do, keep it up.  You’re next reward awaits!  Click below or share your referral code: http://www.tulipclean.com/?ref=<%= @preuser.referral_code %></p>
+<p>If you love free stuff like we do, keep it up.  You’re next reward - <span style="text-decoration: underline;">a 1 year supply of Tulip products</span> -  awaits!  Click below or share your referral code: <a href="http://www.tulipclean.com/?ref=<%= @preuser.referral_code %>">http://www.tulipclean.com/?ref=<%= @preuser.referral_code %></a></p>
 
-	<p><%= mail_to "", "Share some more!", subject: "By Invitation Only", body: "Hey!  I just signed up for Tulip.  Join the oral care revolution and as an added bonus, get free stuff :)\r\n\r\nUse my referral code:\r\nhttp://www.tulipclean.com/?ref=" + "#{@preuser.referral_code}!"%></p>
+	<p><%= mail_to "", "Share some more!", subject: "By Invitation Only", body: "Hey!  I just signed up for Tulip.  Join the oral care revolution and as an added bonus, get free stuff :)\r\n\r\nUse my referral code:\r\nhttp://www.tulipclean.com/?ref=" + "#{@preuser.referral_code}!" %></p>
 
 	<p>Keep flossin’,</p>
 	<p>The Tulip Team</p>
