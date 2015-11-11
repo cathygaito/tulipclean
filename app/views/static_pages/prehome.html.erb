@@ -1,33 +1,29 @@
 <section id="prehome">
-        
-    <header id="logo">
-        <%= image_tag('tulip-logo-light-blue.png') %>
-    </header>
-
-    <div class="headline">
-        <h1>2x the Bristles.  1/2 the Hassle.</h1>
-        <%= image_tag('blue.jpg') %>
-    </div>
-
-    <div class="tagline">
-        EFFECTIVE, BEAUTIFUL, DELIVERED.  THE LAST TOOTHBRUSH YOU'LL PURCHASE.
-    </div>
-
     <div class="formtext">
         <% if !Rails.application.config.ended %>
-            <h3>BE IN THE KNOW ABOUT LAUNCH. AS A BONUS, EARN FREE PRODUCTS!</h3>
+            <h3>JOIN OUR MAILING LIST &amp; YOUR FIRST BRUSH IS ON US!</h3>
             <%= form_for @preuser, url: { controller: "preusers", action: "create" }, class: "preform" do |f| %>
                 <% flash.each do |message_type, message| %>
                     <div class="alert alert-<%= message_type %>"><%= message %></div>
                 <% end %>
                 <%= f.text_field :email, :placeholder => "crown@teethmail.com\n" %>
                 <%= f.hidden_field :referrer_id, value: params[:ref] %>
-                <%= f.submit 'I WANT IN', class: "button", :onClick => "ga('send', 'event', { eventCategory: 'Email Form', eventAction: 'click', eventLabel: 'Preuser form submission'});" %>
+                <%= f.submit "I'M IN", class: "button", :onClick => "ga('send', 'event', { eventCategory: 'Email Form', eventAction: 'click', eventLabel: 'Preuser form submission'});" %>
             <% end %>
         <% end %>
+    </div>    
+    <header id="logo">
+        <%= image_tag('tulip-logo-blue.png') %>
+    </header>
+
+    <div class="headline">
+        <h1>Respect your teeth</h1>
+        <h1><em>and your time.</em></h1>
     </div>
 
-    <p id="copyright">&copy; 2015, TULIP PRODUCTS INC</p>
+    <div class="heroImg">
+        <%= image_tag('tulip-regimen-illustration-3.png') %>
+    </div>
 
     <!-- GOOGLE ANALYTICS -->
     <script>
