@@ -18,6 +18,7 @@ body {
 			text-align: center;
 			margin: 0;
 			padding: 0;
+			height: 80px;
 			img {
 				position: relative;
 				height: 50%;
@@ -35,7 +36,7 @@ body {
 				display: block;
 				color: #fff;
 				margin: 0;
-				padding: 0;
+				padding: 0 60px;
 				color: #4F6177;
 			}
 		}
@@ -59,7 +60,6 @@ body {
 
 			h3 {
 				font-family: "Gotham SSm A", "Gotham SSm B";
-				font-size: 10px;
 				position: relative;
 				text-align: center;
 				color: #fff;
@@ -127,7 +127,7 @@ body {
 			header {
 				height: 80px;
 				img {
-					height: 50% !important;
+					height: 50%;
 				}
 			}
 		}
@@ -141,6 +141,7 @@ body {
 
 			h3 {
 				padding: 10px 0 10px;
+				font-size: 10px;
 			}
 			form {
 				input{ 
@@ -154,9 +155,77 @@ body {
 	}
 	
 	@media only screen and (min-width : 495px) and (max-width : 767px) {
+		section#prehome {
+			header {
+				height: 80px;
+				img {
+					height: 50%;
+				}
+			}
+		}
+		.headline {
+			h1 {
+				font-size: 35px;
+				font-weight: 100;
+			}
+		}
+		.formtext{
+
+			h3 {
+				padding: 10px 0 10px;
+				font-size: 12px;
+			}
+			form {
+				input{ 
+					height: 45px;
+				}
+				.button {
+					height: 45px;
+				}
+			}
+		}
 	}
 	
 	@media only screen and (min-width : 768px) and (max-width : 1223px) {
+		section#prehome {
+			header {
+				height: 80px;
+				img {
+					height: 50%;
+				}
+			}
+			.heroImg{
+				padding: 0;
+				margin: 0 auto 100px;
+				text-align: center;
+				img {
+					height: 50vh;
+					width: auto;
+				}
+			}
+		}
+		.headline {
+			h1 {
+				font-size: 35px;
+				font-weight: 100;
+			}
+		}
+		.formtext{
+
+			h3 {
+				padding: 10px 0 10px;
+				font-size: 12px;
+			}
+			form {
+				width: 60% !important;
+				input{ 
+					height: 45px;
+				}
+				.button {
+					height: 45px;
+				}
+			}
+		}
 	}
 
 	@media only screen  and (min-width : 1224px) {
