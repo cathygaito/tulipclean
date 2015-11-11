@@ -194,9 +194,14 @@ body {
 					height: 50%;
 				}
 			}
+			.headline {
+				h1 {
+					margin: 20px 0;
+				}
+			}
 			.heroImg{
 				padding: 0;
-				margin: 0 auto 100px;
+				margin: 20px auto 100px;
 				text-align: center;
 				img {
 					width: 400px !important;
