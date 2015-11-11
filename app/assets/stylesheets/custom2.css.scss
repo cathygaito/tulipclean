@@ -92,6 +92,8 @@ body {
 					padding: 0;
 					margin-left: -1% !important;
 					font-size: 13px;
+					position: relative;
+					top: -1px;
 				}
 				input::-webkit-input-placeholder {
 				   color: #89CFD7;
@@ -145,7 +147,7 @@ body {
 					height: 45px;
 				}
 				.button {
-					height: 45px;
+					height: 46px;
 				}
 			}
 		}
