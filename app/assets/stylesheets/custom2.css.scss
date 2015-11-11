@@ -199,8 +199,8 @@ body {
 				margin: 0 auto 100px;
 				text-align: center;
 				img {
-					height: 60vh;
-					width: auto;
+					width: 30%;
+					max-width: 320px !important;
 				}
 			}
 		}
@@ -229,6 +229,45 @@ body {
 	}
 
 	@media only screen  and (min-width : 1224px) {
+		section#prehome {
+			header {
+				height: 80px;
+				img {
+					height: 50%;
+				}
+			}
+			.heroImg{
+				padding: 0;
+				margin: 0 auto 100px;
+				text-align: center;
+				img {
+					width: 30%;
+					max-width: 320px !important;
+				}
+			}
+		}
+		.headline {
+			h1 {
+				font-size: 35px;
+				font-weight: 100;
+			}
+		}
+		.formtext{
+
+			h3 {
+				padding: 10px 0 10px;
+				font-size: 12px;
+			}
+			form {
+				width: 60% !important;
+				input{ 
+					height: 45px;
+				}
+				.button {
+					height: 45px;
+				}
+			}
+		}
 	}
 }
 
