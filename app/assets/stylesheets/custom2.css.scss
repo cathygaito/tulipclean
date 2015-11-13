@@ -18,6 +18,7 @@ body {
 		background-color: #cfebef;
 		
 		header {
+			width: 100vw;
 			position: relative;
 			z-index: 1;
 			text-align: center;
@@ -38,6 +39,7 @@ body {
 			text-align: center;
 			position: relative;
 			z-index: 1;
+			width: 100vw;
 			h1 {
 				position: relative;
 				display: block;
