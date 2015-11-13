@@ -47,8 +47,6 @@ body {
 			}
 		}
 		.heroImg, .tabImg, .mobileImg {
-			position: absolute;
-			top: 0;
 			height: 100vh;
 			width: auto;
 			padding: 0;
@@ -140,6 +138,10 @@ body {
 	}
 
 	section#alpha {
+		.heroImg, .tabImg, .mobileImg {
+			position: absolute;
+			top: 0;
+		}
 		.headline {
 			h1 {
 				color: #fff;
