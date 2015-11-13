@@ -136,7 +136,6 @@ body {
 
 		.formtext{
 			background-color: #F7F3F2;
-			border: 1px black dashed;
 			h3 {
 				color: #4F6177;
 			}
@@ -151,6 +150,11 @@ body {
 					height: 50%;
 				}
 			}
+		}
+		section#alpha {
+			background: url('Tulip_Landing_Page_Mobile_Test_4_20151111.jpg');
+			background-size: 100vw auto;
+			background-repeat: no-repeat;
 		}
 		.headline {
 			h1 {
@@ -196,14 +200,14 @@ body {
 			}
 		}
 		.formtext{
-
 			h3 {
-				padding: 10px 0 10px;
 				font-size: 12px;
+				padding: 20px 0 10px;
 			}
 			form {
 				input{ 
 					height: 45px;
+					margin-bottom: 20px !important;
 				}
 				.button {
 					height: 45px;
@@ -247,15 +251,15 @@ body {
 			}
 		}
 		.formtext{
-			padding: 20px 0;
 			h3 {
-				padding: 10px 0 10px;
+				padding: 20px 0 10px;
 				font-size: 12px;
 			}
 			form {
 				width: 60% !important;
 				input{ 
 					height: 45px;
+					margin-bottom: 20px !important;
 				}
 				.button {
 					height: 45px;
@@ -290,15 +294,15 @@ body {
 			}
 		}
 		.formtext{
-
 			h3 {
-				padding: 10px 0 10px;
+				padding: 20px 0 10px;
 				font-size: 12px;
 			}
 			form {
 				width: 60% !important;
 				input{ 
 					height: 45px;
+					margin-bottom: 20px !important;
 				}
 				.button {
 					height: 45px;
