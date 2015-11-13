@@ -17,6 +17,8 @@ body {
 		background-color: #cfebef;
 		height: 100%;
 		header {
+			position: relative;
+			z-index: 1;
 			text-align: center;
 			margin: 0;
 			padding: 0;
@@ -33,6 +35,8 @@ body {
 			margin: 0;
 			padding: 5px 0;
 			text-align: center;
+			position: relative;
+			z-index: 1;
 			h1 {
 				position: relative;
 				display: block;
@@ -42,13 +46,23 @@ body {
 				color: #4F6177;
 			}
 		}
-		.heroImg{
-			width: 90vw;
-			padding: 0 0 100px 0;
-			margin: 0 auto 100px;
+		.heroImg, .tabImg, .mobileImg {
+			position: absolute;
+			top: 0;
+			height: 100vh;
+			width: auto;
+			padding: 0;
+			margin: 0 auto;
+			text-align: center;
+			z-index: 0;
 			img {
 				width: 100%;
+				height: auto;
 			}
+		}
+
+		.tabImg, .mobileImg {
+			display: none;
 		}
 
 		.formtext{
@@ -59,6 +73,7 @@ body {
 			margin: 0;
 			padding: 0;
 			width: 100%;
+			z-index: 1;
 
 			h3 {
 				font-family: "Gotham SSm A", "Gotham SSm B";
@@ -125,9 +140,7 @@ body {
 	}
 
 	section#alpha {
-		background: url('Tulip_Landing_Page_Desktop_Test_4_20151111.jpg');
-		background-size: cover;
-
+		background-color: #8CCEE6;
 		.headline {
 			h1 {
 				color: #fff;
@@ -151,11 +164,7 @@ body {
 				}
 			}
 		}
-		section#alpha {
-			background: url('Tulip_Landing_Page_Mobile_Test_4_20151111.jpg');
-			background-size: 100vw auto;
-			background-repeat: no-repeat;
-		}
+
 		.headline {
 			h1 {
 				font-size: 35px;
@@ -188,11 +197,7 @@ body {
 				}
 			}
 		}
-		section#alpha {
-			background: url('Tulip_Landing_Page_Tablet_Test_4_20151111.jpg');
-			background-size: cover;
-			background-repeat: no-repeat;
-		}
+
 		.headline {
 			h1 {
 				font-size: 35px;
@@ -213,13 +218,24 @@ body {
 			}
 		}
 	}
-	@media only screen and (min-width : 768px) and (max-width : 900px) {
+
+	@media only screen and (min-width: 768px) and (max-width: 1150px) {
 		section#alpha {
-			background: url('Tulip_Landing_Page_Tablet_Test_4_20151111.jpg');
-			background-size: 100vw auto;
-			background-repeat: no-repeat;
+			.heroImg{
+				height: auto !important;
+				width: 100% !important;
+				padding: 0;
+				margin: 0 auto;
+				text-align: center;
+				z-index: 0;
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
 		}
 	}
+
 	@media only screen and (min-width : 768px) and (max-width : 1223px) {
 		section#prehome {
 			header {
@@ -240,6 +256,15 @@ body {
 				img {
 					width: 400px !important;
 				}
+			}
+		}
+		section#alpha {
+			.heroImg {
+				display: none;
+			}
+			.tabImg {
+				top: 100px;
+				display: block;
 			}
 		}
 		.headline {
