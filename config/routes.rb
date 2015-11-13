@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 if Rails.application.config.ended
   root 'static_pages#home'
 else
+  get 'alpha' => 'static_pages#prehome'
   get 'alonzohome' => 'static_pages#prehome'
   get 'alonzorefer' => 'preusers#refer'
   root 'static_pages#prehome'

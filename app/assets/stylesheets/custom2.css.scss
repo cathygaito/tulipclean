@@ -1,7 +1,7 @@
 /**************************************
 GENERAL STYLES 
 **************************************/
-html {height: 100%;}
+html, body {height: 100%;}
 
 body {
 	width: 100%;
@@ -11,9 +11,11 @@ body {
 	font-family: "Sentinel SSm A", "Sentinel SSm B";
 	font-style: normal;
 	font-weight: 300;
-	background-color: #cfebef;
+	
 
-	section#prehome {
+	section#prehome, section#alpha {
+		background-color: #cfebef;
+		height: 100%;
 		header {
 			text-align: center;
 			margin: 0;
@@ -122,6 +124,25 @@ body {
 		}
 	}
 
+	section#alpha {
+		background: url('Tulip_Landing_Page_Desktop_Test_4_20151111.jpg');
+		background-size: cover;
+
+		.headline {
+			h1 {
+				color: #fff;
+			}
+		}
+
+		.formtext{
+			background-color: #F7F3F2;
+			border: 1px black dashed;
+			h3 {
+				color: #4F6177;
+			}
+		}
+	}
+
 	@media only screen and (max-width : 494px) {
 		section#prehome {
 			header {
@@ -208,6 +229,11 @@ body {
 				}
 			}
 		}
+		section#alpha {
+			background: url('Tulip_Landing_Page_Tablet_Test_4_20151111.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
 		.headline {
 			h1 {
 				font-size: 35px;
@@ -215,7 +241,7 @@ body {
 			}
 		}
 		.formtext{
-
+			padding: 20px 0;
 			h3 {
 				padding: 10px 0 10px;
 				font-size: 12px;

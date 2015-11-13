@@ -9,6 +9,8 @@ class StaticPagesController < ApplicationController
     @preuser = Preuser.new
     if request.path_info == '/alonzohome'
       render 'alonzo'
+    elsif request.path_info == '/alpha'
+        render 'alpha'
     end
   end
 
