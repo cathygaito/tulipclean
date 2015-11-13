@@ -5,7 +5,7 @@ html, body {height: 100%;}
 
 body {
 	background-color: #cfebef;
-	width: 100%;
+	width: 100vw;
 	color: #4F6177;
 	margin: 0;
 	padding: 0;
@@ -16,7 +16,6 @@ body {
 
 	section#prehome, section#alpha {
 		background-color: #cfebef;
-		width: 100vw;
 		
 		header {
 			position: relative;
