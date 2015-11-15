@@ -181,9 +181,6 @@ body {
 	}
 
 	@media only screen and (max-width : 494px) {
-		body {
-			margin-right: -5px;
-		}
 		section#prehome {
 			header {
 				height: 80px;
@@ -193,6 +190,7 @@ body {
 			}
 		}
 		section#alpha {
+			margin-right: -5px;
 			.heroImg, .tabImg {
 				display: none !important;
 			}
@@ -249,9 +247,6 @@ body {
 	}
 	
 	@media only screen and (min-width : 495px) and (max-width : 767px) {
-		body {
-			margin-right: -5px;
-		}
 		section#prehome {
 			header {
 				height: 80px;
@@ -261,6 +256,7 @@ body {
 			}
 		}
 		section#alpha {
+			margin-right: -5px;
 			.heroImg, .tabImg {
 				display: none !important;
 			}
@@ -306,9 +302,6 @@ body {
 
 
 	@media only screen and (min-width : 768px) and (max-width : 1223px) {
-		body {
-			margin-right: -5px;
-		}
 		section#prehome {
 			header {
 				height: 80px;
@@ -331,6 +324,7 @@ body {
 			}
 		}
 		section#alpha {
+			margin-right: -5px;
 			.heroImg {
 				display: none;
 			}
