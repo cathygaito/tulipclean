@@ -205,6 +205,8 @@ body {
 			.mobileImg {
 				display: block;
 				width: 100vw;
+				position: relative;
+				margin-right: -15px;
 				img {
 					width: 100%;
 				}
@@ -305,6 +307,8 @@ body {
 			.mobileImg {
 				display: block;
 				width: 100%;
+				position: relative;
+				margin-right: -15px;
 				img {
 					width: 100%;
 				}
