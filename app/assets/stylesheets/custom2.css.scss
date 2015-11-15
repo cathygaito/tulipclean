@@ -262,19 +262,6 @@ body {
 				}
 			}
 		}
-		section#alpha {
-			background-color: #91D8EC;
-			.heroImg, .tabImg {
-				display: none !important;
-			}
-			.mobileImg {
-				display: block;
-				width: 100%;
-				img {
-					width: 100%;
-				}
-			}
-		}
 		.headline {
 			h1 {
 				font-size: 35px;
@@ -301,6 +288,19 @@ body {
 				}
 				.button {
 					height: 45px;
+				}
+			}
+		}
+		section#alpha {
+			background-color: #91D8EC;
+			.heroImg, .tabImg {
+				display: none !important;
+			}
+			.mobileImg {
+				display: block;
+				width: 100%;
+				img {
+					width: 100%;
 				}
 			}
 		}
