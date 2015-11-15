@@ -205,8 +205,6 @@ body {
 			.mobileImg {
 				display: block;
 				width: 100vw;
-				position: relative;
-				margin-right: -15px;
 				img {
 					width: 100%;
 				}
@@ -216,6 +214,7 @@ body {
 		.checklist {
 			width: 62%;
 			position: relative;
+			margin-right: -15px;
 			margin: 180px 0 0 0 !important;
 			ul {
 				right: 0;
@@ -307,8 +306,6 @@ body {
 			.mobileImg {
 				display: block;
 				width: 100%;
-				position: relative;
-				margin-right: -15px;
 				img {
 					width: 100%;
 				}
