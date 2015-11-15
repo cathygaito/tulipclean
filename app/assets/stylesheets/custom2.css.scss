@@ -12,10 +12,8 @@ body {
 	font-family: "Sentinel SSm A", "Sentinel SSm B";
 	font-style: normal;
 	font-weight: 300;
-	
 
 	section#prehome, section#alpha {
-		background-color: #cfebef;
 		
 		header {
 			position: relative;
@@ -159,6 +157,10 @@ body {
 				}
 			}
 		}
+	}
+
+	section#prehome {
+		background-color: #cfebef;
 	}
 
 	section#alpha {
